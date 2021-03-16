@@ -21,7 +21,7 @@ class privacyViewController: UIViewController,UITableViewDelegate,UITableViewDat
         //        UserDefaults.standard.set(0, forKey: "checkMarkRow")
         
         
-        let opt1 = privOptions(title: "Public", desc: "Anyone on MusicTok")
+        let opt1 = privOptions(title: "Public", desc: "Anyone on Moooby")
         //        let opt2 = privOptions(title: "Friends", desc: "Followers that you follow back")
         let opt3 = privOptions(title: "Private", desc: "Visible to me only")
         

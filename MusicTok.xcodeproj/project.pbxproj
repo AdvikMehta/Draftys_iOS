@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		499C5C04DA705851852CCA42 /* Pods_MusicTok_MusicTokUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04DD5C526980863A456056E1 /* Pods_MusicTok_MusicTokUITests.framework */; };
 		5E10CB1D2509FF510024EE18 /* testCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E10CB1C2509FF510024EE18 /* testCollectionViewCell.swift */; };
 		5E10CB1F250A0FE60024EE18 /* share1CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E10CB1E250A0FE60024EE18 /* share1CollectionViewCell.swift */; };
 		5E10CB21250A0FFE0024EE18 /* share2CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E10CB20250A0FFE0024EE18 /* share2CollectionViewCell.swift */; };
@@ -51,7 +50,7 @@
 		5E772A0F2531B58E00966AD1 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E772A0E2531B58E00966AD1 /* Utility.swift */; };
 		5E772A122531B5A100966AD1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5E772A112531B5A100966AD1 /* Localizable.strings */; };
 		5E772A172531B80000966AD1 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E772A152531B7FE00966AD1 /* Reachability.m */; };
-		5E78A57B25F11109000C7D6B /* splashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E78A57A25F11109000C7D6B /* splashViewController.swift */; };
+		5E78A57325F10F37000C7D6B /* splashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E78A57225F10F37000C7D6B /* splashViewController.swift */; };
 		5E7CD9A1254014940098684B /* 4837-heart.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E7CD9A0254014940098684B /* 4837-heart.json */; };
 		5E7D7E1924F9383500A91923 /* postViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7D7E1824F9383500A91923 /* postViewController.swift */; };
 		5E7EFE1124F4D72A00E61DB1 /* cameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7EFE1024F4D72A00E61DB1 /* cameraViewController.swift */; };
@@ -69,6 +68,7 @@
 		5E98AB872502577500F156E6 /* privacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E98AB862502577500F156E6 /* privacyViewController.swift */; };
 		5E98AB8B250257BF00F156E6 /* privacyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E98AB8A250257BF00F156E6 /* privacyTableViewCell.swift */; };
 		5E98AB8E2502583F00F156E6 /* privacyOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E98AB8D2502583F00F156E6 /* privacyOptions.swift */; };
+		5E9B6C542600845E0044ACB9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E9B6C532600845E0044ACB9 /* GoogleService-Info.plist */; };
 		5E9C41E5255AA60200ACF430 /* gifClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C41E4255AA60200ACF430 /* gifClass.swift */; };
 		5EA3E821252B526500C6C13A /* ApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3E820252B526500C6C13A /* ApiHandler.swift */; };
 		5EAB63EE2567DE17003B54DA /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAB63ED2567DE16003B54DA /* CustomTextField.swift */; };
@@ -81,7 +81,6 @@
 		5EAC0EAE255686E800BCDF0F /* searchSoundTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAC0EAD255686E800BCDF0F /* searchSoundTableViewCell.swift */; };
 		5EAC0EB22556879700BCDF0F /* searchVideosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAC0EB12556879700BCDF0F /* searchVideosCollectionViewCell.swift */; };
 		5EAC0EB425569CD300BCDF0F /* hashTagMVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAC0EB325569CD300BCDF0F /* hashTagMVC.swift */; };
-		5EADC63025EFB29D005B713E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5EADC62F25EFB29D005B713E /* GoogleService-Info.plist */; };
 		5EB0639A25020B9D0012A7FA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB0639925020B9D0012A7FA /* HomeViewController.swift */; };
 		5EB108DA25D139370054B909 /* favWorkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB108D925D139370054B909 /* favWorkingViewController.swift */; };
 		5EB1904525CBFCB8000D8A92 /* hashtagsVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB1904425CBFCB8000D8A92 /* hashtagsVideoViewController.swift */; };
@@ -126,6 +125,8 @@
 		5ED55445255BB56B003C121F /* countryCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED55444255BB56B003C121F /* countryCodeViewController.swift */; };
 		5EEBB69B25CEA69F002DC24B /* favMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEBB69A25CEA69F002DC24B /* favMainViewController.swift */; };
 		5EF2254624EE81B600CE3D35 /* size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF2254524EE81B600CE3D35 /* size.swift */; };
+		6988554E56A86A9B4924C69B /* Pods_MusicTok.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8944BEA78B6A1349E72785FF /* Pods_MusicTok.framework */; };
+		86E885C36E4D79BBF06144F9 /* Pods_MusicTok_MusicTokUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F49875CF23EA633BBC3F685 /* Pods_MusicTok_MusicTokUITests.framework */; };
 		AE0AEED424AB5B52008340BD /* FollowingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0AEED324AB5B52008340BD /* FollowingViewController.swift */; };
 		AE0AEED624AB5C15008340BD /* FollowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0AEED524AB5C15008340BD /* FollowTableViewCell.swift */; };
 		AE0AEED824AB6AFC008340BD /* Follow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0AEED724AB6AFC008340BD /* Follow.swift */; };
@@ -171,7 +172,6 @@
 		AEFA5DA9249CEA0600CD7D07 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEFA5DA8249CEA0600CD7D07 /* LocalAuthentication.framework */; };
 		AEFA5DAB249CEA1500CD7D07 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEFA5DAA249CEA1500CD7D07 /* AuthenticationServices.framework */; };
 		AEFA5DAD249CEA1E00CD7D07 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEFA5DAC249CEA1D00CD7D07 /* SystemConfiguration.framework */; };
-		BC2FED81C322EE45767DF552 /* Pods_MusicTok.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D95BAD11E3B1F7A7F332E46 /* Pods_MusicTok.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -185,11 +185,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		04DD5C526980863A456056E1 /* Pods_MusicTok_MusicTokUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicTok_MusicTokUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0D95BAD11E3B1F7A7F332E46 /* Pods_MusicTok.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicTok.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		17F5F34674F4851C03E58252 /* Pods-MusicTok.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicTok.release.xcconfig"; path = "Target Support Files/Pods-MusicTok/Pods-MusicTok.release.xcconfig"; sourceTree = "<group>"; };
 		1C92BBACE9A438963ED215AD /* Pods-TIK TIKUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TIK TIKUITests.release.xcconfig"; path = "Target Support Files/Pods-TIK TIKUITests/Pods-TIK TIKUITests.release.xcconfig"; sourceTree = "<group>"; };
-		2925D6B6741487F539177B0F /* Pods-MusicTok-MusicTokUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicTok-MusicTokUITests.debug.xcconfig"; path = "Target Support Files/Pods-MusicTok-MusicTokUITests/Pods-MusicTok-MusicTokUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		29761484AEC5A2BF6C906956 /* Pods-MusicTok.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicTok.debug.xcconfig"; path = "Target Support Files/Pods-MusicTok/Pods-MusicTok.debug.xcconfig"; sourceTree = "<group>"; };
+		276662BDE6D48B25B8F9BE23 /* Pods-MusicTok-MusicTokUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicTok-MusicTokUITests.debug.xcconfig"; path = "Target Support Files/Pods-MusicTok-MusicTokUITests/Pods-MusicTok-MusicTokUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2A7DB02FAA4BE7D71449722A /* Pods-Moooby-MooobyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moooby-MooobyUITests.release.xcconfig"; path = "Target Support Files/Pods-Moooby-MooobyUITests/Pods-Moooby-MooobyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		455F1339565756698DA9C8CD /* Pods-TIK TIKUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TIK TIKUITests.debug.xcconfig"; path = "Target Support Files/Pods-TIK TIKUITests/Pods-TIK TIKUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5E10CB1C2509FF510024EE18 /* testCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -237,7 +235,7 @@
 		5E772A142531B7FC00966AD1 /* TIK TIK-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TIK TIK-Bridging-Header.h"; sourceTree = "<group>"; };
 		5E772A152531B7FE00966AD1 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		5E772A162531B80000966AD1 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
-		5E78A57A25F11109000C7D6B /* splashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = splashViewController.swift; sourceTree = "<group>"; };
+		5E78A57225F10F37000C7D6B /* splashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = splashViewController.swift; sourceTree = "<group>"; };
 		5E7CD9A0254014940098684B /* 4837-heart.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "4837-heart.json"; sourceTree = "<group>"; };
 		5E7D7E1824F9383500A91923 /* postViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = postViewController.swift; sourceTree = "<group>"; };
 		5E7EFE1024F4D72A00E61DB1 /* cameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cameraViewController.swift; sourceTree = "<group>"; };
@@ -255,6 +253,7 @@
 		5E98AB862502577500F156E6 /* privacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = privacyViewController.swift; sourceTree = "<group>"; };
 		5E98AB8A250257BF00F156E6 /* privacyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = privacyTableViewCell.swift; sourceTree = "<group>"; };
 		5E98AB8D2502583F00F156E6 /* privacyOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = privacyOptions.swift; sourceTree = "<group>"; };
+		5E9B6C532600845E0044ACB9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5E9C41E4255AA60200ACF430 /* gifClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gifClass.swift; sourceTree = "<group>"; };
 		5EA3E820252B526500C6C13A /* ApiHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiHandler.swift; sourceTree = "<group>"; };
 		5EAB63ED2567DE16003B54DA /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
@@ -267,7 +266,6 @@
 		5EAC0EAD255686E800BCDF0F /* searchSoundTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchSoundTableViewCell.swift; sourceTree = "<group>"; };
 		5EAC0EB12556879700BCDF0F /* searchVideosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchVideosCollectionViewCell.swift; sourceTree = "<group>"; };
 		5EAC0EB325569CD300BCDF0F /* hashTagMVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hashTagMVC.swift; sourceTree = "<group>"; };
-		5EADC62F25EFB29D005B713E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5EB0639925020B9D0012A7FA /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5EB108D925D139370054B909 /* favWorkingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favWorkingViewController.swift; sourceTree = "<group>"; };
 		5EB1904425CBFCB8000D8A92 /* hashtagsVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hashtagsVideoViewController.swift; sourceTree = "<group>"; };
@@ -322,7 +320,10 @@
 		5ED55444255BB56B003C121F /* countryCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = countryCodeViewController.swift; sourceTree = "<group>"; };
 		5EEBB69A25CEA69F002DC24B /* favMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favMainViewController.swift; sourceTree = "<group>"; };
 		5EF2254524EE81B600CE3D35 /* size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = size.swift; sourceTree = "<group>"; };
+		5F49875CF23EA633BBC3F685 /* Pods_MusicTok_MusicTokUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicTok_MusicTokUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FAC47F800DB6BF74D61500D /* Pods-Moooby-MooobyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moooby-MooobyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Moooby-MooobyUITests/Pods-Moooby-MooobyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8944BEA78B6A1349E72785FF /* Pods_MusicTok.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicTok.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8967039BBA1F32DA3B49881C /* Pods-MusicTok.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicTok.debug.xcconfig"; path = "Target Support Files/Pods-MusicTok/Pods-MusicTok.debug.xcconfig"; sourceTree = "<group>"; };
 		A5872FDFADD09824F8AB9F67 /* Pods-Moooby.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moooby.release.xcconfig"; path = "Target Support Files/Pods-Moooby/Pods-Moooby.release.xcconfig"; sourceTree = "<group>"; };
 		AE0AEED324AB5B52008340BD /* FollowingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingViewController.swift; sourceTree = "<group>"; };
 		AE0AEED524AB5C15008340BD /* FollowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowTableViewCell.swift; sourceTree = "<group>"; };
@@ -375,9 +376,8 @@
 		AEFA5DAA249CEA1500CD7D07 /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
 		AEFA5DAC249CEA1D00CD7D07 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		AFF6249716FA173B1CB5C3C5 /* Pods-TIK TIK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TIK TIK.debug.xcconfig"; path = "Target Support Files/Pods-TIK TIK/Pods-TIK TIK.debug.xcconfig"; sourceTree = "<group>"; };
-		B20AB1DC781F2B440BF2142D /* Pods-MusicTok.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicTok.release.xcconfig"; path = "Target Support Files/Pods-MusicTok/Pods-MusicTok.release.xcconfig"; sourceTree = "<group>"; };
 		BF44A0F35DDDD8F4952B756B /* Pods-TIK TIK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TIK TIK.release.xcconfig"; path = "Target Support Files/Pods-TIK TIK/Pods-TIK TIK.release.xcconfig"; sourceTree = "<group>"; };
-		C4B9FA553DCF3515E9A94971 /* Pods-MusicTok-MusicTokUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicTok-MusicTokUITests.release.xcconfig"; path = "Target Support Files/Pods-MusicTok-MusicTokUITests/Pods-MusicTok-MusicTokUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CC7B0E3F1868CFEBFE484220 /* Pods-MusicTok-MusicTokUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicTok-MusicTokUITests.release.xcconfig"; path = "Target Support Files/Pods-MusicTok-MusicTokUITests/Pods-MusicTok-MusicTokUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CCD3BE5850F5A788C4FC67F9 /* Pods-Moooby.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moooby.debug.xcconfig"; path = "Target Support Files/Pods-Moooby/Pods-Moooby.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -392,7 +392,7 @@
 				AEFA5DA4249CE9CA00CD7D07 /* GoogleSignIn.framework in Frameworks */,
 				AEFA5DA7249CE9FE00CD7D07 /* SafariServices.framework in Frameworks */,
 				AEFA5DA9249CEA0600CD7D07 /* LocalAuthentication.framework in Frameworks */,
-				BC2FED81C322EE45767DF552 /* Pods_MusicTok.framework in Frameworks */,
+				6988554E56A86A9B4924C69B /* Pods_MusicTok.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,7 +400,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				499C5C04DA705851852CCA42 /* Pods_MusicTok_MusicTokUITests.framework in Frameworks */,
+				86E885C36E4D79BBF06144F9 /* Pods_MusicTok_MusicTokUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -625,7 +625,7 @@
 		5E8CB7B625F0F68C009A1F59 /* Splash */ = {
 			isa = PBXGroup;
 			children = (
-				5E78A57A25F11109000C7D6B /* splashViewController.swift */,
+				5E78A57225F10F37000C7D6B /* splashViewController.swift */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -923,8 +923,8 @@
 				AEFA5DA2249CE9CA00CD7D07 /* GoogleSignIn.bundle */,
 				AEFA5DA1249CE9CA00CD7D07 /* GoogleSignIn.framework */,
 				AEFA5DA0249CE9C900CD7D07 /* GoogleSignInDependencies.framework */,
-				0D95BAD11E3B1F7A7F332E46 /* Pods_MusicTok.framework */,
-				04DD5C526980863A456056E1 /* Pods_MusicTok_MusicTokUITests.framework */,
+				8944BEA78B6A1349E72785FF /* Pods_MusicTok.framework */,
+				5F49875CF23EA633BBC3F685 /* Pods_MusicTok_MusicTokUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -940,10 +940,10 @@
 				A5872FDFADD09824F8AB9F67 /* Pods-Moooby.release.xcconfig */,
 				7FAC47F800DB6BF74D61500D /* Pods-Moooby-MooobyUITests.debug.xcconfig */,
 				2A7DB02FAA4BE7D71449722A /* Pods-Moooby-MooobyUITests.release.xcconfig */,
-				29761484AEC5A2BF6C906956 /* Pods-MusicTok.debug.xcconfig */,
-				B20AB1DC781F2B440BF2142D /* Pods-MusicTok.release.xcconfig */,
-				2925D6B6741487F539177B0F /* Pods-MusicTok-MusicTokUITests.debug.xcconfig */,
-				C4B9FA553DCF3515E9A94971 /* Pods-MusicTok-MusicTokUITests.release.xcconfig */,
+				8967039BBA1F32DA3B49881C /* Pods-MusicTok.debug.xcconfig */,
+				17F5F34674F4851C03E58252 /* Pods-MusicTok.release.xcconfig */,
+				276662BDE6D48B25B8F9BE23 /* Pods-MusicTok-MusicTokUITests.debug.xcconfig */,
+				CC7B0E3F1868CFEBFE484220 /* Pods-MusicTok-MusicTokUITests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -1039,7 +1039,7 @@
 				AE543C522270361B00E47594 /* Main.storyboard */,
 				5EB7936A253AF2E600525B5B /* Assets */,
 				AE543C572270361C00E47594 /* LaunchScreen.storyboard */,
-				5EADC62F25EFB29D005B713E /* GoogleService-Info.plist */,
+				5E9B6C532600845E0044ACB9 /* GoogleService-Info.plist */,
 				AE543C5A2270361C00E47594 /* Info.plist */,
 				5E881CBA255067ED000D5F8A /* testViewController.swift */,
 				5EB236DF25CACC310073D45B /* hashMention.swift */,
@@ -1151,7 +1151,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EADC63025EFB29D005B713E /* GoogleService-Info.plist in Resources */,
+				5E9B6C542600845E0044ACB9 /* GoogleService-Info.plist in Resources */,
 				5EB7936E253AF30000525B5B /* lottieHeart2.json in Resources */,
 				5ED55440255BB495003C121F /* countryCodeWithFlags.json in Resources */,
 				5EB79370253AF30000525B5B /* lottieHeart.json in Resources */,
@@ -1292,7 +1292,6 @@
 				AE543C7E22707DB900E47594 /* MixedRealityViewController.swift in Sources */,
 				5E7EFE1124F4D72A00E61DB1 /* cameraViewController.swift in Sources */,
 				AE0B3CEE227ACD6300E0B2B9 /* Comment.swift in Sources */,
-				5E78A57B25F11109000C7D6B /* splashViewController.swift in Sources */,
 				5E5FAB472535834C00A21897 /* CustomView.swift in Sources */,
 				5E28D29F255D3C4B00CCB1DD /* Open Api.swift in Sources */,
 				5E98AB8B250257BF00F156E6 /* privacyTableViewCell.swift in Sources */,
@@ -1374,6 +1373,7 @@
 				AE0B3CF2227B0C4300E0B2B9 /* SoundTableViewCell.swift in Sources */,
 				5E5350702553C1D7009E4EB9 /* privacySettingTableViewCell.swift in Sources */,
 				5ED040DE25343D44007BCA3A /* OneTimeCodeTextField.swift in Sources */,
+				5E78A57325F10F37000C7D6B /* splashViewController.swift in Sources */,
 				5E881CC3255116E8000D5F8A /* privacyAndSettingTableViewCell.swift in Sources */,
 				5EC846F8254837DA00BBB0A4 /* newNotificationsViewController.swift in Sources */,
 				5EF2254624EE81B600CE3D35 /* size.swift in Sources */,
@@ -1590,14 +1590,14 @@
 		};
 		AE543C692270361C00E47594 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 29761484AEC5A2BF6C906956 /* Pods-MusicTok.debug.xcconfig */;
+			baseConfigurationReference = 8967039BBA1F32DA3B49881C /* Pods-MusicTok.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "TIK TIK.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.8;
+				CURRENT_PROJECT_VERSION = 1.0.1;
 				DEVELOPMENT_TEAM = G99QAZBHL2;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1684,14 +1684,14 @@
 		};
 		AE543C6A2270361C00E47594 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B20AB1DC781F2B440BF2142D /* Pods-MusicTok.release.xcconfig */;
+			baseConfigurationReference = 17F5F34674F4851C03E58252 /* Pods-MusicTok.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "TIK TIK.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.8;
+				CURRENT_PROJECT_VERSION = 1.0.1;
 				DEVELOPMENT_TEAM = G99QAZBHL2;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1777,7 +1777,7 @@
 		};
 		AE543C6C2270361C00E47594 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2925D6B6741487F539177B0F /* Pods-MusicTok-MusicTokUITests.debug.xcconfig */;
+			baseConfigurationReference = 276662BDE6D48B25B8F9BE23 /* Pods-MusicTok-MusicTokUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1798,7 +1798,7 @@
 		};
 		AE543C6D2270361C00E47594 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C4B9FA553DCF3515E9A94971 /* Pods-MusicTok-MusicTokUITests.release.xcconfig */;
+			baseConfigurationReference = CC7B0E3F1868CFEBFE484220 /* Pods-MusicTok-MusicTokUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

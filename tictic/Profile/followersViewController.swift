@@ -107,7 +107,7 @@ extension followersViewController: UITableViewDelegate,UITableViewDataSource{
         
         let otherUserID = followersArr[indexPath.row]["id"] as! String
         let vc = storyboard?.instantiateViewController(withIdentifier: "newProfileVC") as!  newProfileViewController
-//            vc.isOtherUserVisting = true
+            vc.isOtherUserVisting = true
         vc.hidesBottomBarWhenPushed = true
 //            vc.otherUserID = otherUserID
         UserDefaults.standard.set(otherUserID, forKey: "otherUserID")

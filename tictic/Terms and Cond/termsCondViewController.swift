@@ -46,10 +46,10 @@ class termsCondViewController:UIViewController,WKUIDelegate,WKNavigationDelegate
             return
         }
         
-        var url = URL(string: "https://termsfeed.com/privacy-policy/9a03bedc2f642faf5b4a91c68643b1ae")!
+        var url = URL(string: "https://www.freeprivacypolicy.com/live/63ea2c65-c86a-408a-b12a-35afeec613dd")!
         
         if privacyDoc == false{
-         url = URL(string: "https://termsfeed.com/terms-conditions/72b8fed5b38e082d48c9889e4d1276a9")!
+         url = URL(string: "https://www.freeprivacypolicy.com/live/63ea2c65-c86a-408a-b12a-35afeec613dd")!
             
             vcTitle.text = "Terms & Conditions"
         }

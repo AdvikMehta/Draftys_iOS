@@ -15,7 +15,7 @@ class requestVerificationViewController: UIViewController,UIImagePickerControlle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        detailText.text = "A verification badge is check that appears next to an MusicTok accounts name to indicate that the account is the authentic presence of notable public figure,celebrity,global brand or entitu it represents. \n\nSubmitting a requeset for verification does not guarantee that your account will be verified"
+        detailText.text = "A verification badge is check that appears next to an Moooby accounts name to indicate that the account is the authentic presence of notable public figure,celebrity,global brand or entitu it represents. \n\nSubmitting a requeset for verification does not guarantee that your account will be verified"
         // Do any additional setup after loading the view.
     }
     

@@ -224,7 +224,12 @@ class homeFeedViewController: UIViewController,InternetStatusIndicable {
             videosMainArr = userVideoArr
             //            feedCV.moveItem(at: indexAt, to: indexAt)
             feedCV.reloadData()
-            feedCV.scrollToItem(at:indexAt, at: .bottom, animated: false)
+            self.feedCV.performBatchUpdates(nil, completion: {
+                (result) in
+                // ready
+                self.feedCV.scrollToItem(at:self.indexAt, at: .bottom, animated: false)
+            })
+            
         }
         else if discoverVideoArr.isEmpty == false
         {
@@ -234,7 +239,11 @@ class homeFeedViewController: UIViewController,InternetStatusIndicable {
             videosMainArr = discoverVideoArr
             //            feedCV.moveItem(at: indexAt, to: indexAt)
             feedCV.reloadData()
-            feedCV.scrollToItem(at:indexAt, at: .bottom, animated: false)
+            self.feedCV.performBatchUpdates(nil, completion: {
+                (result) in
+                // ready
+                self.feedCV.scrollToItem(at:self.indexAt, at: .bottom, animated: false)
+            })
         }
         else
         {
@@ -687,7 +696,7 @@ extension homeFeedViewController:UICollectionViewDataSource{
             loginScreenAppear()
         }else{
             let vc = storyboard?.instantiateViewController(withIdentifier: "newProfileVC") as!  newProfileViewController
-//            vc.isOtherUserVisting = true
+            vc.isOtherUserVisting = true
             vc.hidesBottomBarWhenPushed = true
 //            vc.otherUserID = otherUserID
             UserDefaults.standard.set(otherUserID, forKey: "otherUserID")

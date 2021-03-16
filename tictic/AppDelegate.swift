@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  MusicTok
+//  Moooby
 //
 //  Created by Junaid Kamoka on 24/04/2019.
 //  Copyright © 2019 Junaid Kamoka. All rights reserved.

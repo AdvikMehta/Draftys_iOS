@@ -120,7 +120,7 @@ class shareViewController: UIViewController,UICollectionViewDataSource,UICollect
                  //                alertModule(title: "Report", msg: "Report is under review")
                  if(UserDefaults.standard.string(forKey: "userID") == "" || UserDefaults.standard.string(forKey: "userID") == nil){
                  
-                 //                    self.alertModule(title:"MusicTok", msg: "Please login from Profile to Report")
+                 //                    self.alertModule(title:"Moooby", msg: "Please login from Profile to Report")
                  let navController = UINavigationController.init(rootViewController: self.storyboard!.instantiateViewController(withIdentifier: "newLoginVC"))
                  navController.navigationBar.isHidden = true
                  navController.modalPresentationStyle = .overFullScreen
@@ -167,7 +167,7 @@ class shareViewController: UIViewController,UICollectionViewDataSource,UICollect
                 
                 if(UserDefaults.standard.string(forKey: "userID") == "" || UserDefaults.standard.string(forKey: "userID") == nil){
                     
-                    //                    self.alertModule(title:"MusicTok", msg: "Please login from Profile to Report")
+                    //                    self.alertModule(title:"Moooby", msg: "Please login from Profile to Report")
                     let navController = UINavigationController.init(rootViewController: self.storyboard!.instantiateViewController(withIdentifier: "newLoginVC"))
                     navController.navigationBar.isHidden = true
                     navController.modalPresentationStyle = .overFullScreen
@@ -225,7 +225,7 @@ class shareViewController: UIViewController,UICollectionViewDataSource,UICollect
         let shareContent = ShareLinkContent()
         //        shareContent.contentURL = URL.init(string: "https://developers.facebook.com")!
         shareContent.contentURL = URL.init(string: self.shareUrl)!//your link
-        shareContent.quote = "MusicTok APP"
+        shareContent.quote = "Moooby APP"
         
         ShareDialog(fromViewController: self, content: shareContent, delegate: self as? SharingDelegate).show()
     }
@@ -258,7 +258,7 @@ class shareViewController: UIViewController,UICollectionViewDataSource,UICollect
     
     //    MARK:- TWITTER SETUPS
     func shareOnTwitter(){
-        let tweetText = "MusicTok APP\n"
+        let tweetText = "Moooby APP\n"
         let tweetUrl = self.shareUrl
         
         let shareString = "https://twitter.com/intent/tweet?text=\(tweetText)&url=\(tweetUrl)"

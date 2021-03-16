@@ -36,13 +36,13 @@ class splashViewController: UIViewController {
                     print("response@200: ",response!)
                     
 //                    self.getDataForFeeds()
+                    
                     let story = UIStoryboard(name: "Main", bundle: nil)
                     let vc = story.instantiateViewController(withIdentifier: "TabbarViewController") as! TabbarViewController
                     let nav = UINavigationController(rootViewController: vc)
                     nav.navigationBar.isHidden = true
 //                    self.window?.rootViewController = nav
                     self.view.window?.rootViewController = nav
-                    
                 }else{
                     print("response not 200: ",response!)
                     

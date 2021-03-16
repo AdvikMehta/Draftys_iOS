@@ -149,9 +149,7 @@ class Utility: NSObject {
     
     func startLoader(view: UIView){
 
-        vc!.isUserInteractionEnabled = false
-        backgroundView.isUserInteractionEnabled = false
-        view.isUserInteractionEnabled = false
+
         
         backgroundView.frame = CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
         backgroundView.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 0.6)
@@ -165,6 +163,8 @@ class Utility: NSObject {
         
         
 //        view.addSubview(loader)
+
+    
         backgroundView.addSubview(loader)
         loader.startAnimating()
         DispatchQueue.main.async { [self] in
@@ -172,6 +172,12 @@ class Utility: NSObject {
             UIApplication.shared.keyWindow!.bringSubviewToFront(backgroundView)
             vc?.bringSubviewToFront(backgroundView)
         }
+
+        loader.isUserInteractionEnabled = false
+        vc!.isUserInteractionEnabled = false
+        backgroundView.isUserInteractionEnabled = false
+        view.isUserInteractionEnabled = false
+        UIApplication.shared.keyWindow?.rootViewController?.tabBarController?.tabBar.isUserInteractionEnabled = false
     }
     func stopLoader(view: UIView){
         
@@ -188,6 +194,8 @@ class Utility: NSObject {
         vc?.isUserInteractionEnabled = true
         backgroundView.isUserInteractionEnabled = true
         view.isUserInteractionEnabled = true
+        loader.isUserInteractionEnabled = true
+        UIApplication.shared.keyWindow?.rootViewController?.tabBarController?.tabBar.isUserInteractionEnabled = true
     }
     
     
@@ -771,3 +779,4 @@ extension Date {
 //        self.isUserInteractionEnabled = true
 //    }
 //}
+

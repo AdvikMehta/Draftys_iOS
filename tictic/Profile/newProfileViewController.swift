@@ -95,7 +95,7 @@ class newProfileViewController: UIViewController,UICollectionViewDataSource,UICo
             scrollViewOutlet.addSubview(refresher)
         }
         
-
+        self.fetchingUserDataFunc()
         
         
     }
@@ -132,11 +132,12 @@ class newProfileViewController: UIViewController,UICollectionViewDataSource,UICo
             
             self.tabBarController?.tabBar.isHidden = false
         }
-        fetchingUserDataFunc()
+        
     }
     
     func fetchingUserDataFunc(){
         self.userID = UserDefaults.standard.string(forKey: "userID")!
+        self.otherUserID = UserDefaults.standard.string(forKey: "otherUserID")!
         /*
         if isOtherUserVisting == true{
             UserDefaults.standard.set(otherUserID, forKey: "otherUserID")
@@ -155,7 +156,9 @@ class newProfileViewController: UIViewController,UICollectionViewDataSource,UICo
         
         
         */
-        self.otherUserID = UserDefaults.standard.string(forKey: "otherUserID")!
+        
+        
+        /*
         //        self.userID = UserDefaults.standard.string(forKey: "userID")!
         
         print("otherUid: ",self.otherUserID)
@@ -184,13 +187,38 @@ class newProfileViewController: UIViewController,UICollectionViewDataSource,UICo
             lpgr.delaysTouchesBegan = true
             self.videosCV.addGestureRecognizer(lpgr)
         }
+        
+       */
+        
+        AppUtility?.startLoader(view: self.view)
+        if isOtherUserVisting{
+            self.getOtherUserDetails()
+            btnChatOutlet.isHidden = false
+            btnFollow.isHidden = false
+            btnBackOutlet.isHidden = false
+//            self.otherUserID = otherUid!
+            getUserVideos()
+
+        }else{
+            self.getUserDetails()
+            btnChatOutlet.isHidden = true
+            btnFollow.isHidden = true
+            btnBackOutlet.isHidden = true
+            self.otherUserID = ""
+            //            self.StoreSelectedIndex(index: storeSelectedIP.row)
+            getUserVideos()
+            
+            
+            let lpgr : UILongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPressVideo))
+            lpgr.minimumPressDuration = 0.5
+            lpgr.delegate = self
+            lpgr.delaysTouchesBegan = true
+            self.videosCV.addGestureRecognizer(lpgr)
+
+        }
         print("videosArr.count: ",videosMainArr.count)
     }
-    
-    //MARK:- SetupView
-    
 
-    //MARK:- Switch Action
     
     //MARK:- Button Action
     @IBAction func btnChat(_ sender: Any) {
@@ -322,7 +350,7 @@ class newProfileViewController: UIViewController,UICollectionViewDataSource,UICo
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         }
-        else
+        else if collectionView == videosCV
         {
             let vc = storyboard?.instantiateViewController(withIdentifier: "homeFeedVC") as! homeFeedViewController
             vc.userVideoArr = videosMainArr
@@ -341,30 +369,20 @@ class newProfileViewController: UIViewController,UICollectionViewDataSource,UICo
         
         if index == 0{
             print("my vid")
+            AppUtility?.startLoader(view: self.view)
             getUserVideos()
-            AppUtility?.startLoader(view: self.videosCV)
-//            self.vidContainerView.isHidden = false
 
-//            self.privateContainerView.isHidden = true
-//            self.likedContainerView.isHidden = true
             
         }else if index == 1{
             print("liked")
+            AppUtility?.startLoader(view: self.view)
             getLikedVideos()
-            AppUtility?.startLoader(view: self.videosCV)
-//            self.likedContainerView.isHidden = false
 
-//            self.vidContainerView.isHidden = true
-//            self.privateContainerView.isHidden = true
             
         }else{
             print("private")
+            AppUtility?.startLoader(view: self.view)
             getPrivateVideos()
-            AppUtility?.startLoader(view: self.videosCV)
-//            self.privateContainerView.isHidden = false
-
-//            self.likedContainerView.isHidden = true
-//            self.vidContainerView.isHidden = true
             
         }
         self.userItemsCollectionView.reloadData()
@@ -426,7 +444,7 @@ class newProfileViewController: UIViewController,UICollectionViewDataSource,UICo
     func getUserDetails(){
         self.userData.removeAll()
         
-        AppUtility?.startLoader(view: view)
+//        AppUtility?.startLoader(view: view)
         ApiHandler.sharedInstance.showOwnDetail(user_id: self.userID) { (isSuccess, response) in
             if isSuccess{
                 
@@ -483,17 +501,15 @@ class newProfileViewController: UIViewController,UICollectionViewDataSource,UICo
                     
                     self.userData.append(user)
                     
-                    AppUtility?.stopLoader(view: self.view)
-//                    self.getUserVideos()
                     self.setProfileData()
                 }else{
-                    AppUtility?.stopLoader(view: self.view)
+                    
                     //                    self.showToast(message: response?.value(forKey: "msg") as! String, font: .systemFont(ofSize: 12))
                     print("showOwnDetail API:",response?.value(forKey: "msg") as Any)
                 }
                 
             }else{
-                AppUtility?.stopLoader(view: self.view)
+                
                 //                self.showToast(message: response?.value(forKey: "msg") as! String, font: .systemFont(ofSize: 12))
                 print("showOwnDetail API:",response?.value(forKey: "msg") as Any)
             }
@@ -506,8 +522,10 @@ class newProfileViewController: UIViewController,UICollectionViewDataSource,UICo
         
         print("otheruser: ",self.otherUserID)
         print("userID: ",self.userID)
-        AppUtility?.startLoader(view: view)
+//        AppUtility?.startLoader(view: view)
         ApiHandler.sharedInstance.showOtherUserDetail(user_id: self.userID, other_user_id: self.otherUserID) { (isSuccess, response) in
+            
+            
             if isSuccess{
                 
                 print("response: ",response?.allValues)
@@ -535,17 +553,17 @@ class newProfileViewController: UIViewController,UICollectionViewDataSource,UICo
                     
                     self.userData.append(user)
                     
-                    AppUtility?.stopLoader(view: self.view)
+                    
                     //                    self.getVideos()
                     self.setProfileData()
                 }else{
-                    AppUtility?.stopLoader(view: self.view)
+                    
                     //                    self.showToast(message: response?.value(forKey: "msg") as! String, font: .systemFont(ofSize: 12))
                     print("showOtherUserDetail API:",response?.value(forKey: "msg") as Any)
                 }
                 
             }else{
-                AppUtility?.stopLoader(view: self.view)
+                
                 //                self.showToast(message: response?.value(forKey: "msg") as! String, font: .systemFont(ofSize: 12))
                 print("showOtherUserDetail API:",response?.value(forKey: "msg") as Any)
             }
@@ -556,7 +574,7 @@ class newProfileViewController: UIViewController,UICollectionViewDataSource,UICo
     func getUserVideos(){
         
         
-        //        AppUtility?.stopLoader(view: view)
+        
         
         print("userID test: ",userID)
         self.userVidArr.removeAll()
@@ -619,7 +637,7 @@ class newProfileViewController: UIViewController,UICollectionViewDataSource,UICo
                     }
                     
                 }else{
-                    AppUtility?.stopLoader(view: self.view)
+                    
                     //  self.showToast(message: response?.value(forKey: "msg") as! String, font: .systemFont(ofSize: 12))
                 }
                 
@@ -642,7 +660,7 @@ class newProfileViewController: UIViewController,UICollectionViewDataSource,UICo
                 self.videosCV.reloadData()
                 
             }else{
-                AppUtility?.stopLoader(view: self.view)
+                
                 //                self.showToast(message: response?.value(forKey: "msg") as! String, font: .systemFont(ofSize: 12))
                 print("showVideosAgainstUserID API:",response?.value(forKey: "msg") as Any)
             }
@@ -714,7 +732,7 @@ class newProfileViewController: UIViewController,UICollectionViewDataSource,UICo
                     }
                     
                 }else{
-                    AppUtility?.stopLoader(view: self.view)
+                    
                     //  self.showToast(message: response?.value(forKey: "msg") as! String, font: .systemFont(ofSize: 12))
                 }
                 self.videosMainArr = self.likeVidArr
@@ -732,7 +750,7 @@ class newProfileViewController: UIViewController,UICollectionViewDataSource,UICo
                 self.videosCV.reloadData()
                 
             }else{
-                AppUtility?.stopLoader(view: self.view)
+                
                 //                self.showToast(message: response?.value(forKey: "msg") as! String, font: .systemFont(ofSize: 12))
                 print("showVideosAgainstUserID API:",response?.value(forKey: "msg") as Any)
             }
@@ -741,9 +759,7 @@ class newProfileViewController: UIViewController,UICollectionViewDataSource,UICo
     
     //    MARK:- GET PRIVATE VIDEOS
     func getPrivateVideos(){
-        
-        //        AppUtility?.stopLoader(view: view)
-        
+                
         print("userID test: ",userID)
         self.likeVidArr.removeAll()
         self.videosMainArr.removeAll()
@@ -755,7 +771,6 @@ class newProfileViewController: UIViewController,UICollectionViewDataSource,UICo
             uid = self.userID
         }
         
-        //        AppUtility?.startLoader(view: self.view)
         ApiHandler.sharedInstance.showVideosAgainstUserID(user_id: uid) { (isSuccess, response) in
             AppUtility?.stopLoader(view: self.view)
             if isSuccess{
@@ -802,7 +817,7 @@ class newProfileViewController: UIViewController,UICollectionViewDataSource,UICo
                     }
                     
                 }else{
-                    AppUtility?.stopLoader(view: self.view)
+                    
                     //  self.showToast(message: response?.value(forKey: "msg") as! String, font: .systemFont(ofSize: 12))
                 }
                 
@@ -821,7 +836,7 @@ class newProfileViewController: UIViewController,UICollectionViewDataSource,UICo
                 self.videosCV.reloadData()
                 
             }else{
-                AppUtility?.stopLoader(view: self.view)
+                
                 //                self.showToast(message: response?.value(forKey: "msg") as! String, font: .systemFont(ofSize: 12))
                 print("showVideosAgainstUserID API:",response?.value(forKey: "msg") as Any)
             }
@@ -952,20 +967,21 @@ class newProfileViewController: UIViewController,UICollectionViewDataSource,UICo
         
         print("block uid: \(uid) blockUid: \(otherUid)")
         ApiHandler.sharedInstance.blockUser(user_id: uid!, block_user_id: otherUid!) { (isSuccess, response) in
+            AppUtility?.stopLoader(view: self.view)
             if isSuccess{
                 if response?.value(forKey: "code") as! NSNumber == 200 {
-                    AppUtility?.stopLoader(view: self.view)
+                    
                     self.showToast(message: "Blocked", font: .systemFont(ofSize: 12))
                     self.navigationController?.popToRootViewController(animated: true)
                     
                 }else{
-                    AppUtility?.stopLoader(view: self.view)
+                    
                     //                    self.showToast(message: response?.value(forKey: "msg") as! String, font: .systemFont(ofSize: 12))
                     print("blockUser API:",response?.value(forKey: "msg") as! String)
                     self.navigationController?.popToRootViewController(animated: true)
                 }
             }
-            AppUtility?.stopLoader(view: self.view)
+            
         }
         
     }
@@ -1000,18 +1016,19 @@ class newProfileViewController: UIViewController,UICollectionViewDataSource,UICo
         print("report user id: \(otherUserID) userID: \(UserDefaults.standard.string(forKey: "userID")!)")
         
         ApiHandler.sharedInstance.reportUser(user_id: UserDefaults.standard.string(forKey: "userID")!, report_user_id: otherUserID, report_reason_id: "1", description: reportReason) { (isSuccess, response) in
+            AppUtility?.stopLoader(view: self.view)
             if isSuccess{
-                AppUtility?.stopLoader(view: self.view)
+                
                 if response?.value(forKey: "code") as! NSNumber == 200 {
                     self.showToast(message: "Report Under Review", font: .systemFont(ofSize: 12))
                 }else{
-                    AppUtility?.stopLoader(view: self.view)
+                    
                     //                    self.showToast(message: response?.value(forKey: "msg") as! String, font: .systemFont(ofSize: 12))
                     print("reportUser API:",response?.value(forKey: "msg") as Any)
                 }
             }else{
                 print("reportUser API:",response?.value(forKey: "msg") as Any)
-                AppUtility?.stopLoader(view: self.view)
+                
             }
         }
     }

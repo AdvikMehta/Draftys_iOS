@@ -57,13 +57,13 @@
 		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>&quot;MusicTok&quot; Would Like to Access the Camera. This lets you share,record videos and save video to your camera Roll.</string>
+	<string>"Moooby" Would Like to Access the Camera. This lets you share,record videos and save video to your camera Roll.</string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>&quot;MusicTok&quot; Would liike to Access the Microphone To record audio, allow us to access Microphone.</string>
+	<string>"Moooby" Would liike to Access the Microphone To record audio, allow us to access Microphone.</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>In order to update from your Camera Roll, MusicTok needs access to your photos and videos.</string>
+	<string>In order to update from your Camera Roll, Moooby needs access to your photos and videos.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>In order to update from your Camera Roll, MusicTok needs access to your photos and videos.</string>
+	<string>In order to update from your Camera Roll, Moooby needs access to your photos and videos.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Proxima Nova Black.otf</string>

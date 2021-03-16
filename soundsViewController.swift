@@ -16,6 +16,7 @@ class soundsViewController: UIViewController,UITableViewDataSource,UITableViewDe
     //    @IBOutlet weak var scrollViewOutlet: UIScrollView!
     @IBOutlet weak var soundsTblView: UITableView!
     @IBOutlet weak var favSoundsTblView: UITableView!
+    @IBOutlet weak var lblFetching: UILabel!
     
     @IBOutlet var tblheight: NSLayoutConstraint!
     @IBOutlet var favTblheight: NSLayoutConstraint!
@@ -383,7 +384,9 @@ class soundsViewController: UIViewController,UITableViewDataSource,UITableViewDe
         favSoundDataArr.removeAll()
         
         AppUtility?.startLoader(view: self.view)
+        self.lblFetching.isHidden = false
         ApiHandler.sharedInstance.showFavouriteSounds(user_id: UserDefaults.standard.string(forKey: "userID")!) { (isSuccess, response) in
+            self.lblFetching.isHidden = true
             if isSuccess{
                 if (response?.value(forKey: "code") as! NSNumber) == 200{
                     let msgDic = response?.value(forKey: "msg") as! NSArray
@@ -431,7 +434,9 @@ class soundsViewController: UIViewController,UITableViewDataSource,UITableViewDe
     func GetAllSounds(){
         soundsDataArr.removeAll()
         AppUtility?.startLoader(view: self.view)
+        self.lblFetching.isHidden = false
         ApiHandler.sharedInstance.showSounds(user_id: UserDefaults.standard.string(forKey: "userID")!, starting_point: startingPoint) { (isSuccess, response) in
+            self.lblFetching.isHidden = true
             if isSuccess{
                 if response?.value(forKey: "code") as! NSNumber == 200{
                     let soundMsg = response?.value(forKey: "msg") as! NSArray

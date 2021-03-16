@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5QF-VE-4zg">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -24,7 +22,7 @@
         <!--Share View Controller-->
         <scene sceneID="Pp7-gD-NAS">
             <objects>
-                <viewController storyboardIdentifier="shareVC" id="6Id-gs-XG2" customClass="shareViewController" customModule="MusicTok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="shareVC" id="6Id-gs-XG2" customClass="shareViewController" customModule="Moooby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jwI-Xo-Hnd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,7 +55,7 @@
                                                     <inset key="sectionInset" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="share1CVC" id="b2i-IV-Wfa" customClass="share1CollectionViewCell" customModule="MusicTok" customModuleProvider="target">
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="share1CVC" id="b2i-IV-Wfa" customClass="share1CollectionViewCell" customModule="Moooby" customModuleProvider="target">
                                                         <rect key="frame" x="10" y="5" width="50" height="80"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="53U-3Y-zZl">
@@ -120,7 +118,7 @@
                                                     <inset key="sectionInset" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="share2CVC" id="6VQ-pq-0yW" customClass="share2CollectionViewCell" customModule="MusicTok" customModuleProvider="target">
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="share2CVC" id="6VQ-pq-0yW" customClass="share2CollectionViewCell" customModule="Moooby" customModuleProvider="target">
                                                         <rect key="frame" x="10" y="5" width="50" height="80"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gUv-sx-poo">
@@ -236,7 +234,7 @@
         <!--Comments New View Controller-->
         <scene sceneID="qI5-Eh-ijG">
             <objects>
-                <viewController storyboardIdentifier="commentsNewVC" id="SVY-L4-GUa" customClass="commentsNewViewController" customModule="MusicTok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="commentsNewVC" id="SVY-L4-GUa" customClass="commentsNewViewController" customModule="Moooby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JYN-IV-CMM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -283,7 +281,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="552.5"/>
                                         <color key="backgroundColor" red="0.96079057459999995" green="0.95676058529999997" blue="0.96078544860000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="commentsNewTVC" rowHeight="57" id="o87-6R-NDU" customClass="commentsNewTableViewCell" customModule="MusicTok" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="commentsNewTVC" rowHeight="57" id="o87-6R-NDU" customClass="commentsNewTableViewCell" customModule="Moooby" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="414" height="57"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="o87-6R-NDU" id="XjL-QN-DKl">
@@ -457,7 +455,7 @@
         <!--Hashtags Video View Controller-->
         <scene sceneID="wlM-N1-bDI">
             <objects>
-                <viewController storyboardIdentifier="hashtagsVideoVC" id="5OS-6f-5A1" customClass="hashtagsVideoViewController" customModule="MusicTok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="hashtagsVideoVC" id="5OS-6f-5A1" customClass="hashtagsVideoViewController" customModule="Moooby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gYT-6h-ewD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -561,7 +559,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="searchVideosCVC" id="NYF-2B-66X" customClass="searchVideosCollectionViewCell" customModule="MusicTok" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="searchVideosCVC" id="NYF-2B-66X" customClass="searchVideosCollectionViewCell" customModule="Moooby" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="159" height="167"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="1yc-d6-ku7">
@@ -651,7 +649,7 @@
         <!--Privacy View Controller-->
         <scene sceneID="cdj-xu-6rh">
             <objects>
-                <viewController storyboardIdentifier="privacyVC" id="LFw-yh-5ik" customClass="privacyViewController" customModule="MusicTok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="privacyVC" id="LFw-yh-5ik" customClass="privacyViewController" customModule="Moooby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vZr-xf-HdH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -712,7 +710,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="c5U-yW-d4K">
                                 <rect key="frame" x="0.0" y="106" width="414" height="756"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="privacyTVC" rowHeight="80" id="IEc-GO-M3c" customClass="privacyTableViewCell" customModule="MusicTok" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="privacyTVC" rowHeight="80" id="IEc-GO-M3c" customClass="privacyTableViewCell" customModule="Moooby" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IEc-GO-M3c" id="lJG-B5-7nD">
@@ -794,7 +792,7 @@
         <!--Post View Controller-->
         <scene sceneID="82c-q6-BiR">
             <objects>
-                <viewController storyboardIdentifier="postVC" id="ebD-mT-8yN" customClass="postViewController" customModule="MusicTok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="postVC" id="ebD-mT-8yN" customClass="postViewController" customModule="Moooby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lps-eU-Iwd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="750"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -808,7 +806,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fi0-Vd-Xw4" userLabel="1view">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="202"/>
                                                 <subviews>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yUR-c6-YiB" customClass="AttrTextView" customModule="MusicTok" customModuleProvider="target">
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yUR-c6-YiB" customClass="AttrTextView" customModule="Moooby" customModuleProvider="target">
                                                         <rect key="frame" x="8" y="61" width="240" height="109"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <color key="textColor" systemColor="labelColor"/>
@@ -1240,7 +1238,7 @@
         <!--Preview Player View Controller-->
         <scene sceneID="hIM-ON-juq">
             <objects>
-                <viewController storyboardIdentifier="previewPlayerVC" id="Lt9-xr-phj" customClass="previewPlayerViewController" customModule="MusicTok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="previewPlayerVC" id="Lt9-xr-phj" customClass="previewPlayerViewController" customModule="Moooby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B9i-VL-IQk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1337,7 +1335,7 @@
         <!--Action Media View Controller-->
         <scene sceneID="TWp-g0-x7G">
             <objects>
-                <viewController storyboardIdentifier="actionMediaVC" wantsFullScreenLayout="YES" id="u8V-hB-1Sm" customClass="actionMediaViewController" customModule="MusicTok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="actionMediaVC" wantsFullScreenLayout="YES" id="u8V-hB-1Sm" customClass="actionMediaViewController" customModule="Moooby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rpn-65-9r5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1784,7 +1782,7 @@
         <!--Action View Controller-->
         <scene sceneID="wXl-6D-14n">
             <objects>
-                <viewController storyboardIdentifier="ActionViewController" wantsFullScreenLayout="YES" modalPresentationStyle="fullScreen" id="kXj-4n-g85" customClass="ActionViewController" customModule="MusicTok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ActionViewController" wantsFullScreenLayout="YES" modalPresentationStyle="fullScreen" id="kXj-4n-g85" customClass="ActionViewController" customModule="Moooby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ybW-ya-F2a">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1820,7 +1818,7 @@
         <!--Home Feed View Controller-->
         <scene sceneID="eZ2-3r-ncf">
             <objects>
-                <viewController storyboardIdentifier="homeFeedVC" id="3H2-0z-1id" customClass="homeFeedViewController" customModule="MusicTok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homeFeedVC" id="3H2-0z-1id" customClass="homeFeedViewController" customModule="Moooby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kd5-1P-ssB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1835,7 +1833,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="homeFeedCVC" id="4Yb-ZD-FpI" customClass="homeFeedCollectionViewCell" customModule="MusicTok" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="homeFeedCVC" id="4Yb-ZD-FpI" customClass="homeFeedCollectionViewCell" customModule="Moooby" customModuleProvider="target">
                                         <rect key="frame" x="19.5" y="0.0" width="375" height="629"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="QTJ-kg-G3Y">
@@ -1898,8 +1896,8 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="desc" translatesAutoresizingMaskIntoConstraints="NO" id="oi2-SQ-gj2" customClass="AttrTextView" customModule="MusicTok" customModuleProvider="target">
-                                                    <rect key="frame" x="10" y="558" width="150" height="16"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="desc" translatesAutoresizingMaskIntoConstraints="NO" id="oi2-SQ-gj2" customClass="AttrTextView" customModule="Moooby" customModuleProvider="target">
+                                                    <rect key="frame" x="10" y="558.5" width="150" height="15.5"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="150" id="jSI-dg-o2D"/>
@@ -1909,7 +1907,7 @@
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                                 <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R2S-gB-ElZ">
-                                                    <rect key="frame" x="10" y="558" width="150" height="16"/>
+                                                    <rect key="frame" x="10" y="558.5" width="150" height="15.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="150" id="Pe9-5M-euD"/>
                                                     </constraints>
@@ -1925,7 +1923,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wHf-mV-5Gw" userLabel="btnFollow">
-                                                    <rect key="frame" x="156" y="526" width="50" height="15"/>
+                                                    <rect key="frame" x="157.5" y="526.5" width="50" height="15"/>
                                                     <color key="backgroundColor" red="0.93387877939999997" green="0.64144575599999998" blue="0.2272979617" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="Pa1-XX-Prw"/>
@@ -1942,7 +1940,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hamza Smith" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="axV-gQ-wUa">
-                                                    <rect key="frame" x="50" y="519" width="101" height="29"/>
+                                                    <rect key="frame" x="50" y="519.5" width="102.5" height="29"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="29" id="IwM-rT-lYF"/>
                                                     </constraints>
@@ -1951,7 +1949,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uwV-Uf-orm" userLabel="userImgView">
-                                                    <rect key="frame" x="10" y="516" width="35" height="35"/>
+                                                    <rect key="frame" x="10" y="516.5" width="35" height="35"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgUser" translatesAutoresizingMaskIntoConstraints="NO" id="d1X-zZ-AvU">
                                                             <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
@@ -2206,7 +2204,7 @@
         <!--Splash View Controller-->
         <scene sceneID="InS-9N-tRU">
             <objects>
-                <viewController storyboardIdentifier="splashVC" id="zu4-N1-YTg" customClass="splashViewController" customModule="MusicTok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="splashVC" id="zu4-N1-YTg" customClass="splashViewController" customModule="Moooby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R4l-Ux-T8C">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2233,7 +2231,7 @@
         <!--Tabbar View Controller-->
         <scene sceneID="dwZ-bG-L77">
             <objects>
-                <tabBarController storyboardIdentifier="TabbarViewController" wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="mMX-E0-l7Q" customClass="TabbarViewController" customModule="MusicTok" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabbarViewController" wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="mMX-E0-l7Q" customClass="TabbarViewController" customModule="Moooby" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="B8I-dt-UCE">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -2255,7 +2253,7 @@
         <!--Notifications-->
         <scene sceneID="fgW-cV-qYh">
             <objects>
-                <viewController storyboardIdentifier="newNotificationsVC" wantsFullScreenLayout="YES" modalPresentationStyle="fullScreen" id="YAm-hz-lq7" customClass="newNotificationsViewController" customModule="MusicTok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="newNotificationsVC" wantsFullScreenLayout="YES" modalPresentationStyle="fullScreen" id="YAm-hz-lq7" customClass="newNotificationsViewController" customModule="Moooby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yfW-IJ-A1Q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2268,7 +2266,7 @@
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell01" rowHeight="80" id="BIb-CL-2xB" customClass="FollowTableViewCell" customModule="MusicTok" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell01" rowHeight="80" id="BIb-CL-2xB" customClass="FollowTableViewCell" customModule="Moooby" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="414" height="80"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BIb-CL-2xB" id="brW-cY-R0F">
@@ -2503,6 +2501,7 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="w1A-Dd-aQB">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
@@ -2518,7 +2517,7 @@
         <!--New Login View Controller-->
         <scene sceneID="LBg-1V-nNp">
             <objects>
-                <viewController storyboardIdentifier="newLoginVC" id="lyR-j9-2ZC" customClass="newLoginViewController" customModule="MusicTok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="newLoginVC" id="lyR-j9-2ZC" customClass="newLoginViewController" customModule="Moooby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xAR-cl-UPM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2526,8 +2525,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mqq-lX-Hzo">
                                 <rect key="frame" x="0.0" y="452" width="414" height="460"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log in to MusicTok" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dwv-3T-mWm">
-                                        <rect key="frame" x="128" y="18" width="158" height="21.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log in to Moooby" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dwv-3T-mWm">
+                                        <rect key="frame" x="134" y="18" width="146.5" height="21.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -2891,7 +2890,7 @@
         <!--dob-->
         <scene sceneID="c9U-99-381">
             <objects>
-                <viewController storyboardIdentifier="dobVC" title="dob" id="Ive-dE-Fs6" customClass="dobViewController" customModule="MusicTok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="dobVC" title="dob" id="Ive-dE-Fs6" customClass="dobViewController" customModule="Moooby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Ny-8B-WLf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3036,6 +3035,7 @@
                     <tabBarItem key="tabBarItem" title="Item" id="SJu-Uq-0Jm"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mUd-Bi-UOX">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -3047,7 +3047,7 @@
         <!--Otp-->
         <scene sceneID="w99-0o-f1l">
             <objects>
-                <viewController storyboardIdentifier="otpVC" title="Otp" id="GyE-q1-JPX" customClass="otpViewController" customModule="MusicTok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="otpVC" title="Otp" id="GyE-q1-JPX" customClass="otpViewController" customModule="Moooby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oeg-29-AZB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3073,7 +3073,7 @@
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SOw-lY-xAS" customClass="OneTimeCodeTextField" customModule="MusicTok" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SOw-lY-xAS" customClass="OneTimeCodeTextField" customModule="Moooby" customModuleProvider="target">
                                         <rect key="frame" x="18" y="83" width="324" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="2BB-1L-pjp"/>
@@ -3209,7 +3209,7 @@
         <!--Request Verification-->
         <scene sceneID="USE-Pd-Kaf">
             <objects>
-                <viewController storyboardIdentifier="requestVerificationVC" title="Request Verification" id="WzK-9s-cU7" customClass="requestVerificationViewController" customModule="MusicTok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="requestVerificationVC" title="Request Verification" id="WzK-9s-cU7" customClass="requestVerificationViewController" customModule="Moooby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wIb-Zw-cL0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3258,8 +3258,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v50-XL-gQh" userLabel="Content View">
                                 <rect key="frame" x="0.0" y="109" width="414" height="300"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apply for MusicTok Verification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="o3Q-hl-evY">
-                                        <rect key="frame" x="15" y="8" width="230" height="16"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apply for Moooby Verification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="o3Q-hl-evY">
+                                        <rect key="frame" x="15" y="8" width="220.5" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="GbJ-8p-zfO"/>
                                         </constraints>
@@ -3338,8 +3338,8 @@
                                     <constraint firstItem="dEU-F0-gpN" firstAttribute="leading" secondItem="hws-AG-qE2" secondAttribute="leading" id="zyM-we-14R"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apply for MusicTok Verififcation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rKG-fb-w6F">
-                                <rect key="frame" x="15" y="419" width="210" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apply for Moooby Verififcation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rKG-fb-w6F">
+                                <rect key="frame" x="15" y="419" width="201" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="ryB-kT-WT7"/>
                                 </constraints>
@@ -3420,18 +3420,18 @@
         <!--Phone Login-->
         <scene sceneID="aQE-cb-CoD">
             <objects>
-                <viewController storyboardIdentifier="phoneNoVC" title="Phone Login" id="8Mg-Zm-zkh" customClass="phoneNoViewController" customModule="MusicTok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="phoneNoVC" title="Phone Login" id="8Mg-Zm-zkh" customClass="phoneNoViewController" customModule="Moooby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S9U-oj-W2B">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z5u-mN-PkA" userLabel="phoneNoView">
-                                <rect key="frame" x="20" y="162" width="84.5" height="133.5"/>
+                                <rect key="frame" x="20" y="162" width="372.5" height="133.5"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I2D-5l-Wzd" customClass="CustomView" customModule="MusicTok" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="20" width="84.5" height="50"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I2D-5l-Wzd" customClass="CustomView" customModule="Moooby" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="20" width="372.5" height="50"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dek-49-pB7" customClass="CustomButton" customModule="MusicTok" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dek-49-pB7" customClass="CustomButton" customModule="Moooby" customModuleProvider="target">
                                                 <rect key="frame" x="10" y="13" width="77" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="Iu9-6I-lRc"/>
@@ -3459,7 +3459,7 @@
                                                 <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="tel"/>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H4I-ux-Kdg">
-                                                <rect key="frame" x="0.0" y="49.5" width="84.5" height="0.5"/>
+                                                <rect key="frame" x="0.0" y="49.5" width="372.5" height="0.5"/>
                                                 <color key="backgroundColor" red="0.70997995140000003" green="0.71735376120000005" blue="0.729414165" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="0.5" id="o5x-n3-5Ie"/>
@@ -3499,7 +3499,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8bZ-FT-Qez" userLabel="termsBtn">
-                                <rect key="frame" x="-121" y="249.5" width="100" height="30"/>
+                                <rect key="frame" x="109.5" y="249.5" width="100" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="YbZ-9v-yuD"/>
                                     <constraint firstAttribute="height" constant="30" id="qf6-Jt-jPS"/>
@@ -3509,7 +3509,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ztJ-eR-gXf" userLabel="privacyBtn">
-                                <rect key="frame" x="80.5" y="249.5" width="100" height="30"/>
+                                <rect key="frame" x="210" y="249.5" width="100" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="SmU-Fe-nSc"/>
                                     <constraint firstAttribute="height" constant="30" id="ibD-WW-x5h"/>
@@ -3519,7 +3519,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAe-y3-lPp" userLabel="By signing up , you confirm you agree to our Terms of Use and Privacy Policy">
-                                <rect key="frame" x="-75.5" y="240.5" width="276" height="39"/>
+                                <rect key="frame" x="68.5" y="240.5" width="276" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="276" id="F6I-7k-Gl3"/>
                                     <constraint firstAttribute="height" constant="39" id="yjA-jr-huL"/>
@@ -3566,7 +3566,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Q5-8K-ZDp" userLabel="btnDone">
-                                <rect key="frame" x="20" y="295.5" width="84.5" height="40"/>
+                                <rect key="frame" x="20" y="295.5" width="372.5" height="40"/>
                                 <color key="backgroundColor" red="0.93387877939999997" green="0.64144575599999998" blue="0.2272979617" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="NWe-vs-dH6"/>
@@ -3585,10 +3585,10 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="LcY-DR-syv">
-                                <rect key="frame" x="0.0" y="112" width="94" height="40"/>
+                                <rect key="frame" x="0.0" y="112" width="414" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BYt-SS-0R3">
-                                        <rect key="frame" x="0.0" y="5" width="47" height="30"/>
+                                        <rect key="frame" x="0.0" y="5" width="207" height="30"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Phone">
                                             <color key="titleColor" red="0.93387877939999997" green="0.64144575599999998" blue="0.2272979617" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -3598,7 +3598,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJc-UV-aBO">
-                                        <rect key="frame" x="47" y="5" width="47" height="30"/>
+                                        <rect key="frame" x="207" y="5" width="207" height="30"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Email">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -3613,34 +3613,34 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Sl-UK-L4u" userLabel="phoneBaseLine">
-                                <rect key="frame" x="0.0" y="157" width="47" height="2"/>
+                                <rect key="frame" x="0.0" y="157" width="207" height="2"/>
                                 <color key="backgroundColor" red="0.93387877939999997" green="0.64144575599999998" blue="0.2272979617" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="KTj-Uw-0kf"/>
                                 </constraints>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="doi-rg-K1A" userLabel="emailBaseLine">
-                                <rect key="frame" x="47" y="157" width="47" height="2"/>
+                                <rect key="frame" x="207" y="157" width="207" height="2"/>
                                 <color key="backgroundColor" red="0.93387877939999997" green="0.64144575599999998" blue="0.2272979617" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="O3U-6y-1t2"/>
                                 </constraints>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bK0-gR-6kI" userLabel="loginEmailContainerVIEW">
-                                <rect key="frame" x="0.0" y="162" width="94" height="737.5"/>
+                                <rect key="frame" x="0.0" y="162" width="414" height="737.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <segue destination="Cae-FJ-ySE" kind="embed" id="R8u-tK-9pH"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hqe-XW-DG9" userLabel="signupEmailContainerView">
-                                <rect key="frame" x="0.0" y="165.5" width="94" height="730.5"/>
+                                <rect key="frame" x="0.0" y="165.5" width="414" height="730.5"/>
                                 <connections>
                                     <segue destination="RFp-L5-hdy" kind="embed" id="Vpq-tx-RlP"/>
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9X9-QK-Ybn" userLabel="topView">
-                                <rect key="frame" x="0.0" y="-12" width="94" height="116"/>
+                                <rect key="frame" x="0.0" y="-12" width="414" height="116"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sje-qv-gIp">
                                         <rect key="frame" x="10" y="74.5" width="25" height="25"/>
@@ -3654,7 +3654,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ES-xt-apz">
-                                        <rect key="frame" x="26.5" y="76.5" width="41.5" height="21"/>
+                                        <rect key="frame" x="186.5" y="76.5" width="41.5" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="1WL-Cb-Ap5"/>
                                         </constraints>
@@ -3737,16 +3737,16 @@
         <!--Email  Login-->
         <scene sceneID="EcP-QR-7pu">
             <objects>
-                <viewController storyboardIdentifier="emailLoginVC" title="Email  Login" id="Cae-FJ-ySE" customClass="emailLoginViewController" customModule="MusicTok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="emailLoginVC" title="Email  Login" id="Cae-FJ-ySE" customClass="emailLoginViewController" customModule="Moooby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d6v-qP-8al">
-                        <rect key="frame" x="0.0" y="0.0" width="94" height="737.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="737.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BoT-bW-n3E">
-                                <rect key="frame" x="4.5" y="0.0" width="85" height="165"/>
+                                <rect key="frame" x="20.5" y="0.0" width="373" height="165"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EiP-JG-hoN" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                        <rect key="frame" x="0.0" y="20" width="85" height="39"/>
+                                        <rect key="frame" x="0.0" y="20" width="373" height="39"/>
                                         <color key="tintColor" red="0.93387877939999997" green="0.64144575599999998" blue="0.2272979617" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="39" id="iZq-s4-Bxv"/>
@@ -3770,7 +3770,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F2W-H9-hBx" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                        <rect key="frame" x="0.0" y="89" width="85" height="18.5"/>
+                                        <rect key="frame" x="0.0" y="89" width="373" height="39"/>
                                         <color key="tintColor" red="0.93387877939999997" green="0.64144575599999998" blue="0.2272979617" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -3806,7 +3806,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZJ-rv-U5S" userLabel="btnDone">
-                                <rect key="frame" x="4.5" y="170" width="85" height="40"/>
+                                <rect key="frame" x="20.5" y="170" width="373" height="40"/>
                                 <color key="backgroundColor" red="0.93387877939999997" green="0.64144575599999998" blue="0.2272979617" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="uMR-MQ-qyX"/>
@@ -3849,7 +3849,7 @@
         <!--username-->
         <scene sceneID="Cak-Wq-dY1">
             <objects>
-                <viewController storyboardIdentifier="nameVC" title="username" id="8N9-9m-Laj" customClass="nameViewController" customModule="MusicTok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="nameVC" title="username" id="8N9-9m-Laj" customClass="nameViewController" customModule="Moooby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AJP-or-aHm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3992,7 +3992,7 @@
         <!--Privacy-->
         <scene sceneID="8j7-5f-kiZ">
             <objects>
-                <viewController storyboardIdentifier="termsCondVC" title="Privacy" id="E4C-ze-dwY" customClass="termsCondViewController" customModule="MusicTok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="termsCondVC" title="Privacy" id="E4C-ze-dwY" customClass="termsCondViewController" customModule="Moooby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oVa-lc-wRc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4077,6 +4077,7 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PBw-Ng-eoS">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -4091,16 +4092,16 @@
         <!--Email Signuo-->
         <scene sceneID="16c-By-vpf">
             <objects>
-                <viewController storyboardIdentifier="emailSignupVC" title="Email Signuo" id="RFp-L5-hdy" customClass="emailSignupViewController" customModule="MusicTok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="emailSignupVC" title="Email Signuo" id="RFp-L5-hdy" customClass="emailSignupViewController" customModule="Moooby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wfc-cE-j3S">
-                        <rect key="frame" x="0.0" y="0.0" width="94" height="730.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="730"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mba-TN-77G">
-                                <rect key="frame" x="20" y="0.0" width="54" height="94"/>
+                                <rect key="frame" x="20" y="0.0" width="374" height="94"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e3c-Cd-vYD" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                        <rect key="frame" x="0.0" y="20" width="54" height="18.5"/>
+                                        <rect key="frame" x="0.0" y="20" width="374" height="39"/>
                                         <color key="tintColor" red="0.93387877939999997" green="0.64144575599999998" blue="0.2272979617" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -4129,7 +4130,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLE-dg-P7d" userLabel="btnDone">
-                                <rect key="frame" x="20" y="138" width="54" height="40"/>
+                                <rect key="frame" x="20" y="138" width="374" height="40"/>
                                 <color key="backgroundColor" red="0.93387877939999997" green="0.64144575599999998" blue="0.2272979617" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Qez-Z5-LBI"/>
@@ -4149,7 +4150,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zQz-U6-bqG" userLabel="termsBtn">
-                                <rect key="frame" x="-91" y="103" width="100" height="30"/>
+                                <rect key="frame" x="69" y="103" width="100" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="Fcy-p1-zOh"/>
                                     <constraint firstAttribute="height" constant="30" id="KRb-lO-BhV"/>
@@ -4159,7 +4160,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlC-sW-oDZ" userLabel="privacyBtn">
-                                <rect key="frame" x="44.5" y="103" width="100" height="30"/>
+                                <rect key="frame" x="169" y="103" width="100" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="EaA-pd-6lN"/>
                                     <constraint firstAttribute="width" constant="100" id="bwv-nd-T6q"/>
@@ -4169,7 +4170,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gC0-L7-3MB" userLabel="By signing up , you confirm you agree to our Terms of Use and Privacy Policy">
-                                <rect key="frame" x="-91" y="94" width="276" height="39"/>
+                                <rect key="frame" x="69" y="94" width="276" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="276" id="DpR-8H-n9L"/>
                                     <constraint firstAttribute="height" constant="39" id="rCD-yi-ndp"/>
@@ -4246,7 +4247,7 @@
         <!--Password-->
         <scene sceneID="tnN-tl-kTK">
             <objects>
-                <viewController storyboardIdentifier="passwordVC" title="Password" id="Jda-qC-s1m" customClass="passwordViewController" customModule="MusicTok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="passwordVC" title="Password" id="Jda-qC-s1m" customClass="passwordViewController" customModule="Moooby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U1k-VZ-LqW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4395,6 +4396,7 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Nah-q9-LpU">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -4409,7 +4411,7 @@
         <!--New Discover View Controller-->
         <scene sceneID="qHS-9a-qAu">
             <objects>
-                <viewController storyboardIdentifier="DiscoverVC" id="sph-Gt-t4p" customClass="newDiscoverViewController" customModule="MusicTok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DiscoverVC" id="sph-Gt-t4p" customClass="newDiscoverViewController" customModule="Moooby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cYs-vy-G1X">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4476,14 +4478,14 @@
                                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         </collectionViewFlowLayout>
                                                         <cells>
-                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="newDiscoverBannerCVC" id="yoo-0e-OBj" customClass="newDiscoverBannerCollectionViewCell" customModule="MusicTok" customModuleProvider="target">
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="newDiscoverBannerCVC" id="yoo-0e-OBj" customClass="newDiscoverBannerCollectionViewCell" customModule="Moooby" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="-1.5" width="375" height="193"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="7xL-zu-NUp">
                                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="193"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <subviews>
-                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="musicNight_1" translatesAutoresizingMaskIntoConstraints="NO" id="BB0-tq-5Ow" customClass="CustomImageView" customModule="MusicTok" customModuleProvider="target">
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="musicNight_1" translatesAutoresizingMaskIntoConstraints="NO" id="BB0-tq-5Ow" customClass="CustomImageView" customModule="Moooby" customModuleProvider="target">
                                                                             <rect key="frame" x="0.0" y="0.0" width="375" height="184"/>
                                                                             <userDefinedRuntimeAttributes>
                                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornarRadius">
@@ -4547,14 +4549,14 @@
                                                     <constraint firstAttribute="height" constant="369" id="MzC-q7-kZC"/>
                                                 </constraints>
                                                 <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="newDiscoverTVC" rowHeight="214" id="6cJ-o0-3Fp" customClass="newDiscoverTableViewCell" customModule="MusicTok" customModuleProvider="target">
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="newDiscoverTVC" rowHeight="214" id="6cJ-o0-3Fp" customClass="newDiscoverTableViewCell" customModule="Moooby" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="28" width="414" height="214"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6cJ-o0-3Fp" id="kFY-hA-Dhz">
                                                             <rect key="frame" x="0.0" y="0.0" width="414" height="214"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hashIcon" translatesAutoresizingMaskIntoConstraints="NO" id="78c-0Q-L9T" customClass="CustomImageView" customModule="MusicTok" customModuleProvider="target">
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hashIcon" translatesAutoresizingMaskIntoConstraints="NO" id="78c-0Q-L9T" customClass="CustomImageView" customModule="Moooby" customModuleProvider="target">
                                                                     <rect key="frame" x="10" y="0.0" width="40" height="40"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="40" id="izE-ok-i4e"/>
@@ -4597,7 +4599,7 @@
                                                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                                     </collectionViewFlowLayout>
                                                                     <cells>
-                                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="newDiscoverCVC" id="CGO-TL-6TE" customClass="newDiscoverCollectionViewCell" customModule="MusicTok" customModuleProvider="target">
+                                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="newDiscoverCVC" id="CGO-TL-6TE" customClass="newDiscoverCollectionViewCell" customModule="Moooby" customModuleProvider="target">
                                                                             <rect key="frame" x="0.0" y="0.0" width="153" height="158"/>
                                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="DYp-O2-sL3">
@@ -4714,6 +4716,7 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bYl-6q-T15">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -4728,7 +4731,7 @@
         <!--Privacy And Setting View Controller-->
         <scene sceneID="D12-Ko-VN1">
             <objects>
-                <viewController storyboardIdentifier="privacyAndSettingVC" id="Yqy-fw-fZ6" customClass="privacyAndSettingViewController" customModule="MusicTok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="privacyAndSettingVC" id="Yqy-fw-fZ6" customClass="privacyAndSettingViewController" customModule="Moooby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1SD-eW-eW0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4736,7 +4739,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0YW-Mv-0lO">
                                 <rect key="frame" x="0.0" y="106" width="414" height="756"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="privacyAndSettingTVC" rowHeight="80" id="0hr-N1-TWv" customClass="privacyAndSettingTableViewCell" customModule="MusicTok" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="privacyAndSettingTVC" rowHeight="80" id="0hr-N1-TWv" customClass="privacyAndSettingTableViewCell" customModule="Moooby" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0hr-N1-TWv" id="MMN-Bh-udD">
@@ -4848,7 +4851,7 @@
         <!--Request Verification-->
         <scene sceneID="N5H-tM-bTE">
             <objects>
-                <viewController storyboardIdentifier="pushNotiSettingsVC" title="Request Verification" id="Xuc-dA-RXS" customClass="pushNotiSettingsViewController" customModule="MusicTok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="pushNotiSettingsVC" title="Request Verification" id="Xuc-dA-RXS" customClass="pushNotiSettingsViewController" customModule="Moooby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="He2-3F-40l">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -5223,7 +5226,7 @@
         <!--New Profile View Controller-->
         <scene sceneID="aML-Tw-amo">
             <objects>
-                <viewController storyboardIdentifier="newProfileVC" id="4Vg-f3-luC" customClass="newProfileViewController" customModule="MusicTok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="newProfileVC" id="4Vg-f3-luC" customClass="newProfileViewController" customModule="Moooby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="orM-Qk-h64">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="917"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -5267,7 +5270,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A6B-Hu-poG">
                                                         <rect key="frame" x="0.0" y="58" width="375" height="233"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="NuG-Va-e4G" customClass="CustomImageView" customModule="MusicTok" customModuleProvider="target">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noUserImg" translatesAutoresizingMaskIntoConstraints="NO" id="NuG-Va-e4G" customClass="CustomImageView" customModule="Moooby" customModuleProvider="target">
                                                                 <rect key="frame" x="137.5" y="-50" width="100" height="100"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="100" id="gVe-1P-exj"/>
@@ -5285,7 +5288,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </imageView>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gIi-Kh-0ib" customClass="CustomButton" customModule="MusicTok" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gIi-Kh-0ib" customClass="CustomButton" customModule="Moooby" customModuleProvider="target">
                                                                 <rect key="frame" x="172.5" y="30" width="30" height="30"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
@@ -5305,8 +5308,8 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </button>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@noah001002" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wAd-73-vAm">
-                                                                <rect key="frame" x="132" y="68" width="111" height="19.5"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wAd-73-vAm">
+                                                                <rect key="frame" x="173" y="68" width="29.5" height="19.5"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -5324,7 +5327,7 @@
                                                                     <inset key="sectionInset" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                                 </collectionViewFlowLayout>
                                                                 <cells>
-                                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="newProfileItemsCVC" id="97d-Xg-szK" customClass="newProfileItemsCollectionViewCell" customModule="MusicTok" customModuleProvider="target">
+                                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="newProfileItemsCVC" id="97d-Xg-szK" customClass="newProfileItemsCollectionViewCell" customModule="Moooby" customModuleProvider="target">
                                                                         <rect key="frame" x="5" y="12" width="120" height="50"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="U0a-6t-5K8">
@@ -5436,7 +5439,7 @@
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="newProfileItemsCVC" id="pyf-PK-v7J" customClass="newProfileItemsCollectionViewCell" customModule="MusicTok" customModuleProvider="target">
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="newProfileItemsCVC" id="pyf-PK-v7J" customClass="newProfileItemsCollectionViewCell" customModule="Moooby" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="-0.5" width="51" height="43"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="pUp-SW-RBG">
@@ -5491,7 +5494,7 @@
                                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         </collectionViewFlowLayout>
                                                         <cells>
-                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="newProfileItemsCVC" id="gLE-tO-BNl" customClass="newProfileItemsCollectionViewCell" customModule="MusicTok" customModuleProvider="target">
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="newProfileItemsCVC" id="gLE-tO-BNl" customClass="newProfileItemsCollectionViewCell" customModule="Moooby" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="180" height="200"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="6PV-mj-e9h">
@@ -5612,8 +5615,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IaX-hy-1kz" userLabel="topView">
                                 <rect key="frame" x="0.0" y="-12" width="375" height="116"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y0B-wa-BFC">
-                                        <rect key="frame" x="166.5" y="76.5" width="44" height="19"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fetching..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y0B-wa-BFC">
+                                        <rect key="frame" x="150" y="76.5" width="77.5" height="19"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -5712,7 +5715,7 @@
         <!--Discover Search View Controller-->
         <scene sceneID="oFE-M3-6zQ">
             <objects>
-                <viewController storyboardIdentifier="discoverSearchVC" id="bL8-X4-bQ3" customClass="discoverSearchViewController" customModule="MusicTok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="discoverSearchVC" id="bL8-X4-bQ3" customClass="discoverSearchViewController" customModule="Moooby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vlq-Z8-q0a">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -5758,7 +5761,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="objectsCVC" id="xVb-q5-GxL" customClass="objectsCollectionViewCell" customModule="MusicTok" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="objectsCVC" id="xVb-q5-GxL" customClass="objectsCollectionViewCell" customModule="Moooby" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="-0.5" width="90" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bPX-cu-1OJ">
@@ -5809,7 +5812,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="723"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="searchSoundTVC" rowHeight="80" id="jQt-BS-Ir1" customClass="searchSoundTableViewCell" customModule="MusicTok" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="searchSoundTVC" rowHeight="80" id="jQt-BS-Ir1" customClass="searchSoundTableViewCell" customModule="Moooby" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="414" height="80"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jQt-BS-Ir1" id="bnE-O1-n8r">
@@ -5957,7 +5960,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="723"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="searchHashtagsTVC" rowHeight="50" id="jic-97-3pS" customClass="searchHashtagsTableViewCell" customModule="MusicTok" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="searchHashtagsTVC" rowHeight="50" id="jic-97-3pS" customClass="searchHashtagsTableViewCell" customModule="Moooby" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="414" height="50"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jic-97-3pS" id="DcN-0N-6Mq">
@@ -6076,7 +6079,7 @@
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="searchVideosCVC" id="mEn-OM-uEp" customClass="searchVideosCollectionViewCell" customModule="MusicTok" customModuleProvider="target">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="searchVideosCVC" id="mEn-OM-uEp" customClass="searchVideosCollectionViewCell" customModule="Moooby" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="187" height="187"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="e84-Ic-Qb5">
@@ -6219,7 +6222,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="723"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="searchUsersTVC" rowHeight="90" id="Sdm-tZ-y9W" customClass="searchUsersTableViewCell" customModule="MusicTok" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="searchUsersTVC" rowHeight="90" id="Sdm-tZ-y9W" customClass="searchUsersTableViewCell" customModule="Moooby" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="414" height="90"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Sdm-tZ-y9W" id="klK-5p-vbM">
@@ -6378,7 +6381,7 @@
         <!--Report View Controller-->
         <scene sceneID="5GP-bH-xuk">
             <objects>
-                <viewController storyboardIdentifier="reportVC" id="2of-TY-Rsz" customClass="reportViewController" customModule="MusicTok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="reportVC" id="2of-TY-Rsz" customClass="reportViewController" customModule="Moooby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d0b-60-Ehf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -6435,7 +6438,7 @@
                                 <rect key="frame" x="0.0" y="141" width="414" height="721"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="reportTVC" rowHeight="49" id="qxI-Xd-fCT" customClass="reportTableViewCell" customModule="MusicTok" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="reportTVC" rowHeight="49" id="qxI-Xd-fCT" customClass="reportTableViewCell" customModule="Moooby" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="49"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qxI-Xd-fCT" id="ybE-Op-C74">
@@ -6490,16 +6493,16 @@
         <!--Report Detail View Controller-->
         <scene sceneID="nsP-7i-Gzv">
             <objects>
-                <viewController storyboardIdentifier="reportDetailVC" id="g2a-c6-4pO" customClass="reportDetailViewController" customModule="MusicTok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="reportDetailVC" id="g2a-c6-4pO" customClass="reportDetailViewController" customModule="Moooby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" ambiguous="YES" id="n8r-HP-wxd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vxz-qS-63L" userLabel="topView">
-                                <rect key="frame" x="0.0" y="-12" width="375" height="116"/>
+                                <rect key="frame" x="0.0" y="-12" width="414" height="116"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Report" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="maL-NU-DhD" userLabel="reportLabel">
-                                        <rect key="frame" x="161.5" y="77" width="52" height="20"/>
+                                        <rect key="frame" x="181" y="77" width="52" height="20"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -6534,7 +6537,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GiN-kG-R1k" userLabel="reportView">
-                                <rect key="frame" x="0.0" y="105" width="375" height="49"/>
+                                <rect key="frame" x="0.0" y="105" width="414" height="49"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Report:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="czv-9G-zLV" userLabel="reportLabel">
                                         <rect key="frame" x="10" y="14" width="57" height="20"/>
@@ -6567,7 +6570,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H1I-TF-j1b" userLabel="tfView">
-                                <rect key="frame" x="0.0" y="155" width="375" height="128"/>
+                                <rect key="frame" x="0.0" y="155" width="414" height="128"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Report Description(Optional)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2Z-DW-zgy">
                                         <rect key="frame" x="10" y="20" width="241" height="21"/>
@@ -6600,7 +6603,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKr-Ab-4mt">
-                                <rect key="frame" x="62.5" y="313" width="250" height="45"/>
+                                <rect key="frame" x="82" y="313" width="250" height="45"/>
                                 <color key="backgroundColor" red="0.95686274510000002" green="0.54901960780000003" blue="0.019607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="adU-w2-Rh9"/>
@@ -6646,7 +6649,7 @@
         <!--Country Code View Controller-->
         <scene sceneID="trl-J4-TWN">
             <objects>
-                <viewController storyboardIdentifier="countryCodeVC" id="D6d-WA-uof" customClass="countryCodeViewController" customModule="MusicTok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="countryCodeVC" id="D6d-WA-uof" customClass="countryCodeViewController" customModule="Moooby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uWM-vy-iJS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -6655,7 +6658,7 @@
                                 <rect key="frame" x="0.0" y="104" width="414" height="758"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="countryCodeTVC" rowHeight="78" id="h4J-3H-5f4" customClass="countryCodeTableViewCell" customModule="MusicTok" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="countryCodeTVC" rowHeight="78" id="h4J-3H-5f4" customClass="countryCodeTableViewCell" customModule="Moooby" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="78"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="h4J-3H-5f4" id="uLk-Ha-ZYg">
@@ -6779,7 +6782,7 @@
         <!--Conversation View Controller-->
         <scene sceneID="9tu-yU-BTY">
             <objects>
-                <viewController storyboardIdentifier="conversationVC" id="t5l-Rt-TGg" customClass="ConversationViewController" customModule="MusicTok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="conversationVC" id="t5l-Rt-TGg" customClass="ConversationViewController" customModule="Moooby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xgR-TR-dWv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -6788,7 +6791,7 @@
                                 <rect key="frame" x="0.0" y="104" width="414" height="758"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="userChatCell" rowHeight="80" id="OFb-hL-OaQ" customClass="ChatTableViewCell" customModule="MusicTok" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="userChatCell" rowHeight="80" id="OFb-hL-OaQ" customClass="ChatTableViewCell" customModule="Moooby" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OFb-hL-OaQ" id="mUA-mj-BDt">
@@ -6992,7 +6995,7 @@
         <!--New Chat View Controller-->
         <scene sceneID="TAY-ic-RXL">
             <objects>
-                <viewController storyboardIdentifier="newChatVC" id="2kS-0g-ytX" customClass="newChatViewController" customModule="MusicTok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="newChatVC" id="2kS-0g-ytX" customClass="newChatViewController" customModule="Moooby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ORU-yI-9ep">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -7001,7 +7004,7 @@
                                 <rect key="frame" x="0.0" y="104" width="414" height="707.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="chatCell1" id="JG6-BH-l1F" customClass="ChatTableViewCell" customModule="MusicTok" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="chatCell1" id="JG6-BH-l1F" customClass="ChatTableViewCell" customModule="Moooby" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="102.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JG6-BH-l1F" id="Xvg-4e-6hO">
@@ -7060,7 +7063,7 @@
                                             <outlet property="lblMessage" destination="eZl-QO-ymf" id="zkl-0J-IoK"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="chatCell2" id="Ngf-Ef-V7m" customClass="ChatTableViewCell" customModule="MusicTok" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="chatCell2" id="Ngf-Ef-V7m" customClass="ChatTableViewCell" customModule="Moooby" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="130.5" width="414" height="190"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ngf-Ef-V7m" id="XDw-fE-LJP">
@@ -7096,7 +7099,7 @@
                                             <outlet property="imgMessage" destination="pT4-A3-snV" id="WAF-Vh-tfQ"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="chatCell3" id="hDB-3z-vfL" customClass="ChatTableViewCell" customModule="MusicTok" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="chatCell3" id="hDB-3z-vfL" customClass="ChatTableViewCell" customModule="Moooby" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="320.5" width="414" height="107"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hDB-3z-vfL" id="QCd-hY-hLS">
@@ -7155,7 +7158,7 @@
                                             <outlet property="lblMessage" destination="38O-Au-Fy3" id="QaH-1G-6KE"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="chatCell4" id="W9w-BS-zdx" customClass="ChatTableViewCell" customModule="MusicTok" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="chatCell4" id="W9w-BS-zdx" customClass="ChatTableViewCell" customModule="Moooby" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="427.5" width="414" height="190"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="W9w-BS-zdx" id="EtE-ok-YUd">
@@ -7202,7 +7205,7 @@
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XO0-xO-OJg" customClass="CustomView" customModule="MusicTok" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XO0-xO-OJg" customClass="CustomView" customModule="Moooby" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="811.5" width="414" height="50.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bgP-in-Edw">
@@ -7322,7 +7325,7 @@
         <!--Image Preview View Controller-->
         <scene sceneID="Wct-ON-i0g">
             <objects>
-                <viewController storyboardIdentifier="imagePreviewVC" id="n6n-Ga-Fdr" customClass="ImagePreviewViewController" customModule="MusicTok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="imagePreviewVC" id="n6n-Ga-Fdr" customClass="ImagePreviewViewController" customModule="Moooby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dIN-Ae-P2c">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -7411,7 +7414,7 @@
         <!--Sounds View Controller-->
         <scene sceneID="zTh-uz-fmY">
             <objects>
-                <viewController storyboardIdentifier="soundsVC" id="Q0Y-f7-3Tu" customClass="soundsViewController" customModule="MusicTok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="soundsVC" id="Q0Y-f7-3Tu" customClass="soundsViewController" customModule="Moooby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jdb-HR-0OH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -7482,7 +7485,7 @@
                                 <rect key="frame" x="0.0" y="146" width="414" height="716"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="favSoundsTVC" rowHeight="80" id="DMa-Ix-VYz" customClass="favSoundsTableViewCell" customModule="MusicTok" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="favSoundsTVC" rowHeight="80" id="DMa-Ix-VYz" customClass="favSoundsTableViewCell" customModule="Moooby" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DMa-Ix-VYz" id="rqw-lL-uIU">
@@ -7601,7 +7604,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="separatorColor" red="0.922031343" green="0.55096179249999999" blue="0.1134601608" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="soundsTVC" rowHeight="296" id="kgk-Kl-x3E" userLabel="soundsTVC" customClass="soundsTableViewCell" customModule="MusicTok" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="soundsTVC" rowHeight="296" id="kgk-Kl-x3E" userLabel="soundsTVC" customClass="soundsTableViewCell" customModule="Moooby" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="296"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kgk-Kl-x3E" id="JOs-xd-MpW">
@@ -7631,7 +7634,7 @@
                                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="soundsCVC" id="isL-30-vXe" customClass="soundsCollectionViewCell" customModule="MusicTok" customModuleProvider="target">
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="soundsCVC" id="isL-30-vXe" customClass="soundsCollectionViewCell" customModule="Moooby" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.0" width="321" height="80"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="QsS-M3-1Rn">
@@ -7772,6 +7775,12 @@
                                     <outlet property="delegate" destination="Q0Y-f7-3Tu" id="VAQ-Xp-E6S"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fetching Sounds ..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EcB-v1-gzO">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Luw-vd-3v9" userLabel="topView">
                                 <rect key="frame" x="0.0" y="-12" width="414" height="116"/>
                                 <subviews>
@@ -7816,18 +7825,22 @@
                         <viewLayoutGuide key="safeArea" id="Yde-KW-Oey"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Yde-KW-Oey" firstAttribute="trailing" secondItem="EcB-v1-gzO" secondAttribute="trailing" id="25y-jM-r3f"/>
                             <constraint firstItem="RBF-jI-21E" firstAttribute="top" secondItem="Sdy-0e-GxZ" secondAttribute="bottom" constant="2" id="4HN-3G-JRL"/>
                             <constraint firstItem="Yde-KW-Oey" firstAttribute="top" secondItem="Luw-vd-3v9" secondAttribute="top" constant="56" id="8pi-3U-xtu"/>
                             <constraint firstItem="KQu-8a-aZo" firstAttribute="top" secondItem="Sdy-0e-GxZ" secondAttribute="bottom" constant="2" id="Bjn-Hj-hc4"/>
                             <constraint firstItem="Yde-KW-Oey" firstAttribute="trailing" secondItem="Sdy-0e-GxZ" secondAttribute="trailing" id="DFG-x2-5mm"/>
                             <constraint firstItem="Sdy-0e-GxZ" firstAttribute="leading" secondItem="Yde-KW-Oey" secondAttribute="leading" id="IDy-r2-pOZ"/>
+                            <constraint firstItem="EcB-v1-gzO" firstAttribute="top" secondItem="Yde-KW-Oey" secondAttribute="top" id="QXE-nc-ObH"/>
                             <constraint firstItem="KQu-8a-aZo" firstAttribute="bottom" secondItem="Yde-KW-Oey" secondAttribute="bottom" constant="1" id="Qnr-Ar-kDs"/>
+                            <constraint firstItem="Yde-KW-Oey" firstAttribute="bottom" secondItem="EcB-v1-gzO" secondAttribute="bottom" id="W5j-te-LKn"/>
                             <constraint firstItem="RBF-jI-21E" firstAttribute="leading" secondItem="Yde-KW-Oey" secondAttribute="leading" id="cAJ-E9-7x0"/>
                             <constraint firstItem="Yde-KW-Oey" firstAttribute="bottom" secondItem="RBF-jI-21E" secondAttribute="bottom" id="chi-dC-eBj"/>
                             <constraint firstItem="Luw-vd-3v9" firstAttribute="leading" secondItem="Yde-KW-Oey" secondAttribute="leading" id="ejy-Wp-Jfg"/>
                             <constraint firstItem="Yde-KW-Oey" firstAttribute="trailing" secondItem="KQu-8a-aZo" secondAttribute="trailing" id="imX-lL-XgK"/>
                             <constraint firstItem="Sdy-0e-GxZ" firstAttribute="top" secondItem="Luw-vd-3v9" secondAttribute="bottom" id="lGt-NA-MUR"/>
                             <constraint firstItem="KQu-8a-aZo" firstAttribute="leading" secondItem="Yde-KW-Oey" secondAttribute="leading" id="oaX-q0-INn"/>
+                            <constraint firstItem="EcB-v1-gzO" firstAttribute="leading" secondItem="Yde-KW-Oey" secondAttribute="leading" id="vbS-3f-3wb"/>
                             <constraint firstItem="Luw-vd-3v9" firstAttribute="trailing" secondItem="Yde-KW-Oey" secondAttribute="trailing" id="ywe-QQ-57N"/>
                             <constraint firstItem="Yde-KW-Oey" firstAttribute="trailing" secondItem="RBF-jI-21E" secondAttribute="trailing" id="ywq-Fa-Az0"/>
                         </constraints>
@@ -7839,6 +7852,7 @@
                         <outlet property="btnFav" destination="wsn-5B-vCU" id="yhu-U9-GP9"/>
                         <outlet property="btnFavBottomView" destination="GzW-CV-LoR" id="SOH-WI-Kfb"/>
                         <outlet property="favSoundsTblView" destination="RBF-jI-21E" id="y4o-HU-3HW"/>
+                        <outlet property="lblFetching" destination="EcB-v1-gzO" id="mfp-Fq-5Dg"/>
                         <outlet property="soundsTblView" destination="KQu-8a-aZo" id="MSj-v3-0xg"/>
                     </connections>
                 </viewController>
@@ -7849,7 +7863,7 @@
         <!--All Sounds View Controller-->
         <scene sceneID="SHD-1Y-4Bd">
             <objects>
-                <viewController storyboardIdentifier="allSoundsVC" id="v9T-wg-mJm" customClass="allSoundsViewController" customModule="MusicTok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="allSoundsVC" id="v9T-wg-mJm" customClass="allSoundsViewController" customModule="Moooby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nvN-sN-6rg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -7858,7 +7872,7 @@
                                 <rect key="frame" x="0.0" y="104" width="414" height="758"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="allSoundsTVC" rowHeight="80" id="4yE-gS-IlI" customClass="allSoundsTableViewCell" customModule="MusicTok" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="allSoundsTVC" rowHeight="80" id="4yE-gS-IlI" customClass="allSoundsTableViewCell" customModule="Moooby" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4yE-gS-IlI" id="Z9z-zu-FUa">
@@ -8035,7 +8049,7 @@
         <!--Edit Profile View Controller-->
         <scene sceneID="y29-om-NGt">
             <objects>
-                <viewController storyboardIdentifier="editProfileVC" id="Au0-tP-jnV" customClass="editProfileViewController" customModule="MusicTok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="editProfileVC" id="Au0-tP-jnV" customClass="editProfileViewController" customModule="Moooby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zbE-ZO-DPe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -8254,7 +8268,7 @@
                                     <constraint firstAttribute="height" constant="35" id="ury-U7-BqV"/>
                                 </constraints>
                             </view>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="www.google.com" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ivR-Iy-Bml" customClass="CustomTextField" customModule="MusicTok" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="www.google.com" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ivR-Iy-Bml" customClass="CustomTextField" customModule="Moooby" customModuleProvider="target">
                                 <rect key="frame" x="30" y="511" width="119" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="pmi-RW-tYX"/>
@@ -8289,7 +8303,7 @@
                                     <constraint firstItem="bfR-9Q-t0C" firstAttribute="leading" secondItem="EVT-JU-HTR" secondAttribute="leading" constant="3" id="etV-R2-EFO"/>
                                 </constraints>
                             </view>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Bio" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lwf-Ku-9O1" customClass="CustomTextField" customModule="MusicTok" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Bio" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lwf-Ku-9O1" customClass="CustomTextField" customModule="Moooby" customModuleProvider="target">
                                 <rect key="frame" x="30" y="599" width="119" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="8uj-dF-fjx"/>
@@ -8417,7 +8431,7 @@
         <!--Privacy Setting View Controller-->
         <scene sceneID="wY2-H1-TOe">
             <objects>
-                <viewController storyboardIdentifier="privacySettingVC" id="Sci-z6-S31" customClass="privacySettingViewController" customModule="MusicTok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="privacySettingVC" id="Sci-z6-S31" customClass="privacySettingViewController" customModule="Moooby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mtc-vM-aoJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -8729,7 +8743,7 @@
                                                     <constraint firstAttribute="height" constant="165" id="ejz-9w-mLa"/>
                                                 </constraints>
                                                 <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="privacySettingTVC" rowHeight="40" id="cbK-eV-MOL" customClass="privacySettingTableViewCell" customModule="MusicTok" customModuleProvider="target">
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="privacySettingTVC" rowHeight="40" id="cbK-eV-MOL" customClass="privacySettingTableViewCell" customModule="Moooby" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="28" width="340" height="40"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cbK-eV-MOL" id="b8w-cl-jb9">
@@ -8823,7 +8837,7 @@
         <!--Fav Working View Controller-->
         <scene sceneID="hSA-2a-od0">
             <objects>
-                <viewController storyboardIdentifier="favWorkingVC" id="ttO-kF-5sE" customClass="favWorkingViewController" customModule="MusicTok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="favWorkingVC" id="ttO-kF-5sE" customClass="favWorkingViewController" customModule="Moooby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VzK-v9-vd9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -8835,7 +8849,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="searchHashtagsTVC" rowHeight="50" id="IcN-cf-7nG" customClass="searchHashtagsTableViewCell" customModule="MusicTok" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="searchHashtagsTVC" rowHeight="50" id="IcN-cf-7nG" customClass="searchHashtagsTableViewCell" customModule="Moooby" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="414" height="50"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IcN-cf-7nG" id="37v-e1-CDD">
@@ -8949,7 +8963,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="searchSoundTVC" rowHeight="80" id="gW2-kG-xqU" customClass="searchSoundTableViewCell" customModule="MusicTok" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="searchSoundTVC" rowHeight="80" id="gW2-kG-xqU" customClass="searchSoundTableViewCell" customModule="Moooby" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="414" height="80"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gW2-kG-xqU" id="saN-c1-UYa">
@@ -9104,7 +9118,7 @@
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="searchVideosCVC" id="Vwm-5r-dmj" customClass="searchVideosCollectionViewCell" customModule="MusicTok" customModuleProvider="target">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="searchVideosCVC" id="Vwm-5r-dmj" customClass="searchVideosCollectionViewCell" customModule="Moooby" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="187" height="187"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="IPT-Xd-r7z">
@@ -9278,7 +9292,7 @@
         <!--Followers View Controller-->
         <scene sceneID="JTG-Yk-CEw">
             <objects>
-                <viewController storyboardIdentifier="followersVC" id="XlY-uS-LIL" customClass="followersViewController" customModule="MusicTok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="followersVC" id="XlY-uS-LIL" customClass="followersViewController" customModule="Moooby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K32-o3-P7a">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -9328,7 +9342,7 @@
                                 <rect key="frame" x="0.0" y="104" width="414" height="758"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="followTVC" rowHeight="98" id="cSP-Rj-VaS" customClass="followTableViewCell" customModule="MusicTok" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="followTVC" rowHeight="98" id="cSP-Rj-VaS" customClass="followTableViewCell" customModule="Moooby" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="98"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cSP-Rj-VaS" id="1iK-ng-SP3">
@@ -9427,7 +9441,7 @@
         <!--Followings View Controller-->
         <scene sceneID="Baq-Sh-Trp">
             <objects>
-                <viewController storyboardIdentifier="followingsVC" id="83Z-Pp-gTe" customClass="followingsViewController" customModule="MusicTok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="followingsVC" id="83Z-Pp-gTe" customClass="followingsViewController" customModule="Moooby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jn1-Na-3eM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -9477,7 +9491,7 @@
                                 <rect key="frame" x="0.0" y="104" width="414" height="758"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="followTVC" rowHeight="98" id="1Lg-WF-eyj" customClass="followTableViewCell" customModule="MusicTok" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="followTVC" rowHeight="98" id="1Lg-WF-eyj" customClass="followTableViewCell" customModule="Moooby" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="98"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1Lg-WF-eyj" id="mjq-dj-f5b">
@@ -9579,6 +9593,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="OSa-t4-oq0" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HgR-f5-pLx">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -9593,7 +9608,7 @@
         <!--FIND FRIENDS-->
         <scene sceneID="aTP-vr-XC6">
             <objects>
-                <viewController storyboardIdentifier="favMainVC" id="1BF-Mb-S4G" customClass="favMainViewController" customModule="MusicTok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="favMainVC" id="1BF-Mb-S4G" customClass="favMainViewController" customModule="Moooby" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YwS-1V-6fz"/>
                         <viewControllerLayoutGuide type="bottom" id="iAW-GN-Uoe"/>
@@ -9737,6 +9752,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="5QF-VE-4zg" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9ph-Jx-zYS">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -9749,61 +9765,11 @@
             <point key="canvasLocation" x="-28.985507246376812" y="34.821428571428569"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="78c-0Q-L9T">
-            <size key="intrinsicContentSize" width="60" height="60"/>
-        </designable>
-        <designable name="BB0-tq-5Ow">
-            <size key="intrinsicContentSize" width="150" height="84"/>
-        </designable>
-        <designable name="DE0-Dr-oL1">
-            <size key="intrinsicContentSize" width="31" height="15"/>
-        </designable>
-        <designable name="EiP-JG-hoN">
-            <size key="intrinsicContentSize" width="34.5" height="18.5"/>
-        </designable>
-        <designable name="F2W-H9-hBx">
-            <size key="intrinsicContentSize" width="62.5" height="18.5"/>
-        </designable>
-        <designable name="FKv-bv-FPq">
-            <size key="intrinsicContentSize" width="62.5" height="18.5"/>
-        </designable>
-        <designable name="NuG-Va-e4G">
-            <size key="intrinsicContentSize" width="137.5" height="91.5"/>
-        </designable>
-        <designable name="dEU-F0-gpN">
-            <size key="intrinsicContentSize" width="64.5" height="18.5"/>
-        </designable>
-        <designable name="dek-49-pB7">
-            <size key="intrinsicContentSize" width="18" height="17"/>
-        </designable>
-        <designable name="e3c-Cd-vYD">
-            <size key="intrinsicContentSize" width="34.5" height="18.5"/>
-        </designable>
-        <designable name="gIi-Kh-0ib">
-            <size key="intrinsicContentSize" width="50" height="50"/>
-        </designable>
-        <designable name="hws-AG-qE2">
-            <size key="intrinsicContentSize" width="66" height="18.5"/>
-        </designable>
-        <designable name="ivR-Iy-Bml">
-            <size key="intrinsicContentSize" width="119" height="18.5"/>
-        </designable>
-        <designable name="lwf-Ku-9O1">
-            <size key="intrinsicContentSize" width="26.5" height="18.5"/>
-        </designable>
-        <designable name="rxf-cC-L0X">
-            <size key="intrinsicContentSize" width="66" height="18.5"/>
-        </designable>
-        <designable name="rzc-30-Z7R">
-            <size key="intrinsicContentSize" width="90" height="17"/>
-        </designable>
-    </designables>
     <resources>
         <image name="13" width="18.666666030883789" height="18.666666030883789"/>
         <image name="30" width="18" height="22.333333969116211"/>
         <image name="8" width="73.333335876464844" height="36.666667938232422"/>
-        <image name="Splash" width="1081" height="2029"/>
+        <image name="Splash" width="769" height="1280"/>
         <image name="add" width="50" height="50"/>
         <image name="appleLoginIcon" width="28.333333969116211" height="28.666666030883789"/>
         <image name="arrowBack" width="80" height="80"/>
@@ -9816,7 +9782,7 @@
         <image name="btnFavEmpty" width="64" height="64"/>
         <image name="btnPlay" width="32" height="32"/>
         <image name="btnTikOrange" width="79.5" height="43"/>
-        <image name="camera.fill" catalog="system" width="128" height="94"/>
+        <image name="camera.fill" catalog="system" width="32" height="32"/>
         <image name="commentIcon" width="42.5" height="42.5"/>
         <image name="cross" width="32" height="32"/>
         <image name="discoverIcon" width="21.666666030883789" height="21.333333969116211"/>
@@ -9852,7 +9818,7 @@
         <image name="nobody_m.1024x1024" width="163.33332824707031" height="163"/>
         <image name="noti" width="21.666666030883789" height="21.333333969116211"/>
         <image name="openLockIcon" width="60" height="60"/>
-        <image name="playercd" width="47.5" height="48.5"/>
+        <image name="playercd" width="65" height="65"/>
         <image name="postIcon" width="30" height="40.5"/>
         <image name="profile" width="137.5" height="91.5"/>
         <image name="profileIcon" width="21.666666030883789" height="21.666666030883789"/>
