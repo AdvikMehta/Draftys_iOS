@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:MusicTok.xcodeproj">
+      location = "group:/Users/aniruddha/Desktop/XCODE_PROJECTS/__Turtleye/IOS Projects/ABYBABY/Tictic - iOS Video Mobile App 16 April 2021/iOS source code/musictok/Draftys.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

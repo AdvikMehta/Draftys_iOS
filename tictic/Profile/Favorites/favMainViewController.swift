@@ -1,6 +1,6 @@
 //
 //  favMainViewController.swift
-//  Moooby
+//  MusicTok
 //
 //  Created by Junaid  Kamoka on 06/02/2021.
 //  Copyright © 2021 Junaid Kamoka. All rights reserved.
@@ -18,7 +18,7 @@ class favMainViewController: ButtonBarPagerTabStripViewController {
         // change selected bar color
         settings.style.buttonBarBackgroundColor = .white
         settings.style.buttonBarItemBackgroundColor = .white
-        settings.style.selectedBarBackgroundColor = #colorLiteral(red: 0.9847028852, green: 0.625120461, blue: 0.007359095383, alpha: 1)
+        settings.style.selectedBarBackgroundColor = #colorLiteral(red: 0.1663755774, green: 0.2092176974, blue: 0.2607190311, alpha: 1)
         settings.style.buttonBarItemFont = UIFont.boldSystemFont(ofSize: 14)
         settings.style.selectedBarHeight = 2.0
         settings.style.buttonBarMinimumLineSpacing = 0
@@ -31,7 +31,7 @@ class favMainViewController: ButtonBarPagerTabStripViewController {
         changeCurrentIndexProgressive = { (oldCell: ButtonBarViewCell?, newCell: ButtonBarViewCell?, progressPercentage: CGFloat, changeCurrentIndex: Bool, animated: Bool) -> Void in
             guard changeCurrentIndex == true else { return }
             oldCell?.label.textColor = UIColor(red: 138/255.0, green: 138/255.0, blue: 144/255.0, alpha: 1.0)
-            newCell?.label.textColor = #colorLiteral(red: 0.9847028852, green: 0.625120461, blue: 0.007359095383, alpha: 1)
+            newCell?.label.textColor = #colorLiteral(red: 0.1663755774, green: 0.2092176974, blue: 0.2607190311, alpha: 1)
         }
         
         self.view.backgroundColor = .white

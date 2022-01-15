@@ -218,7 +218,7 @@ class TabbarViewController: UITabBarController,UITabBarControllerDelegate {
         
         let rectBoundTabbar = self.tabBar.bounds
         let xx = rectBoundTabbar.midX
-        let yy = rectBoundTabbar.midY - paddingBottom
+        let yy = rectBoundTabbar.midY - paddingBottom + 10
         button.center = CGPoint(x: xx, y: yy)
         
         self.tabBar.addSubview(button)
@@ -230,7 +230,7 @@ class TabbarViewController: UITabBarController,UITabBarControllerDelegate {
         {
             let i = floor(Double(count / 2))
             let item = self.tabBar.items![Int(i)]
-            item.title = "Inbox"
+            item.title = "Notification"
         }
     }
     

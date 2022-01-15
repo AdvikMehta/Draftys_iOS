@@ -311,7 +311,8 @@ open class KYShutterButton: UIButton {
         updateLayers()
     }
     
-    @objc open override func setTitle(_ title: String?, for state: UIControl.State) {
+    @objc
+    open override func setTitle(_ title: String?, for state: UIControl.State) {
         super.setTitle("", for: state)
     }
     

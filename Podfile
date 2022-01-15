@@ -1,15 +1,15 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
-target 'MusicTok' do
+target 'Draftys' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
   
-  # Pods for MusicTok
+  # Pods for Draftys
   
   pod "NextLevel"
   pod 'JJFloatingActionButton'
-  pod 'SDWebImage', '~> 5.0'
+  pod 'SDWebImage', :modular_headers => true #, '~> 5.0'
   
   pod 'DSGradientProgressView'
   pod 'IQKeyboardManagerSwift'
@@ -23,8 +23,8 @@ target 'MusicTok' do
   pod 'FirebaseMessaging'
   pod 'Firebase/Crashlytics'
   pod 'Firebase/Analytics'
+  pod 'Firebase/Auth'
   pod 'MarqueeLabel'
-  # pod 'FBSDKLoginKit'
   pod 'Alamofire'
   pod 'ContentLoader'
   pod 'JSQMessagesViewController'
@@ -62,8 +62,10 @@ target 'MusicTok' do
   #pod 'iOSAudioPlayer'
   pod 'FLAnimatedImage'
   pod 'XLPagerTabStrip', '~> 9.0'
+  pod 'AgoraRtcEngine_iOS'
+  pod 'RangeSeekSlider'
   
-  target 'MusicTokUITests' do
+  target 'DraftysUITests' do
     # Pods for testing
   end
   

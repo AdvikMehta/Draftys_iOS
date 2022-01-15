@@ -8,6 +8,7 @@
 
 import UIKit
 
+@available(iOS 13.0, *)
 class emailSignupViewController: UIViewController,UITextFieldDelegate {
     
     
@@ -15,13 +16,15 @@ class emailSignupViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var btnNext: UIButton!
     
     var email = ""
+    var user_type = ""
+    var dob_str = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         btnNext.backgroundColor = #colorLiteral(red: 0.9528577924, green: 0.9529947639, blue: 0.9528278708, alpha: 1)
         btnNext.setTitleColor(#colorLiteral(red: 0.6437677741, green: 0.6631219387, blue: 0.6758852601, alpha: 1), for: .normal)
         btnNext.isUserInteractionEnabled = false
-        
+        emailTxtField.tintColor = #colorLiteral(red: 0.1663755774, green: 0.2092176974, blue: 0.2607190311, alpha: 1)
         emailTxtField.addTarget(self, action: #selector(nameViewController.textFieldDidChange(_:)), for: .editingChanged)
         // Do any additional setup after loading the view.
     }
@@ -32,7 +35,7 @@ class emailSignupViewController: UIViewController,UITextFieldDelegate {
         
         print("change textCount: ",textCount!)
         if textCount! > 3{
-            btnNext.backgroundColor = #colorLiteral(red: 0.9847028852, green: 0.625120461, blue: 0.007359095383, alpha: 1)
+            btnNext.backgroundColor = #colorLiteral(red: 0.1663755774, green: 0.2092176974, blue: 0.2607190311, alpha: 1)
             btnNext.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
             btnNext.isUserInteractionEnabled = true
         }else{
@@ -51,7 +54,7 @@ class emailSignupViewController: UIViewController,UITextFieldDelegate {
         }else{
             let vc = storyboard?.instantiateViewController(withIdentifier: "passwordVC") as! passwordViewController
             vc.email = email
-            
+            vc.user_type = UserDefaults.standard.string(forKey: "signup_user_type")!
             self.navigationController?.pushViewController(vc, animated: true)
         }
         

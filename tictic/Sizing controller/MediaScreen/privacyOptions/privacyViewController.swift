@@ -21,7 +21,7 @@ class privacyViewController: UIViewController,UITableViewDelegate,UITableViewDat
         //        UserDefaults.standard.set(0, forKey: "checkMarkRow")
         
         
-        let opt1 = privOptions(title: "Public", desc: "Anyone on Moooby")
+        let opt1 = privOptions(title: "Public", desc: "Anyone on Draftys")
         //        let opt2 = privOptions(title: "Friends", desc: "Followers that you follow back")
         let opt3 = privOptions(title: "Private", desc: "Visible to me only")
         
@@ -29,6 +29,8 @@ class privacyViewController: UIViewController,UITableViewDelegate,UITableViewDat
         //        arrPrivacyOptions.append(opt2)
         arrPrivacyOptions.append(opt3)
         
+        
+        print("arrPrivacyOptions " , arrPrivacyOptions)
         self.tableOutlet.tableFooterView = UIView()
         
         
@@ -51,7 +53,7 @@ class privacyViewController: UIViewController,UITableViewDelegate,UITableViewDat
         let selectedRow = UserDefaults.standard.integer(forKey: "selectRow")
         if selectedRow == indexPath.row{
             cell.accessoryType = .checkmark
-            cell.accessoryView?.tintColor = #colorLiteral(red: 1, green: 0.5223166943, blue: 0, alpha: 1)
+            cell.accessoryView?.tintColor = #colorLiteral(red: 0.1663755774, green: 0.2092176974, blue: 0.2607190311, alpha: 1)
             
         }
         return cell
@@ -64,7 +66,7 @@ class privacyViewController: UIViewController,UITableViewDelegate,UITableViewDat
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("index",indexPath.row)
         
-        self.tableOutlet.cellForRow(at: indexPath)?.accessoryView?.tintColor = #colorLiteral(red: 1, green: 0.5223166943, blue: 0, alpha: 1)
+        self.tableOutlet.cellForRow(at: indexPath)?.accessoryView?.tintColor = #colorLiteral(red: 0.1663755774, green: 0.2092176974, blue: 0.2607190311, alpha: 1)
         self.tableOutlet.cellForRow(at: indexPath)?.accessoryView?.backgroundColor = .clear
         self.tableOutlet.cellForRow(at: indexPath)?.accessoryType = .checkmark
         

@@ -305,7 +305,7 @@ class ChatDBhandler
             {
 //                AppUtility.shared.hideLoader()
                 print("Error in remove chat: ", error!.localizedDescription)
-                AppUtility!.displayAlert(title: "Moooby", message: error!.localizedDescription)
+                AppUtility!.displayAlert(title: "Draftys", message: error!.localizedDescription)
                 completionHandler(false)
             }
             let messages = Database.database().reference().child("chat").child(senderID+"-"+receiverID)
@@ -314,7 +314,7 @@ class ChatDBhandler
                 {
 //                    AppUtility.shared.hideLoader()
                     print("Error in remove chat: ", error!.localizedDescription)
-                    AppUtility!.displayAlert(title: "Moooby", message: error!.localizedDescription)
+                    AppUtility!.displayAlert(title: "Draftys", message: error!.localizedDescription)
                     completionHandler(false)
                 }
                 

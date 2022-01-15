@@ -7,7 +7,7 @@
 //
 
 import Foundation
-struct userMVC {
+struct userMVC { // user_city,user_state, height,height_inch
     
     let userID:String
     let first_name:String
@@ -30,4 +30,25 @@ struct userMVC {
     let followers:String
     let following:String
     let followBtn:String
+    let sport_name:String
+    
+    
+    let user_city:String
+    let user_state:String
+    let height:String
+    let height_inch:String
+    
+    let achievement:String
+    let sport_id:String
+    let position_id:String
+    let weight:String
+    let gpa:String
+    let graduating_year:String
+    let committed:String
+    let university:String
+    let teams:String
+    let uni_state:String
+    let user_type:String
+    let position_name:String
+    
 }

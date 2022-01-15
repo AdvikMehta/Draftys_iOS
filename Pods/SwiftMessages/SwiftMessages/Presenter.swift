@@ -175,7 +175,7 @@ class Presenter: NSObject {
 
     private func showAccessibilityFocus() {
         guard let accessibleMessage = view as? AccessibleMessage,
-            let focus = accessibleMessage.accessibilityElement ?? accessibleMessage.additonalAccessibilityElements?.first else { return }
+            let focus = accessibleMessage.accessibilityElement ?? accessibleMessage.additionalAccessibilityElements?.first else { return }
         UIAccessibility.post(notification: UIAccessibility.Notification.layoutChanged, argument: focus)
     }
 
@@ -301,7 +301,7 @@ class Presenter: NSObject {
             #if SWIFTMESSAGES_APP_EXTENSIONS
             throw SwiftMessagesError.noRootViewController
             #else
-            if let rootViewController = UIApplication.shared.keyWindow?.rootViewController {
+            if let rootViewController = UIWindow.keyWindow?.rootViewController {
                 let viewController = rootViewController.sm_selectPresentationContextTopDown(config)
                 return .viewController(Weak(value: viewController))
             } else {
@@ -388,7 +388,7 @@ class Presenter: NSObject {
                     }
                     elements.append(element)
                 }
-                if let additional = accessibleMessage.additonalAccessibilityElements {
+                if let additional = accessibleMessage.additionalAccessibilityElements {
                     elements += additional
                 }
             } else {

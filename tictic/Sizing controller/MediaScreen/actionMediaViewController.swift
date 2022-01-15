@@ -443,7 +443,7 @@ class actionMediaViewController: UIViewController,InternetStatusIndicable,UIActi
         NextLevel.shared.enableAudioInputDevice()
         configCapSession()
 //        cameraAudioPermission()
-//        self.loadAudio()
+        //self.loadAudio()
         devicesChecks()
         cameraAudioPermission()
         self.startMonitoringInternet()
@@ -468,6 +468,9 @@ class actionMediaViewController: UIViewController,InternetStatusIndicable,UIActi
 
         if let url = UserDefaults.standard.string(forKey: "url"), let audioUrl = URL(string: url) {
             
+            
+            print("audioUrl Action media vc " , audioUrl)
+            
             // then lets create your document folder url
             let documentsDirectoryURL =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
             
@@ -490,13 +493,20 @@ class actionMediaViewController: UIViewController,InternetStatusIndicable,UIActi
                 soundsLabel.text = soundName
                 soundsLabel.type = .continuous
                 
-            } catch {
+            } catch let error {
                 // couldn't load file :(
                 print("CouldNot load audio file")
+                print("User creation failed with error: \(error)")
+                let soundName = UserDefaults.standard.string(forKey: "selectedSongName")
+                soundsLabel.text = soundName
+                soundsLabel.type = .continuous
             }
  
             print("audioPlayer?.duration:- ",audioPlayer?.duration)
             
+        }
+        else{
+            print("Call from else " , UserDefaults.standard.string(forKey: "url") as Any)
         }
     }
     
@@ -888,6 +898,9 @@ extension actionMediaViewController {
 //    }
     
     @IBAction func didTapButton(_ sender: KYShutterButton) {
+        
+        self.soundsViewOutlet.isUserInteractionEnabled = false
+        self.soundsViewOutlet.isHidden = true
         
         print("btn tapped")
         switch sender.buttonState {

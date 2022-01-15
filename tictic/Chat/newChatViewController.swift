@@ -77,6 +77,9 @@ class newChatViewController: UIViewController, UIImagePickerControllerDelegate, 
         self.senderID = UserDefaults.standard.string(forKey: "userID")!
         
         if otherVisiting == true{
+            
+            
+            
             let obj = receiverData[0]
             self.receiverID = obj.userID
             self.receiverName = obj.username
@@ -120,7 +123,7 @@ class newChatViewController: UIViewController, UIImagePickerControllerDelegate, 
         }
 
         
-        self.txtMessage.tintColor = #colorLiteral(red: 0.9568627451, green: 0.5490196078, blue: 0.01960784314, alpha: 1)
+        self.txtMessage.tintColor = #colorLiteral(red: 0.1663755774, green: 0.2092176974, blue: 0.2607190311, alpha: 1)
         self.txtMessage.tintColorDidChange()
         self.txtMessage.delegate = self
         
@@ -374,15 +377,26 @@ class newChatViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         */
         
-        
-        
+        var dateString = ""
+        // 1632458359142
         let time = (self.arrMessages[indexPath.row]["time"] as? Double)
-        let date = Date(timeIntervalSince1970: time!/1000)
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd-MM-yy' 'HH:mm a"
-        dateFormatter.amSymbol = "am"
-        dateFormatter.pmSymbol = "pm"
-        let dateString = dateFormatter.string(from: date)
+        
+        print("time " , time)
+        
+        if(time == nil){
+            print("time is nil" )
+        }
+        else{
+            let date = Date(timeIntervalSince1970: time!/1000)
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "dd-MM-yy' 'HH:mm a"
+            dateFormatter.amSymbol = "am"
+            dateFormatter.pmSymbol = "pm"
+            dateString = dateFormatter.string(from: date)
+        }
+        
+        //time = 1632458359142
+        
         
         let from = self.arrMessages[indexPath.row]["sender_id"] as? String ?? "from"
         let type = self.arrMessages[indexPath.row]["type"] as? String ?? "type"

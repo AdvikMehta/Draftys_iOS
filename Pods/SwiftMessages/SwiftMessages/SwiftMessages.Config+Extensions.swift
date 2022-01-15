@@ -20,12 +20,12 @@ extension SwiftMessages.Config {
     @available (iOS 13.0, *)
     var windowScene: UIWindowScene? {
         switch presentationContext {
-        case .windowScene(let scene, _): return scene
+        case .windowScene(let scene, _): return scene as? UIWindowScene
         default:
             #if SWIFTMESSAGES_APP_EXTENSIONS
             return nil
             #else
-            return UIApplication.shared.keyWindow?.windowScene
+            return UIWindow.keyWindow?.windowScene
             #endif
         }
     }

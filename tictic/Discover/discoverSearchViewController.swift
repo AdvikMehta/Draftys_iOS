@@ -183,9 +183,204 @@ class discoverSearchViewController: UIViewController,UISearchBarDelegate {
                         let gender = (user.value(forKey: "gender") as? String)!
                         let bio = (user.value(forKey: "bio") as? String)!
                         let dob = (user.value(forKey: "dob") as? String)!
+                        
+                        var sport_name = ""
+                        
+                        if ((userObj.object(forKey: "sport_name")) != nil) {
+                            print("response someKey exists")
+                            sport_name = (userObj.value(forKey: "sport_name") as? String)!
+                        }
+                        
+                        
+                        
                         let website = (user.value(forKey: "website") as? String)!
                         
-                        let obj = userMVC(userID: userID, first_name: firstName, last_name: lastName, gender: gender, bio: bio, website: website, dob: dob, social_id: "", userEmail: "", userPhone: "", password: "", userProfile_pic: userImage, role: "", username: userName, social: "", device_token: "", videoCount: videoCount, likesCount: likesCount, followers: followers, following: followings, followBtn: "")
+                        
+                        
+                        var user_city = ""
+                        
+                        if ((userObj.object(forKey: "user_city")) != nil) {
+                            print("response someKey exists")
+                            user_city = (userObj.value(forKey: "user_city") as? String)!
+                        }
+                        
+                        var user_state = ""
+                        
+                        if ((userObj.object(forKey: "user_state")) != nil) {
+                            print("response someKey exists")
+                            user_state = (userObj.value(forKey: "user_state") as? String)!
+                        }
+                        
+                        var height = ""
+                        
+                        if ((userObj.object(forKey: "height")) != nil) {
+                            print("response someKey exists")
+                            height = (userObj.value(forKey: "height") as? String)!
+                        }
+                        
+                        var height_inch = ""
+                        
+                        if ((userObj.object(forKey: "height_inch")) != nil) {
+                            print("response someKey exists")
+                            height_inch = (userObj.value(forKey: "height_inch") as? String)!
+                        }
+                        
+                        
+                        var achievement = ""
+                        
+                        if ((userObj.object(forKey: "achievement")) != nil) {
+                            if let tempachievement = (userObj.object(forKey: "achievement")) as? String
+                            {
+                                achievement = tempachievement
+                            }
+                            else
+                            {
+                            }
+                        }
+                        
+                        
+                        var sport_id = ""
+                        
+                        if ((userObj.object(forKey: "sport_id")) != nil) {
+                            if let tempsport_id = (userObj.object(forKey: "sport_id")) as? String
+                            {
+                                sport_id = tempsport_id
+                            }
+                            else
+                            {
+                            }
+                        }
+                        
+                        
+                        var position_id = ""
+                        
+                        if ((userObj.object(forKey: "position_id")) != nil) {
+                            if let tempposition_id = (userObj.object(forKey: "position_id")) as? String
+                            {
+                                position_id = tempposition_id
+                            }
+                            else
+                            {
+                            }
+                        }
+                        
+                        var weight = ""
+                        
+                        if ((userObj.object(forKey: "weight")) != nil) {
+                            if let tempVal = (userObj.object(forKey: "weight")) as? String
+                            {
+                                weight = tempVal
+                            }
+                            else
+                            {
+                            }
+                        }
+                        
+                        
+                        var gpa = ""
+                        
+                        if ((userObj.object(forKey: "gpa")) != nil) {
+                            if let tempVal = (userObj.object(forKey: "gpa")) as? String
+                            {
+                                gpa = tempVal
+                            }
+                            else
+                            {
+                            }
+                        }
+                        
+                        var graduating_year = ""
+                        
+                        if ((userObj.object(forKey: "graduating_year")) != nil) {
+                            if let tempVal = (userObj.object(forKey: "graduating_year")) as? String
+                            {
+                                graduating_year = tempVal
+                            }
+                            else
+                            {
+                            }
+                        }
+                        
+                        
+                        var committed = ""
+                        
+                        if ((userObj.object(forKey: "committed")) != nil) {
+                            if let tempVal = (userObj.object(forKey: "committed")) as? String
+                            {
+                                committed = tempVal
+                            }
+                            else
+                            {
+                            }
+                        }
+                        
+                        var university = ""
+                        
+                        if ((userObj.object(forKey: "university")) != nil) {
+                            if let tempVal = (userObj.object(forKey: "university")) as? String
+                            {
+                                university = tempVal
+                            }
+                            else
+                            {
+                            }
+                        }
+                        
+                        
+                        var teams = ""
+                        
+                        if ((userObj.object(forKey: "teams")) != nil) {
+                            if let tempVal = (userObj.object(forKey: "teams")) as? String
+                            {
+                                teams = tempVal
+                            }
+                            else
+                            {
+                            }
+                        }
+                        
+                        
+                        var uni_state = ""
+                        
+                        if ((userObj.object(forKey: "uni_state")) != nil) {
+                            if let tempVal = (userObj.object(forKey: "uni_state")) as? String
+                            {
+                                uni_state = tempVal
+                            }
+                            else
+                            {
+                            }
+                        }
+                        
+                        var user_type = ""
+                         
+                        
+                        if ((userObj.object(forKey: "user_type")) != nil) {
+                            if let tempVal = (userObj.object(forKey: "user_type")) as? String
+                            {
+                                user_type = tempVal
+                            }
+                            else
+                            {
+                            }
+                        }
+                                            
+                        var position_name = ""
+                        
+                        
+                        if ((userObj.object(forKey: "position_name")) != nil) {
+                         
+                            if let tempVal = (userObj.object(forKey: "position_name")) as? String
+                            {
+                                position_name = tempVal
+                            }
+                            else
+                            {
+                            }
+                            
+                        }
+                        
+                        let obj = userMVC(userID: userID, first_name: firstName, last_name: lastName, gender: gender, bio: bio, website: website, dob: dob, social_id: "", userEmail: "", userPhone: "", password: "", userProfile_pic: userImage, role: "", username: userName, social: "", device_token: "", videoCount: videoCount, likesCount: likesCount, followers: followers, following: followings, followBtn: "",sport_name:sport_name ,user_city:user_city,user_state:user_state,height:height,height_inch:height_inch, achievement:achievement , sport_id:sport_id , position_id : position_id , weight:weight,gpa:gpa,graduating_year:graduating_year , committed:committed , university: university,teams: teams , uni_state:uni_state,user_type: user_type,position_name: position_name)
                         
                         self.userDataArr.append(obj)
                     }
@@ -784,7 +979,7 @@ extension discoverSearchViewController: UICollectionViewDelegate,UICollectionVie
             }else{
                 cell.bottomLineView.isHidden  = false
                 cell.titleLbl.text = objArr[indexPath.row]["title"]
-                cell.titleLbl.textColor = #colorLiteral(red: 0.9568627451, green: 0.5490196078, blue: 0.01960784314, alpha: 1)
+                cell.titleLbl.textColor = #colorLiteral(red: 0.1663755774, green: 0.2092176974, blue: 0.2607190311, alpha: 1)
             }
         }
         if indexPath.row == 1 {
@@ -795,7 +990,7 @@ extension discoverSearchViewController: UICollectionViewDelegate,UICollectionVie
             }else{
                 cell.bottomLineView.isHidden  = false
                 cell.titleLbl.text = objArr[indexPath.row]["title"]
-                cell.titleLbl.textColor = #colorLiteral(red: 0.9568627451, green: 0.5490196078, blue: 0.01960784314, alpha: 1)
+                cell.titleLbl.textColor = #colorLiteral(red: 0.1663755774, green: 0.2092176974, blue: 0.2607190311, alpha: 1)
             }
         }
         if indexPath.row == 2{
@@ -806,7 +1001,7 @@ extension discoverSearchViewController: UICollectionViewDelegate,UICollectionVie
             }else{
                 cell.bottomLineView.isHidden  = false
                 cell.titleLbl.text = objArr[indexPath.row]["title"]
-                cell.titleLbl.textColor = #colorLiteral(red: 0.9568627451, green: 0.5490196078, blue: 0.01960784314, alpha: 1)
+                cell.titleLbl.textColor = #colorLiteral(red: 0.1663755774, green: 0.2092176974, blue: 0.2607190311, alpha: 1)
             }
         }
         if indexPath.row == 3{
@@ -817,7 +1012,7 @@ extension discoverSearchViewController: UICollectionViewDelegate,UICollectionVie
             }else{
                 cell.bottomLineView.isHidden  = false
                 cell.titleLbl.text = objArr[indexPath.row]["title"]
-                cell.titleLbl.textColor = #colorLiteral(red: 0.9568627451, green: 0.5490196078, blue: 0.01960784314, alpha: 1)
+                cell.titleLbl.textColor = #colorLiteral(red: 0.1663755774, green: 0.2092176974, blue: 0.2607190311, alpha: 1)
             }
         }
         

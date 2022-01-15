@@ -11,9 +11,11 @@ import PhoneNumberKit
 import ContactsUI
 import SKCountryPicker
 
+@available(iOS 13.0, *)
 class phoneNoViewController: UIViewController,UITextFieldDelegate,CNContactPickerDelegate {
     
 //    @IBOutlet var phoneNoTxtField: PhoneNumberTextField!
+    @IBOutlet weak var headerLbl: UILabel!
     
     @IBOutlet var phoneNoTxtField: UITextField!
     
@@ -29,9 +31,22 @@ class phoneNoViewController: UIViewController,UITextFieldDelegate,CNContactPicke
     
     @IBOutlet weak var btnCountryCode: UIButton!
     
-    var dialCode = "+92"
+    var dialCode = "+91"
+    
+    var navFrmStr = ""
+    var user_type = ""
+    var dob_str = ""
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if(navFrmStr == "login"){
+            self.headerLbl.text = "Login"
+        }
+        else{
+            self.headerLbl.text = "Signup"
+        }
         
         emailContainerVIEW.isHidden =  true
         emailSignupContainerVIEW.isHidden = true
@@ -49,6 +64,8 @@ class phoneNoViewController: UIViewController,UITextFieldDelegate,CNContactPicke
 
 
     }
+    
+    
     
     @objc func countryDataNoti(_ notification: NSNotification) {
 
@@ -71,7 +88,7 @@ class phoneNoViewController: UIViewController,UITextFieldDelegate,CNContactPicke
         
         print("change textCount: ",textCount)
         if textCount! > 0{
-            btnSendCode.backgroundColor = #colorLiteral(red: 0.9847028852, green: 0.625120461, blue: 0.007359095383, alpha: 1)
+            btnSendCode.backgroundColor = #colorLiteral(red: 0.04472430795, green: 0.05244834721, blue: 0.07734320313, alpha: 0.8470588235)
             btnSendCode.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
             btnSendCode.isUserInteractionEnabled = true
         }else{
@@ -129,15 +146,16 @@ class phoneNoViewController: UIViewController,UITextFieldDelegate,CNContactPicke
         emailSignupContainerVIEW.isHidden = true
         
         btnPhoneBottomView.isHidden = false
-        btnPhone.setTitleColor(#colorLiteral(red: 0.9847028852, green: 0.625120461, blue: 0.007359095383, alpha: 1), for: .normal)
+        btnPhone.setTitleColor(#colorLiteral(red: 0.04472430795, green: 0.05244834721, blue: 0.07734320313, alpha: 0.8470588235), for: .normal)
         
         
     }
     @IBAction func btnEmailAction(_ sender: Any) {
+        print("btnEmailAction click")
+        UserDefaults.standard.setValue(user_type, forKey: "signup_user_type")
         btnPhoneBottomView.isHidden = true
         btnPhone.setTitleColor(.black, for: .normal)
         
-        print(UserDefaults.standard.string(forKey: "signUpType"))
         
         if UserDefaults.standard.string(forKey: "signUpType") == "emailSignup"{
             emailSignupContainerVIEW.isHidden = false
@@ -146,7 +164,7 @@ class phoneNoViewController: UIViewController,UITextFieldDelegate,CNContactPicke
         }
         
         btnEmailBottomView.isHidden = false
-        btnEmail.setTitleColor(#colorLiteral(red: 0.9847028852, green: 0.625120461, blue: 0.007359095383, alpha: 1), for: .normal)
+        btnEmail.setTitleColor(#colorLiteral(red: 0.04472430795, green: 0.05244834721, blue: 0.07734320313, alpha: 0.8470588235), for: .normal)
         
     }
     
@@ -161,7 +179,7 @@ class phoneNoViewController: UIViewController,UITextFieldDelegate,CNContactPicke
         let phoneNo = self.dialCode+phoneNoTxtField.text!
         print("phoneNo: ",phoneNo)
         AppUtility?.startLoader(view: self.view)
-        ApiHandler.sharedInstance.verifyPhoneNo(phone: phoneNo, verify: "0") { (isSuccess, response) in
+        ApiHandler.sharedInstance.verifyPhoneNo(phone: phoneNo, verify: "0") { [self] (isSuccess, response) in
             if isSuccess{
                 if response?.value(forKey: "code") as! NSNumber == 200 {
                     AppUtility?.stopLoader(view: self.view)
@@ -169,7 +187,9 @@ class phoneNoViewController: UIViewController,UITextFieldDelegate,CNContactPicke
                     print("respone: ",response?.value(forKey: "msg") as! String)
                     if #available(iOS 12.0, *) {
                         let vc = self.storyboard?.instantiateViewController(withIdentifier: "otpVC") as! otpViewController
+                        vc.user_type = user_type
                         vc.phoneNo = self.dialCode+self.phoneNoTxtField.text!
+                        vc.dob_str = self.dob_str
                         self.navigationController?.pushViewController(vc, animated: true)
                     } else {
                         // Fallback on earlier versions
@@ -232,7 +252,7 @@ class phoneNoViewController: UIViewController,UITextFieldDelegate,CNContactPicke
            
        }
        // can customize the countryPicker here e.g font and color
-       countryController.detailColor = #colorLiteral(red: 0.9568627451, green: 0.5490196078, blue: 0.01960784314, alpha: 1)
+       countryController.detailColor = #colorLiteral(red: 0.04472430795, green: 0.05244834721, blue: 0.07734320313, alpha: 0.8470588235)
         countryController.detailFont.withSize(9.0)
         countryController.labelFont.withSize(9.0)
         countryController.flagStyle = .circular

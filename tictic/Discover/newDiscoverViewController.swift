@@ -20,6 +20,12 @@ class newDiscoverViewController: UIViewController ,UICollectionViewDelegate,UICo
     @IBOutlet var tblheight: NSLayoutConstraint!
     @IBOutlet weak var bannerPageController: UIPageControl!
     
+    @IBAction func advanceFilterAction(_ sender: Any) {
+      //  performSegue(withIdentifier: "goToAdvcanceFilter", sender: self)
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "advanceFilter") as! AdvanceFilterViewController
+        vc.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     
     var hashtagDataArr = [[String:Any]]()
     
@@ -36,7 +42,9 @@ class newDiscoverViewController: UIViewController ,UICollectionViewDelegate,UICo
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+       
+        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self]).setTitleTextAttributes([NSAttributedString.Key(rawValue: NSAttributedString.Key.foregroundColor.rawValue): #colorLiteral(red: 0.1663755774, green: 0.2092176974, blue: 0.2607190311, alpha: 1)], for: .normal)
+
         bannerPageController.tintColor = .white
         view.bringSubviewToFront(self.bannerPageController)
         
@@ -67,7 +75,7 @@ class newDiscoverViewController: UIViewController ,UICollectionViewDelegate,UICo
         } else {
             scrollViewOutlet.addSubview(refresher)
         }
-
+        
     }
     
     //MARK:- SetupView
@@ -75,12 +83,6 @@ class newDiscoverViewController: UIViewController ,UICollectionViewDelegate,UICo
     func setupView(){
         tblheight.constant = CGFloat(hashtagDataArr.count * 190)
     }
-    
-    //MARK:- Switch Action
-    
-    //MARK:- Button Action
-    
-    //MARK:- DELEGATE METHODS
     
     //MARK: TableView
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -106,6 +108,7 @@ class newDiscoverViewController: UIViewController ,UICollectionViewDelegate,UICo
         cell.videosObj = hashObj["videosObj"] as! [videoMainMVC]
         return cell
     }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 190
     }
@@ -145,22 +148,22 @@ class newDiscoverViewController: UIViewController ,UICollectionViewDelegate,UICo
         
     }
     
-//    MARK:- SEARCH BTN ACTION
+    //    MARK:- SEARCH BTN ACTION
     
     @IBAction func searchBtnAction(_ sender: Any) {
         
         let vc = storyboard?.instantiateViewController(withIdentifier: "discoverSearchVC") as! discoverSearchViewController
-//        let transition = CATransition()
-//        transition.duration = 0.5
-//        transition.type = CATransitionType.fade
-//        transition.subtype = CATransitionSubtype.fromLeft
-//        transition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
-//        view.window!.layer.add(transition, forKey: kCATransition)
+        //        let transition = CATransition()
+        //        transition.duration = 0.5
+        //        transition.type = CATransitionType.fade
+        //        transition.subtype = CATransitionSubtype.fromLeft
+        //        transition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
+        //        view.window!.layer.add(transition, forKey: kCATransition)
         vc.modalPresentationStyle = .overFullScreen
-//        present(vc, animated: false, completion: nil)
+        //        present(vc, animated: false, completion: nil)
         vc.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(vc, animated: false)
-//        present(vc, animated: false, completion: nil)
+        //        present(vc, animated: false, completion: nil)
     }
     //MARK: Segment Control
     
@@ -186,7 +189,7 @@ class newDiscoverViewController: UIViewController ,UICollectionViewDelegate,UICo
         sliderArr.removeAll()
         ApiHandler.sharedInstance.showAppSlider{ (isSuccess, response) in
             if isSuccess{
-                print("response: ",response?.allValues)
+                print("response: ",response?.allValues as Any)
                 if response?.value(forKey: "code") as! NSNumber == 200 {
                     
                     let sliderDataArr = response?.value(forKey: "msg") as! NSArray
@@ -213,13 +216,13 @@ class newDiscoverViewController: UIViewController ,UICollectionViewDelegate,UICo
     }
     //    MARK:- VIDEOS DATA API
     func getVideosData(){
-
+        
         hashtagDataArr.removeAll()
         //        videosArr.removeAll()
         
         ApiHandler.sharedInstance.showDiscoverySections { (isSuccess, response) in
             if isSuccess{
-                print("response: ",response?.allValues)
+                print("response: ",response?.allValues as Any)
                 if response?.value(forKey: "code") as! NSNumber == 200 {
                     let videosHashtags = response?.value(forKey: "msg") as! NSArray
                     
@@ -247,7 +250,7 @@ class newDiscoverViewController: UIViewController ,UICollectionViewDelegate,UICo
                             
                             let videoObj = videosData.value(forKey: "Video") as! NSDictionary
                             let userObj = videoObj.value(forKey: "User") as! NSDictionary
-//                            let soundObj = videoObj.value(forKey: "Sound") as! NSDictionary
+                            let soundObj = videoObj.value(forKey: "Sound") as! NSDictionary
                             
                             let videoUrl = videoObj.value(forKey: "video") as! String
                             let videoThum = videoObj.value(forKey: "thum") as! String
@@ -270,11 +273,11 @@ class newDiscoverViewController: UIViewController ,UICollectionViewDelegate,UICo
                             //                        let followBtn = userObj.value(forKey: "button") as! String
                             let verified = userObj.value(forKey: "verified")
                             
-//                            let soundID = soundObj.value(forKey: "id") as? String
-//                            let soundName = soundObj.value(forKey: "name") as? String
+                            let soundID = soundObj.value(forKey: "id") as? String
+                            let soundName = soundObj.value(forKey: "name") as? String
                             
                             
-                            let video = videoMainMVC(videoID: videoID, videoUserID: "", fb_id: "", description: videoDesc, videoURL: videoUrl, videoTHUM: videoThum, videoGIF: videoGif, view: views, section: "", sound_id: "", privacy_type: "", allow_comments: allowComment, allow_duet: allowDuet, block: "", duet_video_id: "", old_video_id: "", created: created, like: like, favourite: "", comment_count: videoComments, like_count: videoLikes, followBtn: "", duetVideoID: "\(duetVidID!)", userID: userID, first_name: "", last_name: "", gender: "", bio: "", website: "", dob: "", social_id: "", userEmail: "", userPhone: "", password: "", userProfile_pic: "", role: "", username: username, social: "", device_token: "", videoCount: "", verified: "\(verified!)", soundName: "")
+                            let video = videoMainMVC(videoID: videoID, videoUserID: "", fb_id: "", description: videoDesc, videoURL: videoUrl, videoTHUM: videoThum, videoGIF: videoGif, view: views, section: "", sound_id: "", privacy_type: "", allow_comments: allowComment, allow_duet: allowDuet, block: "", duet_video_id: "", old_video_id: "", created: created, like: like, favourite: "", comment_count: videoComments, like_count: videoLikes, followBtn: "", duetVideoID: "\(duetVidID!)", userID: userID, first_name: "", last_name: "", gender: "", bio: "", website: "", dob: "", social_id: "", userEmail: "", userPhone: "", password: "", userProfile_pic: "", role: "", username: username, social: "", device_token: "", videoCount: "", verified: "\(verified!)", soundName: soundName ?? "")
                             
                             videosArr.append(video)
                             
@@ -292,7 +295,7 @@ class newDiscoverViewController: UIViewController ,UICollectionViewDelegate,UICo
                 
             }
             
-//            self.discoverTblView.reloadData()
+            //            self.discoverTblView.reloadData()
             self.setupView()
             self.discoverTblView.reloadData()
             

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 @available(iOS 12.0, *)
 class otpViewController: UIViewController,UITextFieldDelegate {
@@ -19,17 +20,38 @@ class otpViewController: UIViewController,UITextFieldDelegate {
     
     var phoneNo = ""
     var otp = ""
+    var user_type = ""
+    var dob_str = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        sendOnNoLbl.text = "Your code was sent  to \(phoneNo)"
+        sendOnNoLbl.text = "Your code was sent  to  \(phoneNo)"
         otpSetup()
         otpTextField.addTarget(self, action: #selector(otpViewController.textFieldDidChange(_:)), for: .editingChanged)
         btnNext.backgroundColor = #colorLiteral(red: 0.9528577924, green: 0.9529947639, blue: 0.9528278708, alpha: 1)
         btnNext.setTitleColor(#colorLiteral(red: 0.6437677741, green: 0.6631219387, blue: 0.6758852601, alpha: 1), for: .normal)
         btnNext.isUserInteractionEnabled = false
+        
+        print("phoneNo " , phoneNo)
+        self.getOtpFromFirebase()
         // Do any additional setup after loading the view.
+    }
+    
+    func getOtpFromFirebase(){
+        
+        PhoneAuthProvider.provider()
+          .verifyPhoneNumber(phoneNo, uiDelegate: nil) { verificationID, error in
+              if let error = error {
+                print("error " , error.localizedDescription)
+               // self.showMessagePrompt(error.localizedDescription)
+                return
+              }
+            
+            print("verificationID " , verificationID as Any)
+              // Sign in using the verificationID and the code sent to the user
+              // ...
+          }
     }
     
     @objc func textFieldDidChange(_ textField: UITextField) {
@@ -38,7 +60,7 @@ class otpViewController: UIViewController,UITextFieldDelegate {
         
         print("change textCount: ",textCount!)
         if textCount! > 3{
-            btnNext.backgroundColor = #colorLiteral(red: 0.9847028852, green: 0.625120461, blue: 0.007359095383, alpha: 1)
+            btnNext.backgroundColor = #colorLiteral(red: 0.04472430795, green: 0.05244834721, blue: 0.07734320313, alpha: 0.8470588235)
             btnNext.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
             btnNext.isUserInteractionEnabled = true
         }else{
@@ -62,15 +84,23 @@ class otpViewController: UIViewController,UITextFieldDelegate {
     }
     
     @IBAction func btnNextAction(_ sender: Any) {
-        verifyOTPfunc()
+        if #available(iOS 13.0, *) {
+            verifyOTPfunc()
+        } else {
+            // Fallback on earlier versions
+        }
     }
+    @available(iOS 13.0, *)
     @IBAction func btnResenOTP(_ sender: Any) {
-        verifyPhoneFunc()
+     //   verifyPhoneFunc()
+        self.getOtpFromFirebase()
     }
     @IBAction func btnBack(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
     
+    @available(iOS 13.0, *)
+    @available(iOS 13.0, *)
     func verifyOTPfunc(){
         let phoneNoNew = phoneNo.trimmingCharacters(in: .whitespaces)
         AppUtility?.startLoader(view: self.view)
@@ -95,6 +125,7 @@ class otpViewController: UIViewController,UITextFieldDelegate {
         }
     }
     
+    @available(iOS 13.0, *)
     func verifyPhoneFunc(){
         let phoneNoNew = phoneNo.trimmingCharacters(in: .whitespaces)
         AppUtility?.startLoader(view: self.view)
@@ -108,7 +139,7 @@ class otpViewController: UIViewController,UITextFieldDelegate {
                 }else{
                     AppUtility?.stopLoader(view: self.view)
                     self.alertModule(title: NSLocalizedString("alert_app_name", comment: ""), msg: response?.value(forKey: "msg") as! String)
-                    
+                 
                 }
             }else{
                 AppUtility?.stopLoader(view: self.view)
@@ -116,12 +147,14 @@ class otpViewController: UIViewController,UITextFieldDelegate {
             }
         }
     }
+    @available(iOS 13.0, *)
     func registerPhoneCeck(){
         
         let phoneNoNew = phoneNo.trimmingCharacters(in: .whitespaces)
         AppUtility?.startLoader(view: self.view)
-                ApiHandler.sharedInstance.registerPhoneCheck(phone: phoneNoNew) { (isSuccess, response) in
+        ApiHandler.sharedInstance.registerPhoneCheck(phone: phoneNoNew , user_type:user_type) { (isSuccess, response) in
             if isSuccess{
+                print("inside is Success")
                 if response?.value(forKey: "code") as! NSNumber == 200 {
                     AppUtility?.stopLoader(view: self.view)
                     
@@ -192,28 +225,34 @@ class otpViewController: UIViewController,UITextFieldDelegate {
                     
                 }else{
                     AppUtility?.stopLoader(view: self.view)
-
-                    
-                    let alert = UIAlertController(title: NSLocalizedString("alert_app_name", comment: ""), message: "Want to create new account?", preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
-                    alert.addAction(UIAlertAction(title: "Signup", style: .default, handler: { action in
-                          switch action.style{
-                          case .default:
-                                print("default")
-                            UserDefaults.standard.set("signUpType", forKey: "passSignup")
-                            let vc = self.storyboard?.instantiateViewController(withIdentifier: "dobVC") as! dobViewController
-                            vc.phoneNo = phoneNoNew
+                    if(self.user_type == ""){
+                        
+                        /*vc.dob = self.dob_str
+                        vc.phoneNo = self.phoneNo
+                        vc.user_type  = self.user_type*/
+                        
+                        UserDefaults.standard.set(self.phoneNo, forKey: "savedRegPhnNo")
+                        
+                        let vc = self.storyboard?.instantiateViewController(withIdentifier: "dobVC") as! dobViewController
                             self.navigationController?.pushViewController(vc, animated: true)
-
-                          case .cancel:
-                                print("cancel")
-
-                          case .destructive:
-                                print("destructive")
-
-                    }}))
-                   
-                    self.present(alert, animated: true, completion: nil)
+                        
+                        
+                    }
+                    else{
+                        
+                        UserDefaults.standard.set("", forKey: "savedRegPhnNo")
+                        
+                        
+                        let vc = self.storyboard?.instantiateViewController(identifier: "nameVC") as! nameViewController
+                        
+                        vc.dob = self.dob_str
+                        vc.phoneNo = self.phoneNo
+                        vc.user_type  = self.user_type
+                       
+                        
+                        self.navigationController?.pushViewController(vc, animated: true)
+                    }
+                    
                     //if user not registered
                     
                     

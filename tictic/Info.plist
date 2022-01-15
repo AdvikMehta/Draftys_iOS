@@ -2,10 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>BGTaskSchedulerPermittedIdentifiers</key>
+	<array>
+		<string>com.yourCompanyName.appName</string>
+	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>MusicTok</string>
+	<string>Draftys</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -25,24 +29,26 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb755163375333975</string>
+				<string>app-1-622709956577-ios-e8793be51c54a6e47fbca0</string>
+				<string>com.googleusercontent.apps.622709956577-p7ro15u8lm4jggtqkcvs7tjd94ganldk</string>
+				<string>fb315144293295913</string>
 			</array>
 		</dict>
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>com.googleusercontent.apps.964642536474-jaldv56dmv19ijuc9nqfos51rt5rji85</string>
-			</array>
+			<array/>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>FacebookAppID</key>
-	<string>755163375333975</string>
+	<string>315144293295913</string>
 	<key>FacebookDisplayName</key>
-	<string>MusicTok</string>
+	<string>Draftys</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>instagram</string>
@@ -57,16 +63,22 @@
 		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>"Moooby" Would Like to Access the Camera. This lets you share,record videos and save video to your camera Roll.</string>
+	<string>"Draftys" Would Like to Access the Camera. This lets you share,record videos and save video to your camera Roll.</string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>"Moooby" Would liike to Access the Microphone To record audio, allow us to access Microphone.</string>
+	<string>"Draftys" Would liike to Access the Microphone To record audio, allow us to access Microphone.</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>In order to update from your Camera Roll, Moooby needs access to your photos and videos.</string>
+	<string>In order to update from your Camera Roll, Draftys needs access to your photos and videos.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>In order to update from your Camera Roll, Moooby needs access to your photos and videos.</string>
+	<string>In order to update from your Camera Roll, Draftys needs access to your photos and videos.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Proxima Nova Black.otf</string>
+	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+		<string>processing</string>
+		<string>remote-notification</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>

@@ -53,7 +53,7 @@ public class InternetViewIndicator {
         var statusConfig = SwiftMessages.defaultConfig
         statusConfig.duration = .forever
         #if swift(>=4.2)
-        statusConfig.presentationContext = .window(windowLevel: UIWindow.Level(rawValue: UIWindow.Level.statusBar.rawValue))
+        statusConfig.presentationContext = .window(windowLevel: UIWindow.Level(rawValue: UIWindow.Level.statusBar.rawValue) )
         #else
         statusConfig.presentationContext = .window(windowLevel: UIWindowLevelStatusBar)
         #endif

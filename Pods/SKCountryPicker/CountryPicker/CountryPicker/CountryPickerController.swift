@@ -26,28 +26,43 @@ public enum CountryFlagStyle {
 open class CountryPickerController: UIViewController {
     
     // MARK: - Variables
-    var countries = [Country]() {
+    internal var countries = [Country]() {
         didSet {
             tableView.reloadData()
         }
     }
     
-    var filterCountries = [Country]() {
+    internal var filterCountries = [Country]() {
         didSet {
             tableView.reloadData()
         }
     }
     
-    var applySearch = false
-    var callBack: (( _ choosenCountry: Country) -> Void)?
+    internal var applySearch = false
+    // To be set by client
+    public var callBack: (( _ choosenCountry: Country) -> Void)?
     
-    let bundle = Bundle(for: CountryPickerController.self)
+    #if SWIFT_PACKAGE
+        let bundle = Bundle.module
+    #else
+        let bundle = Bundle(for: CountryPickerController.self)
+    #endif
     
     //MARK: View and ViewController
-    var presentingVC: UIViewController?
-    var searchController = UISearchController(searchResultsController: nil)
-    let tableView =  UITableView()
-    
+    internal var presentingVC: UIViewController?
+    internal var searchController = UISearchController(searchResultsController: nil)
+    internal let tableView =  UITableView()
+    public var favoriteCountriesLocaleIdentifiers = [String]() {
+        didSet {
+            self.loadCountries()
+            self.tableView.reloadData()
+        }
+    }
+    internal var isFavoriteEnable: Bool { return !favoriteCountries.isEmpty }
+    internal var favoriteCountries: [Country] {
+        return self.favoriteCountriesLocaleIdentifiers
+            .compactMap { CountryManager.shared.country(withCode: $0) }
+    }
     /// Properties for countryPicker controller
     public var statusBarStyle: UIStatusBarStyle? = .default
     public var isStatusBarVisible = true
@@ -89,9 +104,8 @@ open class CountryPickerController: UIViewController {
     }
     
     // MARK: - View life cycle
-    fileprivate func setUpsSearchController() {
+    private func setUpsSearchController() {
         searchController.hidesNavigationBarDuringPresentation = true
-        searchController.dimsBackgroundDuringPresentation = false
         searchController.searchBar.barStyle = .default
         searchController.searchBar.sizeToFit()
         searchController.searchBar.delegate = self
@@ -119,8 +133,6 @@ open class CountryPickerController: UIViewController {
                                               action: #selector(self.crossButtonClicked(_:)))
         
         navigationItem.leftBarButtonItem = uiBarButtonItem
-//        MARK:- JK
-        navigationItem.leftBarButtonItem?.tintColor = .black
         
         // Setup table view and cells
         setUpTableView()
@@ -201,7 +213,7 @@ open class CountryPickerController: UIViewController {
     }
     
     // MARK: - Cross Button Action
-    @objc func crossButtonClicked(_ sender: UIBarButtonItem) {
+    @objc private func crossButtonClicked(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
     }
 }
@@ -211,7 +223,7 @@ open class CountryPickerController: UIViewController {
 internal extension CountryPickerController {
 
     func loadCountries() {
-        countries = CountryManager.shared.allCountries()
+        countries = CountryManager.shared.allCountries(favoriteCountriesLocaleIdentifiers)
     }
     
     ///
@@ -272,7 +284,6 @@ extension CountryPickerController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func setUpCellProperties(cell: CountryCell) {
-        
         // Auto-hide flag & dial labels
         cell.hideFlag(isCountryFlagHidden)
         cell.hideDialCode(isCountryDialHidden)
@@ -306,7 +317,8 @@ extension CountryPickerController: UITableViewDelegate, UITableViewDataSource {
         dismiss(animated: dismissWithAnimation, completion: nil)
     }
     
-    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath)
+        -> CGFloat {
         return 60.0
     }
     
@@ -319,7 +331,7 @@ extension CountryPickerController: UISearchBarDelegate {
         
         let searchTextTrimmed = searchBar.text?.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
         
-        guard let searchText = searchTextTrimmed, searchText.isEmpty == false else {
+        guard let searchText = searchTextTrimmed, !searchText.isEmpty else {
             self.applySearch = false
             self.filterCountries.removeAll()
             self.tableView.reloadData()
@@ -329,29 +341,8 @@ extension CountryPickerController: UISearchBarDelegate {
         applySearch = true
         filterCountries.removeAll()
         
-        let filteredCountries = countries.compactMap { (country) -> Country? in
-            
-            let countryMatchFound = country.countryName.lowercased().contains(searchText)
-            
-            // Filter country by country name first character
-            if CountryManager.shared.defaultFilter == .countryName, countryMatchFound {
-                return country
-            }
-
-            // Filter country by country code and utilise `CountryFilterOptions`
-            if CountryManager.shared.filters.contains(.countryCode), countryMatchFound {
-                return country
-            }
-
-            // Filter country by digit country code and utilise `CountryFilterOptions`
-            if CountryManager.shared.filters.contains(.countryDialCode),
-                let digitCountryCode = country.digitCountrycode, digitCountryCode.contains(searchText) {
-                return country
-            }
-
-            return nil
-        }
-        
+        let filteredCountries = CountryPickerEngine().filterCountries(searchText: searchText)
+    
         // Append filtered countries
         filterCountries.append(contentsOf: filteredCountries)
     }

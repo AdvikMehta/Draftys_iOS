@@ -11,9 +11,9 @@ import UIKit
 open class CountryPickerWithSectionViewController: CountryPickerController {
 
     // MARK: - Variables
-    var sections: [Character] = []
-    var sectionCoutries =  [Character: [Country]]()
-    var searchHeaderTitle: Character = "A"
+    private(set) var sections: [Character] = []
+    private(set) var sectionCoutries =  [Character: [Country]]()
+    private(set) var searchHeaderTitle: Character = "A"
 
     // MARK: - View Life Cycle
     override open func viewDidLoad() {
@@ -30,11 +30,13 @@ open class CountryPickerWithSectionViewController: CountryPickerController {
     }
 
     open override func viewDidAppear(_ animated: Bool) {
-        
         if #available(iOS 11.0, *) {
             navigationItem.hidesSearchBarWhenScrolling = true
         }
-        
+        scrollToPreviousCountryIfNeeded()
+    }
+    
+    internal func scrollToPreviousCountryIfNeeded() {
         /// Request for previous country and automatically scroll table view to item
         if let previousCountry = CountryManager.shared.lastCountrySelected {
            let previousCountryFirstCharacter = previousCountry.countryName.first!
@@ -82,18 +84,26 @@ internal extension CountryPickerWithSectionViewController {
         let countrySectionKeyIndexes = sectionCoutries.keys.map { $0 }.sorted()
         let countryMatchSectionIndex = countrySectionKeyIndexes.firstIndex(of: sectionTitle)
         
-        if let itemIndexPath = countryMatchIndex, let sectionIndexPath = countryMatchSectionIndex {
-            let previousCountryIndex = IndexPath(item: itemIndexPath, section: sectionIndexPath)
-            tableView.scrollToRow(at: previousCountryIndex, at: .middle, animated: animated)
+        guard let row = countryMatchIndex, var section = countryMatchSectionIndex else {
+            return
         }
+        if isFavoriteEnable { // If favourite enable first section is by default reserved for favourite
+            section += 1
+        }
+        tableView.scrollToRow(at: IndexPath(row: row, section: section), at: .middle, animated: true)
     }
     
     
     func fetchSectionCountries() {
-        sections = countries.map({ String($0.countryName.prefix(1)).first! }).removeDuplicates()
-        
+        // For Favourite case we need first section empty
+        if isFavoriteEnable {
+            sections.append(contentsOf: "")
+        }
+        sections = countries.map { String($0.countryName.prefix(1)).first! }
+            .removeDuplicates()
+            .sorted(by: <)
         for section in sections {
-            let sectionCountries = countries.filter({ $0.countryName.first! == section })
+            let sectionCountries = countries.filter({ $0.countryName.first! == section }).removeDuplicates()
             sectionCoutries[section] = sectionCountries
         }
     }
@@ -104,20 +114,42 @@ internal extension CountryPickerWithSectionViewController {
 extension CountryPickerWithSectionViewController {
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        return applySearch ? 1 : sections.count
+        if applySearch {
+            return 1
+        }
+        return isFavoriteEnable ? sections.count + 1 : sections.count
     }
     
     override public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return applySearch ? filterCountries.count : numberOfRowFor(section: section)
+        guard !applySearch else { return filterCountries.count }
+        return numberOfRowFor(section: section)
     }
 
     func numberOfRowFor(section: Int) -> Int {
+        if isFavoriteEnable {
+            if section == 0 {
+               return favoriteCountries.count
+            }
+            let character = sections[section-1]
+            return sectionCoutries[character]!.count
+        }
         let character = sections[section]
         return sectionCoutries[character]!.count
     }
 
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return applySearch ? String(searchHeaderTitle) : sections[section].description
+        guard !applySearch else {
+            return String(searchHeaderTitle)
+        }
+        
+        if isFavoriteEnable {
+            if section == 0 {
+                return nil
+            }
+            return sections[section-1].description
+        }
+
+        return sections[section].description
     }
     
     override public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -134,6 +166,13 @@ extension CountryPickerWithSectionViewController {
         
         if applySearch {
             country = filterCountries[indexPath.row]
+        } else if isFavoriteEnable {
+            if indexPath.section == 0 {
+                country = favoriteCountries[indexPath.row]
+            } else {
+                let character = sections[indexPath.section-1]
+                country = sectionCoutries[character]![indexPath.row]
+            }
         } else {
             let character = sections[indexPath.section]
             country = sectionCoutries[character]![indexPath.row]
@@ -174,16 +213,33 @@ extension CountryPickerWithSectionViewController {
         switch applySearch {
         case true:
             let country = filterCountries[indexPath.row]
-            self.callBack?(country)
-            CountryManager.shared.lastCountrySelected = country
-            self.dismiss(animated: false, completion: nil)
+            triggerCallbackAndDismiss(with: country)
         case false:
-            let character = sections[indexPath.section]
-            let country = sectionCoutries[character]![indexPath.row]
-            self.callBack?(country)
-            CountryManager.shared.lastCountrySelected = country
+            var country: Country?
+            if isFavoriteEnable {
+                if indexPath.section == 0 {
+                    country = favoriteCountries[indexPath.row]
+                } else {
+                    let character = sections[indexPath.section-1]
+                    country = sectionCoutries[character]![indexPath.row]
+                }
+            } else {
+                let character = sections[indexPath.section]
+                country = sectionCoutries[character]![indexPath.row]
+            }
+            guard let _country = country else {
+                #if DEBUG
+                  print("fail to get country")
+                #endif
+                return
+            }
+            triggerCallbackAndDismiss(with: _country)
         }
-        
+     }
+    
+    private func triggerCallbackAndDismiss(with country: Country) {
+        callBack?(country)
+        CountryManager.shared.lastCountrySelected = country
         self.dismiss(animated: true, completion: nil)
     }
 }

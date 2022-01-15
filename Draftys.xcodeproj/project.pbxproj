@@ -10,6 +10,7 @@
 		5E10CB1D2509FF510024EE18 /* testCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E10CB1C2509FF510024EE18 /* testCollectionViewCell.swift */; };
 		5E10CB1F250A0FE60024EE18 /* share1CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E10CB1E250A0FE60024EE18 /* share1CollectionViewCell.swift */; };
 		5E10CB21250A0FFE0024EE18 /* share2CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E10CB20250A0FFE0024EE18 /* share2CollectionViewCell.swift */; };
+		5E14DBA02626C13C00CE244B /* duetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E14DB9F2626C13C00CE244B /* duetViewController.swift */; };
 		5E15D0A025062FFD0052E12F /* shareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E15D09F25062FFD0052E12F /* shareViewController.swift */; };
 		5E1F04E52510C24600A3FD49 /* commentsNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1F04E42510C24600A3FD49 /* commentsNewViewController.swift */; };
 		5E2147C52546B73E008C714B /* newDiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2147C42546B73E008C714B /* newDiscoverViewController.swift */; };
@@ -30,6 +31,25 @@
 		5E40DEC5256917500004F0D9 /* privacySettingMVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E40DEC4256917500004F0D9 /* privacySettingMVC.swift */; };
 		5E40DEC7256919E20004F0D9 /* pushNotiSettingMVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E40DEC6256919E20004F0D9 /* pushNotiSettingMVC.swift */; };
 		5E42549C24F13CA400322C28 /* previewPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E42549B24F13CA400322C28 /* previewPlayerViewController.swift */; };
+		5E4A2DAD26061BDE00C076B8 /* liverUserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4A2D9726061BDE00C076B8 /* liverUserCollectionViewCell.swift */; };
+		5E4A2DAE26061BDE00C076B8 /* liveUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4A2D9826061BDE00C076B8 /* liveUsersViewController.swift */; };
+		5E4A2DAF26061BDE00C076B8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4A2D9926061BDE00C076B8 /* MainViewController.swift */; };
+		5E4A2DB026061BDE00C076B8 /* LiveRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4A2D9A26061BDE00C076B8 /* LiveRoomViewController.swift */; };
+		5E4A2DB126061BDE00C076B8 /* RoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4A2D9B26061BDE00C076B8 /* RoleViewController.swift */; };
+		5E4A2DB226061BDE00C076B8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4A2D9C26061BDE00C076B8 /* SettingsViewController.swift */; };
+		5E4A2DB326061BDE00C076B8 /* DimensionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4A2D9E26061BDE00C076B8 /* DimensionCell.swift */; };
+		5E4A2DB426061BDE00C076B8 /* VideoSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4A2D9F26061BDE00C076B8 /* VideoSession.swift */; };
+		5E4A2DB526061BDE00C076B8 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4A2DA026061BDE00C076B8 /* VideoView.swift */; };
+		5E4A2DB626061BDE00C076B8 /* StatisticsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4A2DA226061BDE00C076B8 /* StatisticsInfo.swift */; };
+		5E4A2DB726061BDE00C076B8 /* AgoraExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4A2DA326061BDE00C076B8 /* AgoraExtension.swift */; };
+		5E4A2DB826061BDE00C076B8 /* FileCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4A2DA426061BDE00C076B8 /* FileCenter.swift */; };
+		5E4A2DB926061BDE00C076B8 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4A2DA526061BDE00C076B8 /* Settings.swift */; };
+		5E4A2DBA26061BDE00C076B8 /* KeyCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4A2DA626061BDE00C076B8 /* KeyCenter.swift */; };
+		5E4A2DBB26061BDE00C076B8 /* AGEVideoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4A2DA826061BDE00C076B8 /* AGEVideoLayout.swift */; };
+		5E4A2DBC26061BDE00C076B8 /* AGEVideoConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4A2DA926061BDE00C076B8 /* AGEVideoConstraints.swift */; };
+		5E4A2DBD26061BDE00C076B8 /* AGEEventsObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4A2DAA26061BDE00C076B8 /* AGEEventsObserver.swift */; };
+		5E4A2DBE26061BDE00C076B8 /* AGEView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4A2DAB26061BDE00C076B8 /* AGEView.swift */; };
+		5E4A2DBF26061BDE00C076B8 /* AGEVideoContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4A2DAC26061BDE00C076B8 /* AGEVideoContainer.swift */; };
 		5E4A9AA32552850E000D9D6C /* pushNotiSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4A9AA22552850E000D9D6C /* pushNotiSettingsViewController.swift */; };
 		5E53506E2553C0FA009E4EB9 /* privacySettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E53506D2553C0FA009E4EB9 /* privacySettingViewController.swift */; };
 		5E5350702553C1D7009E4EB9 /* privacySettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E53506F2553C1D7009E4EB9 /* privacySettingTableViewCell.swift */; };
@@ -68,7 +88,6 @@
 		5E98AB872502577500F156E6 /* privacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E98AB862502577500F156E6 /* privacyViewController.swift */; };
 		5E98AB8B250257BF00F156E6 /* privacyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E98AB8A250257BF00F156E6 /* privacyTableViewCell.swift */; };
 		5E98AB8E2502583F00F156E6 /* privacyOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E98AB8D2502583F00F156E6 /* privacyOptions.swift */; };
-		5E9B6C542600845E0044ACB9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E9B6C532600845E0044ACB9 /* GoogleService-Info.plist */; };
 		5E9C41E5255AA60200ACF430 /* gifClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C41E4255AA60200ACF430 /* gifClass.swift */; };
 		5EA3E821252B526500C6C13A /* ApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3E820252B526500C6C13A /* ApiHandler.swift */; };
 		5EAB63EE2567DE17003B54DA /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAB63ED2567DE16003B54DA /* CustomTextField.swift */; };
@@ -125,8 +144,7 @@
 		5ED55445255BB56B003C121F /* countryCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED55444255BB56B003C121F /* countryCodeViewController.swift */; };
 		5EEBB69B25CEA69F002DC24B /* favMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEBB69A25CEA69F002DC24B /* favMainViewController.swift */; };
 		5EF2254624EE81B600CE3D35 /* size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF2254524EE81B600CE3D35 /* size.swift */; };
-		6988554E56A86A9B4924C69B /* Pods_MusicTok.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8944BEA78B6A1349E72785FF /* Pods_MusicTok.framework */; };
-		86E885C36E4D79BBF06144F9 /* Pods_MusicTok_MusicTokUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F49875CF23EA633BBC3F685 /* Pods_MusicTok_MusicTokUITests.framework */; };
+		9EDFA83FCA9AD4DB373E4E51 /* Pods_Draftys_DraftysUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBD51C851F6EAF834D13B626 /* Pods_Draftys_DraftysUITests.framework */; };
 		AE0AEED424AB5B52008340BD /* FollowingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0AEED324AB5B52008340BD /* FollowingViewController.swift */; };
 		AE0AEED624AB5C15008340BD /* FollowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0AEED524AB5C15008340BD /* FollowTableViewCell.swift */; };
 		AE0AEED824AB6AFC008340BD /* Follow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0AEED724AB6AFC008340BD /* Follow.swift */; };
@@ -172,6 +190,19 @@
 		AEFA5DA9249CEA0600CD7D07 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEFA5DA8249CEA0600CD7D07 /* LocalAuthentication.framework */; };
 		AEFA5DAB249CEA1500CD7D07 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEFA5DAA249CEA1500CD7D07 /* AuthenticationServices.framework */; };
 		AEFA5DAD249CEA1E00CD7D07 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEFA5DAC249CEA1D00CD7D07 /* SystemConfiguration.framework */; };
+		B606A33726983373002672EE /* userTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B606A33626983372002672EE /* userTypeViewController.swift */; };
+		B61B5632270EC513000DB890 /* viewEyeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = B61B5631270EC513000DB890 /* viewEyeIcon.png */; };
+		B63C86E726AB210D0083272D /* SearchedProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63C86E626AB210D0083272D /* SearchedProfileViewController.swift */; };
+		B63C86EB26AB250D0083272D /* searchedprofileListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63C86EA26AB250D0083272D /* searchedprofileListTableViewCell.swift */; };
+		B6537DC5269ED3DA0047D6E0 /* AdvanceFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6537DC4269ED3DA0047D6E0 /* AdvanceFilterViewController.swift */; };
+		B6537DC9269F27E30047D6E0 /* Draftys.png in Resources */ = {isa = PBXBuildFile; fileRef = B6537DC8269F27E30047D6E0 /* Draftys.png */; };
+		B68CFBE32705D0D40021D64E /* videosAgainstSoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68CFBE22705D0D40021D64E /* videosAgainstSoundViewController.swift */; };
+		B6BA270126C4FD5E00008F40 /* forgetPwdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BA270026C4FD5E00008F40 /* forgetPwdViewController.swift */; };
+		B6EC631B2694983100A338A7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6EC631A2694983100A338A7 /* GoogleService-Info.plist */; };
+		B6F1ABE326C64C6D00741D6A /* ResetPwdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F1ABE226C64C6D00741D6A /* ResetPwdViewController.swift */; };
+		B6F8EDBC26A7F1A100F9054A /* splashScreen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B6F8EDBB26A7F1A100F9054A /* splashScreen.jpg */; };
+		B6F8EDC026A7F40300F9054A /* splashScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = B6F8EDBF26A7F40300F9054A /* splashScreen.png */; };
+		B9DF251F57CD3A8DF34F9FAE /* Pods_Draftys.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F50985F9EF7A0EACD6179FD0 /* Pods_Draftys.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -185,14 +216,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		17F5F34674F4851C03E58252 /* Pods-MusicTok.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicTok.release.xcconfig"; path = "Target Support Files/Pods-MusicTok/Pods-MusicTok.release.xcconfig"; sourceTree = "<group>"; };
-		1C92BBACE9A438963ED215AD /* Pods-TIK TIKUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TIK TIKUITests.release.xcconfig"; path = "Target Support Files/Pods-TIK TIKUITests/Pods-TIK TIKUITests.release.xcconfig"; sourceTree = "<group>"; };
-		276662BDE6D48B25B8F9BE23 /* Pods-MusicTok-MusicTokUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicTok-MusicTokUITests.debug.xcconfig"; path = "Target Support Files/Pods-MusicTok-MusicTokUITests/Pods-MusicTok-MusicTokUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		2A7DB02FAA4BE7D71449722A /* Pods-Moooby-MooobyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moooby-MooobyUITests.release.xcconfig"; path = "Target Support Files/Pods-Moooby-MooobyUITests/Pods-Moooby-MooobyUITests.release.xcconfig"; sourceTree = "<group>"; };
-		455F1339565756698DA9C8CD /* Pods-TIK TIKUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TIK TIKUITests.debug.xcconfig"; path = "Target Support Files/Pods-TIK TIKUITests/Pods-TIK TIKUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5E10CB1C2509FF510024EE18 /* testCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testCollectionViewCell.swift; sourceTree = "<group>"; };
 		5E10CB1E250A0FE60024EE18 /* share1CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = share1CollectionViewCell.swift; sourceTree = "<group>"; };
 		5E10CB20250A0FFE0024EE18 /* share2CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = share2CollectionViewCell.swift; sourceTree = "<group>"; };
+		5E14DB9F2626C13C00CE244B /* duetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = duetViewController.swift; sourceTree = "<group>"; };
 		5E15D09F25062FFD0052E12F /* shareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shareViewController.swift; sourceTree = "<group>"; };
 		5E1F04E42510C24600A3FD49 /* commentsNewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = commentsNewViewController.swift; sourceTree = "<group>"; };
 		5E2147C42546B73E008C714B /* newDiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newDiscoverViewController.swift; sourceTree = "<group>"; };
@@ -213,6 +240,25 @@
 		5E40DEC4256917500004F0D9 /* privacySettingMVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = privacySettingMVC.swift; sourceTree = "<group>"; };
 		5E40DEC6256919E20004F0D9 /* pushNotiSettingMVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pushNotiSettingMVC.swift; sourceTree = "<group>"; };
 		5E42549B24F13CA400322C28 /* previewPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = previewPlayerViewController.swift; sourceTree = "<group>"; };
+		5E4A2D9726061BDE00C076B8 /* liverUserCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = liverUserCollectionViewCell.swift; sourceTree = "<group>"; };
+		5E4A2D9826061BDE00C076B8 /* liveUsersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = liveUsersViewController.swift; sourceTree = "<group>"; };
+		5E4A2D9926061BDE00C076B8 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		5E4A2D9A26061BDE00C076B8 /* LiveRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveRoomViewController.swift; sourceTree = "<group>"; };
+		5E4A2D9B26061BDE00C076B8 /* RoleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoleViewController.swift; sourceTree = "<group>"; };
+		5E4A2D9C26061BDE00C076B8 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		5E4A2D9E26061BDE00C076B8 /* DimensionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DimensionCell.swift; sourceTree = "<group>"; };
+		5E4A2D9F26061BDE00C076B8 /* VideoSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoSession.swift; sourceTree = "<group>"; };
+		5E4A2DA026061BDE00C076B8 /* VideoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
+		5E4A2DA226061BDE00C076B8 /* StatisticsInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsInfo.swift; sourceTree = "<group>"; };
+		5E4A2DA326061BDE00C076B8 /* AgoraExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgoraExtension.swift; sourceTree = "<group>"; };
+		5E4A2DA426061BDE00C076B8 /* FileCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileCenter.swift; sourceTree = "<group>"; };
+		5E4A2DA526061BDE00C076B8 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		5E4A2DA626061BDE00C076B8 /* KeyCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyCenter.swift; sourceTree = "<group>"; };
+		5E4A2DA826061BDE00C076B8 /* AGEVideoLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGEVideoLayout.swift; sourceTree = "<group>"; };
+		5E4A2DA926061BDE00C076B8 /* AGEVideoConstraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGEVideoConstraints.swift; sourceTree = "<group>"; };
+		5E4A2DAA26061BDE00C076B8 /* AGEEventsObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGEEventsObserver.swift; sourceTree = "<group>"; };
+		5E4A2DAB26061BDE00C076B8 /* AGEView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGEView.swift; sourceTree = "<group>"; };
+		5E4A2DAC26061BDE00C076B8 /* AGEVideoContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGEVideoContainer.swift; sourceTree = "<group>"; };
 		5E4A9AA22552850E000D9D6C /* pushNotiSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pushNotiSettingsViewController.swift; sourceTree = "<group>"; };
 		5E53506D2553C0FA009E4EB9 /* privacySettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = privacySettingViewController.swift; sourceTree = "<group>"; };
 		5E53506F2553C1D7009E4EB9 /* privacySettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = privacySettingTableViewCell.swift; sourceTree = "<group>"; };
@@ -253,7 +299,6 @@
 		5E98AB862502577500F156E6 /* privacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = privacyViewController.swift; sourceTree = "<group>"; };
 		5E98AB8A250257BF00F156E6 /* privacyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = privacyTableViewCell.swift; sourceTree = "<group>"; };
 		5E98AB8D2502583F00F156E6 /* privacyOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = privacyOptions.swift; sourceTree = "<group>"; };
-		5E9B6C532600845E0044ACB9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5E9C41E4255AA60200ACF430 /* gifClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gifClass.swift; sourceTree = "<group>"; };
 		5EA3E820252B526500C6C13A /* ApiHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiHandler.swift; sourceTree = "<group>"; };
 		5EAB63ED2567DE16003B54DA /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
@@ -320,11 +365,8 @@
 		5ED55444255BB56B003C121F /* countryCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = countryCodeViewController.swift; sourceTree = "<group>"; };
 		5EEBB69A25CEA69F002DC24B /* favMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favMainViewController.swift; sourceTree = "<group>"; };
 		5EF2254524EE81B600CE3D35 /* size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = size.swift; sourceTree = "<group>"; };
-		5F49875CF23EA633BBC3F685 /* Pods_MusicTok_MusicTokUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicTok_MusicTokUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7FAC47F800DB6BF74D61500D /* Pods-Moooby-MooobyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moooby-MooobyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Moooby-MooobyUITests/Pods-Moooby-MooobyUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		8944BEA78B6A1349E72785FF /* Pods_MusicTok.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicTok.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8967039BBA1F32DA3B49881C /* Pods-MusicTok.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicTok.debug.xcconfig"; path = "Target Support Files/Pods-MusicTok/Pods-MusicTok.debug.xcconfig"; sourceTree = "<group>"; };
-		A5872FDFADD09824F8AB9F67 /* Pods-Moooby.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moooby.release.xcconfig"; path = "Target Support Files/Pods-Moooby/Pods-Moooby.release.xcconfig"; sourceTree = "<group>"; };
+		678886D4D55DA6150EC1FF5D /* Pods-Draftys.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Draftys.release.xcconfig"; path = "Target Support Files/Pods-Draftys/Pods-Draftys.release.xcconfig"; sourceTree = "<group>"; };
+		79E59C3E03E1EC9E81AD3FA5 /* Pods-Draftys-DraftysUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Draftys-DraftysUITests.release.xcconfig"; path = "Target Support Files/Pods-Draftys-DraftysUITests/Pods-Draftys-DraftysUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AE0AEED324AB5B52008340BD /* FollowingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingViewController.swift; sourceTree = "<group>"; };
 		AE0AEED524AB5C15008340BD /* FollowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowTableViewCell.swift; sourceTree = "<group>"; };
 		AE0AEED724AB6AFC008340BD /* Follow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follow.swift; sourceTree = "<group>"; };
@@ -337,14 +379,14 @@
 		AE11DFAE24AF125C009A10D4 /* AsyncPhotoMediaItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncPhotoMediaItem.swift; sourceTree = "<group>"; };
 		AE277735227883C4003695BB /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		AE3C98C424AC8071004D89B9 /* Following1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Following1ViewController.swift; sourceTree = "<group>"; };
-		AE543C4B2270361B00E47594 /* MusicTok.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicTok.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE543C4B2270361B00E47594 /* Draftys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Draftys.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE543C4E2270361B00E47594 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE543C502270361B00E47594 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AE543C532270361B00E47594 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AE543C552270361C00E47594 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE543C582270361C00E47594 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE543C5A2270361C00E47594 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AE543C5F2270361C00E47594 /* MusicTokUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicTokUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE543C5F2270361C00E47594 /* DraftysUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DraftysUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE543C632270361C00E47594 /* ticticUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ticticUITests.swift; sourceTree = "<group>"; };
 		AE543C652270361C00E47594 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE543C70227041A900E47594 /* HomeViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController2.swift; sourceTree = "<group>"; };
@@ -375,10 +417,22 @@
 		AEFA5DA8249CEA0600CD7D07 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		AEFA5DAA249CEA1500CD7D07 /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
 		AEFA5DAC249CEA1D00CD7D07 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		AFF6249716FA173B1CB5C3C5 /* Pods-TIK TIK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TIK TIK.debug.xcconfig"; path = "Target Support Files/Pods-TIK TIK/Pods-TIK TIK.debug.xcconfig"; sourceTree = "<group>"; };
-		BF44A0F35DDDD8F4952B756B /* Pods-TIK TIK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TIK TIK.release.xcconfig"; path = "Target Support Files/Pods-TIK TIK/Pods-TIK TIK.release.xcconfig"; sourceTree = "<group>"; };
-		CC7B0E3F1868CFEBFE484220 /* Pods-MusicTok-MusicTokUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicTok-MusicTokUITests.release.xcconfig"; path = "Target Support Files/Pods-MusicTok-MusicTokUITests/Pods-MusicTok-MusicTokUITests.release.xcconfig"; sourceTree = "<group>"; };
-		CCD3BE5850F5A788C4FC67F9 /* Pods-Moooby.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moooby.debug.xcconfig"; path = "Target Support Files/Pods-Moooby/Pods-Moooby.debug.xcconfig"; sourceTree = "<group>"; };
+		B54AF369813C40580486E4B6 /* Pods-Draftys-DraftysUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Draftys-DraftysUITests.debug.xcconfig"; path = "Target Support Files/Pods-Draftys-DraftysUITests/Pods-Draftys-DraftysUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B606A33626983372002672EE /* userTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userTypeViewController.swift; sourceTree = "<group>"; };
+		B61B5631270EC513000DB890 /* viewEyeIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = viewEyeIcon.png; sourceTree = "<group>"; };
+		B63C86E626AB210D0083272D /* SearchedProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchedProfileViewController.swift; sourceTree = "<group>"; };
+		B63C86EA26AB250D0083272D /* searchedprofileListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchedprofileListTableViewCell.swift; sourceTree = "<group>"; };
+		B6537DC4269ED3DA0047D6E0 /* AdvanceFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvanceFilterViewController.swift; sourceTree = "<group>"; };
+		B6537DC8269F27E30047D6E0 /* Draftys.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Draftys.png; sourceTree = "<group>"; };
+		B68CFBE22705D0D40021D64E /* videosAgainstSoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = videosAgainstSoundViewController.swift; sourceTree = "<group>"; };
+		B6BA270026C4FD5E00008F40 /* forgetPwdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = forgetPwdViewController.swift; sourceTree = "<group>"; };
+		B6EC631A2694983100A338A7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B6F1ABE226C64C6D00741D6A /* ResetPwdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPwdViewController.swift; sourceTree = "<group>"; };
+		B6F8EDBB26A7F1A100F9054A /* splashScreen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = splashScreen.jpg; sourceTree = "<group>"; };
+		B6F8EDBF26A7F40300F9054A /* splashScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splashScreen.png; sourceTree = "<group>"; };
+		CD854CAA202685D74EA7412A /* Pods-Draftys.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Draftys.debug.xcconfig"; path = "Target Support Files/Pods-Draftys/Pods-Draftys.debug.xcconfig"; sourceTree = "<group>"; };
+		F50985F9EF7A0EACD6179FD0 /* Pods_Draftys.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Draftys.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBD51C851F6EAF834D13B626 /* Pods_Draftys_DraftysUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Draftys_DraftysUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -392,7 +446,7 @@
 				AEFA5DA4249CE9CA00CD7D07 /* GoogleSignIn.framework in Frameworks */,
 				AEFA5DA7249CE9FE00CD7D07 /* SafariServices.framework in Frameworks */,
 				AEFA5DA9249CEA0600CD7D07 /* LocalAuthentication.framework in Frameworks */,
-				6988554E56A86A9B4924C69B /* Pods_MusicTok.framework in Frameworks */,
+				B9DF251F57CD3A8DF34F9FAE /* Pods_Draftys.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,13 +454,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86E885C36E4D79BBF06144F9 /* Pods_MusicTok_MusicTokUITests.framework in Frameworks */,
+				9EDFA83FCA9AD4DB373E4E51 /* Pods_Draftys_DraftysUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E14DB9E2626C11D00CE244B /* duet */ = {
+			isa = PBXGroup;
+			children = (
+				5E14DB9F2626C13C00CE244B /* duetViewController.swift */,
+			);
+			path = duet;
+			sourceTree = "<group>";
+		};
 		5E15D09E25062FE50052E12F /* Share */ = {
 			isa = PBXGroup;
 			children = (
@@ -432,6 +494,8 @@
 				5E2147C62546B7AC008C714B /* cell */,
 				5E2147C42546B73E008C714B /* newDiscoverViewController.swift */,
 				5EAC0E9F2556670400BCDF0F /* discoverSearchViewController.swift */,
+				B6537DC4269ED3DA0047D6E0 /* AdvanceFilterViewController.swift */,
+				B63C86E626AB210D0083272D /* SearchedProfileViewController.swift */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -442,6 +506,7 @@
 				5E2147C72546B7C7008C714B /* newDiscoverTableViewCell.swift */,
 				5E2147C92546B7E2008C714B /* newDiscoverCollectionViewCell.swift */,
 				5E2147CB2546B839008C714B /* newDiscoverBannerCollectionViewCell.swift */,
+				B63C86EA26AB250D0083272D /* searchedprofileListTableViewCell.swift */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -493,6 +558,80 @@
 			path = loader;
 			sourceTree = "<group>";
 		};
+		5E4A2D9326061BDE00C076B8 /* AgoraWork */ = {
+			isa = PBXGroup;
+			children = (
+				5E4A2D9426061BDE00C076B8 /* ALL_ARCHITECTURE */,
+				5E4A2D9526061BDE00C076B8 /* agoraController */,
+				5E4A2D9D26061BDE00C076B8 /* agoraViews */,
+				5E4A2DA126061BDE00C076B8 /* agoraSupport */,
+				5E4A2DA726061BDE00C076B8 /* video layout */,
+			);
+			path = AgoraWork;
+			sourceTree = "<group>";
+		};
+		5E4A2D9426061BDE00C076B8 /* ALL_ARCHITECTURE */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ALL_ARCHITECTURE;
+			sourceTree = "<group>";
+		};
+		5E4A2D9526061BDE00C076B8 /* agoraController */ = {
+			isa = PBXGroup;
+			children = (
+				5E4A2D9626061BDE00C076B8 /* CVC */,
+				5E4A2D9826061BDE00C076B8 /* liveUsersViewController.swift */,
+				5E4A2D9926061BDE00C076B8 /* MainViewController.swift */,
+				5E4A2D9A26061BDE00C076B8 /* LiveRoomViewController.swift */,
+				5E4A2D9B26061BDE00C076B8 /* RoleViewController.swift */,
+				5E4A2D9C26061BDE00C076B8 /* SettingsViewController.swift */,
+			);
+			path = agoraController;
+			sourceTree = "<group>";
+		};
+		5E4A2D9626061BDE00C076B8 /* CVC */ = {
+			isa = PBXGroup;
+			children = (
+				5E4A2D9726061BDE00C076B8 /* liverUserCollectionViewCell.swift */,
+			);
+			path = CVC;
+			sourceTree = "<group>";
+		};
+		5E4A2D9D26061BDE00C076B8 /* agoraViews */ = {
+			isa = PBXGroup;
+			children = (
+				5E4A2D9E26061BDE00C076B8 /* DimensionCell.swift */,
+				5E4A2D9F26061BDE00C076B8 /* VideoSession.swift */,
+				5E4A2DA026061BDE00C076B8 /* VideoView.swift */,
+			);
+			path = agoraViews;
+			sourceTree = "<group>";
+		};
+		5E4A2DA126061BDE00C076B8 /* agoraSupport */ = {
+			isa = PBXGroup;
+			children = (
+				5E4A2DA226061BDE00C076B8 /* StatisticsInfo.swift */,
+				5E4A2DA326061BDE00C076B8 /* AgoraExtension.swift */,
+				5E4A2DA426061BDE00C076B8 /* FileCenter.swift */,
+				5E4A2DA526061BDE00C076B8 /* Settings.swift */,
+				5E4A2DA626061BDE00C076B8 /* KeyCenter.swift */,
+			);
+			path = agoraSupport;
+			sourceTree = "<group>";
+		};
+		5E4A2DA726061BDE00C076B8 /* video layout */ = {
+			isa = PBXGroup;
+			children = (
+				5E4A2DA826061BDE00C076B8 /* AGEVideoLayout.swift */,
+				5E4A2DA926061BDE00C076B8 /* AGEVideoConstraints.swift */,
+				5E4A2DAA26061BDE00C076B8 /* AGEEventsObserver.swift */,
+				5E4A2DAB26061BDE00C076B8 /* AGEView.swift */,
+				5E4A2DAC26061BDE00C076B8 /* AGEVideoContainer.swift */,
+			);
+			path = "video layout";
+			sourceTree = "<group>";
+		};
 		5E5FAB49253584EB00A21897 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -535,6 +674,7 @@
 				5E772A0B2531B33500966AD1 /* loginViewController.swift */,
 				5E6C374C25341F3A00F60718 /* dobViewController.swift */,
 				5ED040EC253489EB007BCA3A /* nameViewController.swift */,
+				B606A33626983372002672EE /* userTypeViewController.swift */,
 			);
 			path = LoginSignup;
 			sourceTree = "<group>";
@@ -580,6 +720,7 @@
 			children = (
 				5E7FD31F2525DD35009481DD /* homeFeedCell */,
 				5E7FD31D2525DD2B009481DD /* homeFeedViewController.swift */,
+				B68CFBE22705D0D40021D64E /* videosAgainstSoundViewController.swift */,
 			);
 			path = HomeScreen;
 			sourceTree = "<group>";
@@ -613,13 +754,6 @@
 				5E40DEC2256904070004F0D9 /* popPrivacySettingTableViewCell.swift */,
 			);
 			path = Cells;
-			sourceTree = "<group>";
-		};
-		5E8C95EC2500D5B200EA991E /* bottomPager */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = bottomPager;
 			sourceTree = "<group>";
 		};
 		5E8CB7B625F0F68C009A1F59 /* Splash */ = {
@@ -755,6 +889,7 @@
 		5EB7936A253AF2E600525B5B /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				B61B5631270EC513000DB890 /* viewEyeIcon.png */,
 				5E40DEC02568F4640004F0D9 /* 22954-plus-to-tick.json */,
 				5E7CD9A0254014940098684B /* 4837-heart.json */,
 				5EB7936C253AF2FF00525B5B /* lottieAddUser.json */,
@@ -862,15 +997,10 @@
 				5ED040E7253455FF007BCA3A /* emailLoginViewController.swift */,
 				5EB595EC25381914009B3F45 /* emailSignupViewController.swift */,
 				5EB595EE2538192B009B3F45 /* passwordViewController.swift */,
+				B6BA270026C4FD5E00008F40 /* forgetPwdViewController.swift */,
+				B6F1ABE226C64C6D00741D6A /* ResetPwdViewController.swift */,
 			);
 			path = signup;
-			sourceTree = "<group>";
-		};
-		5ED0B35D252F3BE000360832 /* network */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = network;
 			sourceTree = "<group>";
 		};
 		5ED468A524ECE62900F6B8D5 /* Custom Classes */ = {
@@ -923,34 +1053,17 @@
 				AEFA5DA2249CE9CA00CD7D07 /* GoogleSignIn.bundle */,
 				AEFA5DA1249CE9CA00CD7D07 /* GoogleSignIn.framework */,
 				AEFA5DA0249CE9C900CD7D07 /* GoogleSignInDependencies.framework */,
-				8944BEA78B6A1349E72785FF /* Pods_MusicTok.framework */,
-				5F49875CF23EA633BBC3F685 /* Pods_MusicTok_MusicTokUITests.framework */,
+				F50985F9EF7A0EACD6179FD0 /* Pods_Draftys.framework */,
+				FBD51C851F6EAF834D13B626 /* Pods_Draftys_DraftysUITests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		679354F852722EE41609FEBB /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				AFF6249716FA173B1CB5C3C5 /* Pods-TIK TIK.debug.xcconfig */,
-				BF44A0F35DDDD8F4952B756B /* Pods-TIK TIK.release.xcconfig */,
-				455F1339565756698DA9C8CD /* Pods-TIK TIKUITests.debug.xcconfig */,
-				1C92BBACE9A438963ED215AD /* Pods-TIK TIKUITests.release.xcconfig */,
-				CCD3BE5850F5A788C4FC67F9 /* Pods-Moooby.debug.xcconfig */,
-				A5872FDFADD09824F8AB9F67 /* Pods-Moooby.release.xcconfig */,
-				7FAC47F800DB6BF74D61500D /* Pods-Moooby-MooobyUITests.debug.xcconfig */,
-				2A7DB02FAA4BE7D71449722A /* Pods-Moooby-MooobyUITests.release.xcconfig */,
-				8967039BBA1F32DA3B49881C /* Pods-MusicTok.debug.xcconfig */,
-				17F5F34674F4851C03E58252 /* Pods-MusicTok.release.xcconfig */,
-				276662BDE6D48B25B8F9BE23 /* Pods-MusicTok-MusicTokUITests.debug.xcconfig */,
-				CC7B0E3F1868CFEBFE484220 /* Pods-MusicTok-MusicTokUITests.release.xcconfig */,
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 		AE543C422270361B00E47594 = {
 			isa = PBXGroup;
 			children = (
+				B6EC631A2694983100A338A7 /* GoogleService-Info.plist */,
+				5E4A2D9326061BDE00C076B8 /* AgoraWork */,
 				5EA3E81F252B524400C6C13A /* api */,
 				AE11DFAE24AF125C009A10D4 /* AsyncPhotoMediaItem.swift */,
 				AEAFD3E324ADD20D00D7870C /* Notification.swift */,
@@ -976,16 +1089,16 @@
 				AE543C4D2270361B00E47594 /* tictic */,
 				AE543C622270361C00E47594 /* ticticUITests */,
 				AE543C4C2270361B00E47594 /* Products */,
-				679354F852722EE41609FEBB /* Pods */,
 				6182C4FCE1237484E8E9405B /* Frameworks */,
+				DC9C8B3604A9DEDE68AC9EB6 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
 		AE543C4C2270361B00E47594 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AE543C4B2270361B00E47594 /* MusicTok.app */,
-				AE543C5F2270361C00E47594 /* MusicTokUITests.xctest */,
+				AE543C4B2270361B00E47594 /* Draftys.app */,
+				AE543C5F2270361C00E47594 /* DraftysUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -993,6 +1106,10 @@
 		AE543C4D2270361B00E47594 /* tictic */ = {
 			isa = PBXGroup;
 			children = (
+				B6F8EDBF26A7F40300F9054A /* splashScreen.png */,
+				B6F8EDBB26A7F1A100F9054A /* splashScreen.jpg */,
+				B6537DC8269F27E30047D6E0 /* Draftys.png */,
+				5E14DB9E2626C11D00CE244B /* duet */,
 				5E8CB7B625F0F68C009A1F59 /* Splash */,
 				5EB1903F25CBFBC7000D8A92 /* Hashtag */,
 				5EBFE8AB2562B942009EF73A /* PlayerSetup */,
@@ -1010,12 +1127,10 @@
 				5E772A102531B59500966AD1 /* Localization */,
 				5E772A0D2531B58400966AD1 /* Utilities */,
 				5E6F778E25307C9C003E3ED4 /* LoginSignup */,
-				5ED0B35D252F3BE000360832 /* network */,
 				5E7FD31C2525DCEB009481DD /* HomeScreen */,
 				5E1F04E32510C22900A3FD49 /* Comments */,
 				5E15D09E25062FE50052E12F /* Share */,
 				5E98AB8C2502582700F156E6 /* Models */,
-				5E8C95EC2500D5B200EA991E /* bottomPager */,
 				5E37B08D24F61E500026B566 /* loader */,
 				5EF2254424EE81A100CE3D35 /* Sizing controller */,
 				5ED468A524ECE62900F6B8D5 /* Custom Classes */,
@@ -1039,7 +1154,6 @@
 				AE543C522270361B00E47594 /* Main.storyboard */,
 				5EB7936A253AF2E600525B5B /* Assets */,
 				AE543C572270361C00E47594 /* LaunchScreen.storyboard */,
-				5E9B6C532600845E0044ACB9 /* GoogleService-Info.plist */,
 				AE543C5A2270361C00E47594 /* Info.plist */,
 				5E881CBA255067ED000D5F8A /* testViewController.swift */,
 				5EB236DF25CACC310073D45B /* hashMention.swift */,
@@ -1056,12 +1170,23 @@
 			path = ticticUITests;
 			sourceTree = "<group>";
 		};
+		DC9C8B3604A9DEDE68AC9EB6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CD854CAA202685D74EA7412A /* Pods-Draftys.debug.xcconfig */,
+				678886D4D55DA6150EC1FF5D /* Pods-Draftys.release.xcconfig */,
+				B54AF369813C40580486E4B6 /* Pods-Draftys-DraftysUITests.debug.xcconfig */,
+				79E59C3E03E1EC9E81AD3FA5 /* Pods-Draftys-DraftysUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AE543C4A2270361B00E47594 /* MusicTok */ = {
+		AE543C4A2270361B00E47594 /* Draftys */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AE543C682270361C00E47594 /* Build configuration list for PBXNativeTarget "MusicTok" */;
+			buildConfigurationList = AE543C682270361C00E47594 /* Build configuration list for PBXNativeTarget "Draftys" */;
 			buildPhases = (
 				0FFAA204659835DB86F39016 /* [CP] Check Pods Manifest.lock */,
 				AE543C472270361B00E47594 /* Sources */,
@@ -1074,14 +1199,14 @@
 			);
 			dependencies = (
 			);
-			name = MusicTok;
+			name = Draftys;
 			productName = tictic;
-			productReference = AE543C4B2270361B00E47594 /* MusicTok.app */;
+			productReference = AE543C4B2270361B00E47594 /* Draftys.app */;
 			productType = "com.apple.product-type.application";
 		};
-		AE543C5E2270361C00E47594 /* MusicTokUITests */ = {
+		AE543C5E2270361C00E47594 /* DraftysUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AE543C6B2270361C00E47594 /* Build configuration list for PBXNativeTarget "MusicTokUITests" */;
+			buildConfigurationList = AE543C6B2270361C00E47594 /* Build configuration list for PBXNativeTarget "DraftysUITests" */;
 			buildPhases = (
 				2EEC43DDFE766F494D099E43 /* [CP] Check Pods Manifest.lock */,
 				AE543C5B2270361C00E47594 /* Sources */,
@@ -1094,9 +1219,9 @@
 			dependencies = (
 				AE543C612270361C00E47594 /* PBXTargetDependency */,
 			);
-			name = MusicTokUITests;
+			name = DraftysUITests;
 			productName = ticticUITests;
-			productReference = AE543C5F2270361C00E47594 /* MusicTokUITests.xctest */;
+			productReference = AE543C5F2270361C00E47594 /* DraftysUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -1106,7 +1231,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1020;
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1320;
 				ORGANIZATIONNAME = "Junaid Kamoka";
 				TargetAttributes = {
 					AE543C4A2270361B00E47594 = {
@@ -1127,7 +1252,7 @@
 					};
 				};
 			};
-			buildConfigurationList = AE543C462270361B00E47594 /* Build configuration list for PBXProject "MusicTok" */;
+			buildConfigurationList = AE543C462270361B00E47594 /* Build configuration list for PBXProject "Draftys" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -1140,8 +1265,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AE543C4A2270361B00E47594 /* MusicTok */,
-				AE543C5E2270361C00E47594 /* MusicTokUITests */,
+				AE543C4A2270361B00E47594 /* Draftys */,
+				AE543C5E2270361C00E47594 /* DraftysUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -1151,7 +1276,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E9B6C542600845E0044ACB9 /* GoogleService-Info.plist in Resources */,
+				B6EC631B2694983100A338A7 /* GoogleService-Info.plist in Resources */,
 				5EB7936E253AF30000525B5B /* lottieHeart2.json in Resources */,
 				5ED55440255BB495003C121F /* countryCodeWithFlags.json in Resources */,
 				5EB79370253AF30000525B5B /* lottieHeart.json in Resources */,
@@ -1159,11 +1284,15 @@
 				AE543C562270361C00E47594 /* Assets.xcassets in Resources */,
 				AE543C542270361B00E47594 /* Main.storyboard in Resources */,
 				5E40DEC12568F4640004F0D9 /* 22954-plus-to-tick.json in Resources */,
+				B6F8EDBC26A7F1A100F9054A /* splashScreen.jpg in Resources */,
 				5E772A122531B5A100966AD1 /* Localizable.strings in Resources */,
 				AEFA5DA5249CE9CA00CD7D07 /* GoogleSignIn.bundle in Resources */,
 				AEC5E7C322898F4A00D9C59B /* Spinner-1s-200px.gif in Resources */,
+				B61B5632270EC513000DB890 /* viewEyeIcon.png in Resources */,
 				5E7CD9A1254014940098684B /* 4837-heart.json in Resources */,
 				5EB7936F253AF30000525B5B /* lottieAddUser.json in Resources */,
+				B6F8EDC026A7F40300F9054A /* splashScreen.png in Resources */,
+				B6537DC9269F27E30047D6E0 /* Draftys.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1192,7 +1321,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MusicTok-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Draftys-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1205,15 +1334,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MusicTok-MusicTokUITests/Pods-MusicTok-MusicTokUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Draftys-DraftysUITests/Pods-Draftys-DraftysUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MusicTok-MusicTokUITests/Pods-MusicTok-MusicTokUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Draftys-DraftysUITests/Pods-Draftys-DraftysUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MusicTok-MusicTokUITests/Pods-MusicTok-MusicTokUITests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Draftys-DraftysUITests/Pods-Draftys-DraftysUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		2EEC43DDFE766F494D099E43 /* [CP] Check Pods Manifest.lock */ = {
@@ -1231,7 +1360,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MusicTok-MusicTokUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Draftys-DraftysUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1261,15 +1390,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MusicTok/Pods-MusicTok-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Draftys/Pods-Draftys-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MusicTok/Pods-MusicTok-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Draftys/Pods-Draftys-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MusicTok/Pods-MusicTok-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Draftys/Pods-Draftys-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1286,11 +1415,14 @@
 				5E5FAB482535834C00A21897 /* CustomImageView.swift in Sources */,
 				5EAC0EA625566AAA00BCDF0F /* objectsCollectionViewCell.swift in Sources */,
 				AE543C7B22704C2500E47594 /* TabbarViewController.swift in Sources */,
+				5E4A2DBF26061BDE00C076B8 /* AGEVideoContainer.swift in Sources */,
 				5E5FAB462535834C00A21897 /* CustomButton.swift in Sources */,
+				B6BA270126C4FD5E00008F40 /* forgetPwdViewController.swift in Sources */,
 				5EB698F2254A97D7009DA936 /* termsCondViewController.swift in Sources */,
 				5E37B08F24F61E5D0026B566 /* loader.swift in Sources */,
 				AE543C7E22707DB900E47594 /* MixedRealityViewController.swift in Sources */,
 				5E7EFE1124F4D72A00E61DB1 /* cameraViewController.swift in Sources */,
+				5E4A2DAD26061BDE00C076B8 /* liverUserCollectionViewCell.swift in Sources */,
 				AE0B3CEE227ACD6300E0B2B9 /* Comment.swift in Sources */,
 				5E5FAB472535834C00A21897 /* CustomView.swift in Sources */,
 				5E28D29F255D3C4B00CCB1DD /* Open Api.swift in Sources */,
@@ -1300,7 +1432,9 @@
 				5E29BE4524F3AE1C00B1A237 /* audioTestViewController.swift in Sources */,
 				AE0B3CF4227B109B00E0B2B9 /* Sound.swift in Sources */,
 				5EAC0EAC2556853300BCDF0F /* searchHashtagsTableViewCell.swift in Sources */,
+				5E4A2DBE26061BDE00C076B8 /* AGEView.swift in Sources */,
 				AE0AEED824AB6AFC008340BD /* Follow.swift in Sources */,
+				B68CFBE32705D0D40021D64E /* videosAgainstSoundViewController.swift in Sources */,
 				5E7FC32025BAE97D0085B55C /* followTableViewCell.swift in Sources */,
 				5E5FAB53253587A800A21897 /* newProfileItemsCollectionViewCell.swift in Sources */,
 				5ECC1916255E549500893BF3 /* ConversationViewController.swift in Sources */,
@@ -1328,10 +1462,14 @@
 				5E5E656E252D8BE700B0B4E3 /* videoMainMVC.swift in Sources */,
 				5E53506E2553C0FA009E4EB9 /* privacySettingViewController.swift in Sources */,
 				5ECC191A255E549500893BF3 /* newChatViewController.swift in Sources */,
+				B63C86EB26AB250D0083272D /* searchedprofileListTableViewCell.swift in Sources */,
 				5E9784392563EC1A009DF285 /* allSoundsTableViewCell.swift in Sources */,
 				5E2147CA2546B7E2008C714B /* newDiscoverCollectionViewCell.swift in Sources */,
 				5ED55443255BB4E4003C121F /* countryCodeTableViewCell.swift in Sources */,
 				AE11DFAF24AF125C009A10D4 /* AsyncPhotoMediaItem.swift in Sources */,
+				5E4A2DB926061BDE00C076B8 /* Settings.swift in Sources */,
+				5E4A2DB226061BDE00C076B8 /* SettingsViewController.swift in Sources */,
+				B6537DC5269ED3DA0047D6E0 /* AdvanceFilterViewController.swift in Sources */,
 				AEF752272282BED200C23370 /* DiscoverViewController.swift in Sources */,
 				5EBFE8A925625EF2009EF73A /* soundsCollectionViewCell.swift in Sources */,
 				AE543C77227041E600E47594 /* NotificationViewController.swift in Sources */,
@@ -1345,25 +1483,32 @@
 				AE0B3CEC227ACAF200E0B2B9 /* CommentTableViewCell.swift in Sources */,
 				5E9784372563E4B2009DF285 /* allSoundsViewController.swift in Sources */,
 				5E772A0F2531B58E00966AD1 /* Utility.swift in Sources */,
+				5E14DBA02626C13C00CE244B /* duetViewController.swift in Sources */,
+				5E4A2DB526061BDE00C076B8 /* VideoView.swift in Sources */,
 				5EBFE8B22562BAB6009EF73A /* Notifications.swift in Sources */,
 				5E26F772255A6A2C0043AA03 /* reportViewController.swift in Sources */,
 				AE6F458122854E5B003EF953 /* StaticData.swift in Sources */,
 				AEF7522B2282C09100C23370 /* dicoverTableCell.swift in Sources */,
 				5E2C477B24ED492800E41860 /* actionMediaViewController.swift in Sources */,
+				5E4A2DB126061BDE00C076B8 /* RoleViewController.swift in Sources */,
 				5E2147C82546B7C7008C714B /* newDiscoverTableViewCell.swift in Sources */,
 				5ED55445255BB56B003C121F /* countryCodeViewController.swift in Sources */,
 				5E98AB872502577500F156E6 /* privacyViewController.swift in Sources */,
 				5E9784332563AF99009DF285 /* favSoundsTableViewCell.swift in Sources */,
 				5EAC0EA02556670400BCDF0F /* discoverSearchViewController.swift in Sources */,
 				5EAB63F22567E294003B54DA /* imagePicker.swift in Sources */,
+				B6F1ABE326C64C6D00741D6A /* ResetPwdViewController.swift in Sources */,
 				5EC846F52548355900BBB0A4 /* notificationsMVC.swift in Sources */,
 				AE66E46A2271E24200F7A47C /* homecollCell.swift in Sources */,
 				AEF7522F2282FBBB00C23370 /* DiscoverVideoViewController.swift in Sources */,
 				5EC846F32548069A00BBB0A4 /* videoDetailMVC.swift in Sources */,
 				AEAC0498229FF0AD003C47D9 /* Profile1ViewController.swift in Sources */,
 				5EBFE8A1256259F2009EF73A /* soundsViewController.swift in Sources */,
+				5E4A2DBC26061BDE00C076B8 /* AGEVideoConstraints.swift in Sources */,
 				5EAB63F02567DF62003B54DA /* editProfileViewController.swift in Sources */,
+				5E4A2DB426061BDE00C076B8 /* VideoSession.swift in Sources */,
 				5EBFE8A725625A37009EF73A /* soundsTableViewCell.swift in Sources */,
+				5E4A2DBD26061BDE00C076B8 /* AGEEventsObserver.swift in Sources */,
 				5ED040E8253455FF007BCA3A /* emailLoginViewController.swift in Sources */,
 				AE277736227883C4003695BB /* Home.swift in Sources */,
 				AE543C71227041A900E47594 /* HomeViewController2.swift in Sources */,
@@ -1386,6 +1531,8 @@
 				5EAC0EB425569CD300BCDF0F /* hashTagMVC.swift in Sources */,
 				5E26F770255A6A120043AA03 /* reportTableViewCell.swift in Sources */,
 				5E772A0C2531B33500966AD1 /* loginViewController.swift in Sources */,
+				5E4A2DB826061BDE00C076B8 /* FileCenter.swift in Sources */,
+				5E4A2DBA26061BDE00C076B8 /* KeyCenter.swift in Sources */,
 				5E10CB21250A0FFE0024EE18 /* share2CollectionViewCell.swift in Sources */,
 				5EB595EF2538192B009B3F45 /* passwordViewController.swift in Sources */,
 				5E15D0A025062FFD0052E12F /* shareViewController.swift in Sources */,
@@ -1395,12 +1542,16 @@
 				5EAC0EAE255686E800BCDF0F /* searchSoundTableViewCell.swift in Sources */,
 				5E2147CC2546B839008C714B /* newDiscoverBannerCollectionViewCell.swift in Sources */,
 				5E5FAB4B2535850B00A21897 /* newProfileViewController.swift in Sources */,
+				5E4A2DAF26061BDE00C076B8 /* MainViewController.swift in Sources */,
+				5E4A2DB326061BDE00C076B8 /* DimensionCell.swift in Sources */,
 				5E98AB8E2502583F00F156E6 /* privacyOptions.swift in Sources */,
 				5EAB63EE2567DE17003B54DA /* CustomTextField.swift in Sources */,
+				5E4A2DAE26061BDE00C076B8 /* liveUsersViewController.swift in Sources */,
 				AEF38BB3227C136A00EF7481 /* FavSound.swift in Sources */,
 				5E7D7E1924F9383500A91923 /* postViewController.swift in Sources */,
 				AEAB7D9E228AA2EE00256428 /* ProfileCell.swift in Sources */,
 				5E881CC0255116AC000D5F8A /* privacyAndSettingViewController.swift in Sources */,
+				B63C86E726AB210D0083272D /* SearchedProfileViewController.swift in Sources */,
 				5ECC1917255E549500893BF3 /* ChatTableViewCell.swift in Sources */,
 				5E6F779025307CBD003E3ED4 /* newLoginViewController.swift in Sources */,
 				5E7FD31E2525DD2C009481DD /* homeFeedViewController.swift in Sources */,
@@ -1412,14 +1563,19 @@
 				AE0AEED624AB5C15008340BD /* FollowTableViewCell.swift in Sources */,
 				5E42549C24F13CA400322C28 /* previewPlayerViewController.swift in Sources */,
 				5E5FAB5A2535910F00A21897 /* User.swift in Sources */,
+				5E4A2DB626061BDE00C076B8 /* StatisticsInfo.swift in Sources */,
 				5E40DEC7256919E20004F0D9 /* pushNotiSettingMVC.swift in Sources */,
 				5E1F04E52510C24600A3FD49 /* commentsNewViewController.swift in Sources */,
+				5E4A2DB026061BDE00C076B8 /* LiveRoomViewController.swift in Sources */,
 				5EB7A2802510C42D00386181 /* commentsNewTableViewCell.swift in Sources */,
 				5EB682B92566AF4200D10D96 /* testSoundViewController.swift in Sources */,
 				5E10CB1D2509FF510024EE18 /* testCollectionViewCell.swift in Sources */,
 				5EB595ED25381914009B3F45 /* emailSignupViewController.swift in Sources */,
 				5EA3E821252B526500C6C13A /* ApiHandler.swift in Sources */,
+				5E4A2DB726061BDE00C076B8 /* AgoraExtension.swift in Sources */,
+				B606A33726983373002672EE /* userTypeViewController.swift in Sources */,
 				5E26F776255A71BC0043AA03 /* reportDetailViewController.swift in Sources */,
+				5E4A2DBB26061BDE00C076B8 /* AGEVideoLayout.swift in Sources */,
 				AEF7522D2282C1F100C23370 /* Discover.swift in Sources */,
 				5EB108DA25D139370054B909 /* favWorkingViewController.swift in Sources */,
 			);
@@ -1438,7 +1594,7 @@
 /* Begin PBXTargetDependency section */
 		AE543C612270361C00E47594 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = AE543C4A2270361B00E47594 /* MusicTok */;
+			target = AE543C4A2270361B00E47594 /* Draftys */;
 			targetProxy = AE543C602270361C00E47594 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1497,6 +1653,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1558,6 +1715,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1590,15 +1748,15 @@
 		};
 		AE543C692270361C00E47594 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8967039BBA1F32DA3B49881C /* Pods-MusicTok.debug.xcconfig */;
+			baseConfigurationReference = CD854CAA202685D74EA7412A /* Pods-Draftys.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "TIK TIK.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.1;
-				DEVELOPMENT_TEAM = G99QAZBHL2;
+				CURRENT_PROJECT_VERSION = 1.3;
+				DEVELOPMENT_TEAM = 32GYWMBL38;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1666,33 +1824,33 @@
 					"\"${PODS_TARGET_SRCROOT}/Sources/FBLPromises/include\"",
 				);
 				INFOPLIST_FILE = tictic/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.dinosoftlab.tikik;
-				PRODUCT_NAME = MusicTok;
+				MARKETING_VERSION = 1.3.19;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eliteprohub.draftys;
+				PRODUCT_NAME = Draftys;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "tictic/internetReach/TIK TIK-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		AE543C6A2270361C00E47594 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 17F5F34674F4851C03E58252 /* Pods-MusicTok.release.xcconfig */;
+			baseConfigurationReference = 678886D4D55DA6150EC1FF5D /* Pods-Draftys.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "TIK TIK.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.1;
-				DEVELOPMENT_TEAM = G99QAZBHL2;
+				CURRENT_PROJECT_VERSION = 1.3;
+				DEVELOPMENT_TEAM = 32GYWMBL38;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1760,24 +1918,24 @@
 					"\"${PODS_TARGET_SRCROOT}/Sources/FBLPromises/include\"",
 				);
 				INFOPLIST_FILE = tictic/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.dinosoftlab.tikik;
-				PRODUCT_NAME = MusicTok;
+				MARKETING_VERSION = 1.3.19;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eliteprohub.draftys;
+				PRODUCT_NAME = Draftys;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "tictic/internetReach/TIK TIK-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 		AE543C6C2270361C00E47594 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 276662BDE6D48B25B8F9BE23 /* Pods-MusicTok-MusicTokUITests.debug.xcconfig */;
+			baseConfigurationReference = B54AF369813C40580486E4B6 /* Pods-Draftys-DraftysUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1798,7 +1956,7 @@
 		};
 		AE543C6D2270361C00E47594 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CC7B0E3F1868CFEBFE484220 /* Pods-MusicTok-MusicTokUITests.release.xcconfig */;
+			baseConfigurationReference = 79E59C3E03E1EC9E81AD3FA5 /* Pods-Draftys-DraftysUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1820,7 +1978,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AE543C462270361B00E47594 /* Build configuration list for PBXProject "MusicTok" */ = {
+		AE543C462270361B00E47594 /* Build configuration list for PBXProject "Draftys" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AE543C662270361C00E47594 /* Debug */,
@@ -1829,7 +1987,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AE543C682270361C00E47594 /* Build configuration list for PBXNativeTarget "MusicTok" */ = {
+		AE543C682270361C00E47594 /* Build configuration list for PBXNativeTarget "Draftys" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AE543C692270361C00E47594 /* Debug */,
@@ -1838,7 +1996,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AE543C6B2270361C00E47594 /* Build configuration list for PBXNativeTarget "MusicTokUITests" */ = {
+		AE543C6B2270361C00E47594 /* Build configuration list for PBXNativeTarget "DraftysUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AE543C6C2270361C00E47594 /* Debug */,

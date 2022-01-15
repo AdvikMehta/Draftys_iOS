@@ -198,7 +198,13 @@ class Utility: NSObject {
         UIApplication.shared.keyWindow?.rootViewController?.tabBarController?.tabBar.isUserInteractionEnabled = true
     }
     
-    
+    // MARK:- Dismiss and Pop ViewControllers
+    func dismissPopAllViewViewControllers() {
+        if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+            appDelegate.window?.rootViewController?.dismiss(animated: true, completion: nil)
+            (appDelegate.window?.rootViewController as? UINavigationController)?.popToRootViewController(animated: true)
+        }
+    }
     
     //var fbLogin:FBSDKLoginManager!
     var datePickerDelegate : DatePickerDelegate?

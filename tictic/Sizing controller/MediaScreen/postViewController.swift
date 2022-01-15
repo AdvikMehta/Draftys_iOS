@@ -199,6 +199,10 @@ class postViewController: UIViewController,UITextViewDelegate {
                     }
                     debugPrint(error as Any)
                     print("===========================\n\n")
+                    
+                    AppUtility?.stopLoader(view: self.view)
+                    self.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
+                    
                   //  self.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
             //        AppUtility?.stopLoader(view: self.view)
                //     self.showToast(message: "Not Posted", font: .systemFont(ofSize: 12))
@@ -253,6 +257,9 @@ class postViewController: UIViewController,UITextViewDelegate {
                 }
                 debugPrint(error as Any)
                 print("===========================\n\n")
+                
+                AppUtility?.stopLoader(view: self.view)
+                self.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
                 
             }
         }

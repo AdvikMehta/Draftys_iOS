@@ -18,7 +18,7 @@ class followingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("I am In Following VC")
         // Do any additional setup after loading the view.
         
         tblView.delegate = self
@@ -115,7 +115,7 @@ extension followingsViewController: UITableViewDelegate,UITableViewDataSource{
         let vc = storyboard?.instantiateViewController(withIdentifier: "newProfileVC") as!  newProfileViewController
             vc.isOtherUserVisting = true
         vc.hidesBottomBarWhenPushed = true
-//            vc.otherUserID = otherUserID
+            vc.otherUserID = otherUserID
         UserDefaults.standard.set(otherUserID, forKey: "otherUserID")
         navigationController?.pushViewController(vc, animated: true)
     }

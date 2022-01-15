@@ -12,7 +12,7 @@ class privacyAndSettingViewController: UIViewController,UITableViewDelegate,UITa
     
     var arrPrivacyOptions = [privOptions]()
     
-    var listArr = ["Request Verification","Push Notification","Privacy Setting","Privacy Policy","Terms and Conditions","Change Password","Logout"]
+    var listArr = ["Request Verification","Push Notification","Privacy Setting","Privacy Policy","Terms and Conditions","Change Password"]// ,"Logout"
     
     @IBOutlet weak var tableOutlet: UITableView!
     
@@ -65,6 +65,13 @@ class privacyAndSettingViewController: UIViewController,UITableViewDelegate,UITa
             vc.privacyDoc = false
             vc.modalPresentationStyle = .fullScreen
             present(vc, animated: true, completion: nil)
+            
+            
+        case 5:
+            let vc = storyboard?.instantiateViewController(withIdentifier: "ResetPwdViewController") as! ResetPwdViewController
+           // vc.privacyDoc = false
+            vc.modalPresentationStyle = .fullScreen
+            present(vc, animated: true, completion: nil)
         case 6:
             navigationController?.popViewController(animated: true)
             self.tabBarController?.selectedIndex = 0
@@ -98,6 +105,7 @@ class privacyAndSettingViewController: UIViewController,UITableViewDelegate,UITa
                 if response?.value(forKey: "code") as! NSNumber == 200 {
                     //  self.showToast(message: (response?.value(forKey: "msg") as? String)!, font: .systemFont(ofSize: 12))
                     print(response?.value(forKey: "msg") as Any)
+                    UserDefaults.standard.set("", forKey: "savedRegPhnNo")
                     UserDefaults.standard.set("", forKey: "userID")
                 }else{
                     //                    self.showToast(message: (response?.value(forKey: "msg") as? String)!, font: .systemFont(ofSize: 12))

@@ -85,6 +85,7 @@ class newLoginViewController: UIViewController, UITabBarControllerDelegate {
     @objc func phoneTouchTapped(_ sender: UITapGestureRecognizer) {
     
         let vc = storyboard?.instantiateViewController(withIdentifier: "phoneNoVC") as! phoneNoViewController
+        vc.navFrmStr = "login"
         self.navigationController?.pushViewController(vc, animated: true)
 
         UserDefaults.standard.set("emailSignin", forKey: "signUpType")
@@ -110,7 +111,10 @@ class newLoginViewController: UIViewController, UITabBarControllerDelegate {
         //self.showToast(message: "Comming soon..", font: .systemFont(ofSize: 12))
         
         UserDefaults.standard.set("emailSignup", forKey: "signUpType")
-        let vc = storyboard?.instantiateViewController(identifier: "phoneNoVC") as! phoneNoViewController
+        //let vc = storyboard?.instantiateViewController(identifier: "phoneNoVC") as! phoneNoViewController
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "dobVC") as! dobViewController
+        
         self.navigationController?.pushViewController(vc, animated: true)
         
     }
@@ -140,8 +144,7 @@ class newLoginViewController: UIViewController, UITabBarControllerDelegate {
         if((AccessToken.current) != nil){
             
             print("access token fb: ",AccessToken.current!)
-            
-            GraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email,age_range"]).start(completionHandler: { (connection, result, error) -> Void in
+            GraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email,age_range"]).start(completion: { (connection, result, error) -> Void in
                 if (error == nil){
                     let dict = result as! [String : AnyObject]
                     print(dict)
@@ -168,10 +171,10 @@ class newLoginViewController: UIViewController, UITabBarControllerDelegate {
                             self.socialID = dict["id"] as? String
                             self.authToken = AccessToken.current?.tokenString
                             
-                            print("email: ",dict["email"] as? String)
+                            print("email: ",dict["email"] as! String)
                             
                             
-                            print("email: \(self.email), name: \(self.my_id)")
+                            print("email: \(String(describing: self.email)), name: \(self.my_id)")
                             
                             self.signUPType = "facebook"
                             self.checkAlreadyRegistered()

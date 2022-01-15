@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Moooby
+//  MusicTok
 //
 //  Created by Junaid Kamoka on 24/04/2019.
 //  Copyright © 2019 Junaid Kamoka. All rights reserved.
@@ -12,8 +12,10 @@ import FBSDKCoreKit
 import FirebaseCore
 import GoogleSignIn
 import FirebaseMessaging
-import FirebaseInstanceID
+//import FirebaseInstanceID
 import UserNotifications
+import Firebase
+
 
 let NextLevelAlbumTitle = "NextLevel"
 
@@ -59,11 +61,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate,GIDSignInDelegate,UNUserNo
 //        let uid = UIDevice.current.identifierForVendor!.uuidString
 //        settingUDID(uid:uid)
  
+       
+        
         IQKeyboardManager.shared.enable = true
         FirebaseApp.configure()
         Messaging.messaging().delegate = self
         
-        GIDSignIn.sharedInstance().clientID = "964642536474-jaldv56dmv19ijuc9nqfos51rt5rji85.apps.googleusercontent.com"
+        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
 
         
         if #available(iOS 10.0, *) {
@@ -105,19 +109,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate,GIDSignInDelegate,UNUserNo
         Messaging.messaging().delegate = self
         Messaging.messaging().isAutoInitEnabled = true
         Messaging.messaging().subscribe(toTopic: "topicEventSlotUpdated")
-        InstanceID.instanceID().instanceID { (result, error) in
+        Messaging.messaging().token { (result, error) in
             if let error = error {
                 print("Error fetching remote instance ID: \(error)")
             } else if let result = result {
-                print("Remote instance ID token: \(result.token)")
+                print("Remote instance ID token: \(result)")
 //                AppUtility!.saveObject(obj: result.token, forKey: strAPNSToken)
-                AppUtility?.saveObject(obj: result.token, forKey: "DeviceToken")
+                AppUtility?.saveObject(obj: result, forKey: "DeviceToken")
             }
         }
         
         application.registerForRemoteNotifications()
         
         UserDefaults.standard.set("", forKey: "otherUserID")
+        
+        UIApplication.shared.applicationIconBadgeNumber = 0
         
         return true
     }
@@ -244,6 +250,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,GIDSignInDelegate,UNUserNo
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        NotificationCenter.default.post(name: Notification.Name("removeLiveUserNoti"), object: nil)
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
@@ -266,7 +273,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate,GIDSignInDelegate,UNUserNo
 extension AppDelegate{
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        
         Messaging.messaging().apnsToken = deviceToken as Data
+        
     }
     
     func messaging(_ messaging: Messaging, didReceive remoteMessage: MessagingMessageInfo) {

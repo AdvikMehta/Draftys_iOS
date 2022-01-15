@@ -1,6 +1,5 @@
 //
 //  AsyncPhotoMediaItem.swift
-//  Jalebi
 //
 //  Created by Junaid Kamoka on 10/29/18.
 //  Copyright © 2018 Junaid Kamoka. All rights reserved.

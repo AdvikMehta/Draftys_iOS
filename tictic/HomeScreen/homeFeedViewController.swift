@@ -21,6 +21,7 @@ class homeFeedViewController: UIViewController,InternetStatusIndicable {
     
     @IBOutlet weak var feedCV: UICollectionView!
     @IBOutlet weak var segmentVideos: UISegmentedControl!
+    @IBOutlet weak var btnLiveUser: UIButton!
     
     @IBOutlet weak var btnBack: UIButton!
     
@@ -49,7 +50,7 @@ class homeFeedViewController: UIViewController,InternetStatusIndicable {
     var videoID = ""
     var videoURL = ""
     var otherUserID = ""
-        
+    var currentSoundDic : NSDictionary = [:]
     /*
      var items: [URL] = [
      URL(string: "http://vfx.mtime.cn/Video/2019/06/29/mp4/190629004821240734.mp4")!,
@@ -85,7 +86,8 @@ class homeFeedViewController: UIViewController,InternetStatusIndicable {
         
         self.btnBack.isHidden = true
         self.segmentVideos.isHidden = true
-     
+        self.btnLiveUser.isHidden = true
+        
         print("indexpath: ",indexAt)
         
         segmentVideos.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: .selected)
@@ -117,7 +119,11 @@ class homeFeedViewController: UIViewController,InternetStatusIndicable {
         
         loaderView.type = .ballTrianglePath
         loaderView.backgroundColor = .clear
-        loaderView.color = #colorLiteral(red: 1, green: 0.5223166943, blue: 0, alpha: 1)
+        loaderView.color = #colorLiteral(red: 0.1663755774, green: 0.2092176974, blue: 0.2607190311, alpha: 1)
+        
+        
+        
+        
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.methodOfReceivedNotification(notification:)), name: Notification.Name("errInPlay"), object: nil)
         
@@ -134,6 +140,11 @@ class homeFeedViewController: UIViewController,InternetStatusIndicable {
         }
     }
     
+    @IBAction func btnLiveUsers(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "liveUsersVC") as! liveUsersViewController
+        vc.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc, animated: true)
+    }
     
     @objc
     func requestData() {
@@ -220,6 +231,7 @@ class homeFeedViewController: UIViewController,InternetStatusIndicable {
         {
             btnBack.isHidden = false
             segmentVideos.isHidden = true
+            btnLiveUser.isHidden = true
             videosMainArr.removeAll()
             videosMainArr = userVideoArr
             //            feedCV.moveItem(at: indexAt, to: indexAt)
@@ -235,6 +247,7 @@ class homeFeedViewController: UIViewController,InternetStatusIndicable {
         {
             btnBack.isHidden = false
             segmentVideos.isHidden = true
+            btnLiveUser.isHidden = true
             videosMainArr.removeAll()
             videosMainArr = discoverVideoArr
             //            feedCV.moveItem(at: indexAt, to: indexAt)
@@ -248,6 +261,7 @@ class homeFeedViewController: UIViewController,InternetStatusIndicable {
         else
         {
             segmentVideos.isHidden = false
+            btnLiveUser.isHidden = true
             btnBack.isHidden = true
             getAllVideos(startPoint: "\(startPoint)")
         }
@@ -258,16 +272,19 @@ class homeFeedViewController: UIViewController,InternetStatusIndicable {
         {
             btnBack.isHidden = false
             segmentVideos.isHidden = true
+            btnLiveUser.isHidden = true
         }
         else if discoverVideoArr.isEmpty == false
         {
             btnBack.isHidden = false
             segmentVideos.isHidden = true
+            btnLiveUser.isHidden = true
 
         }
         else
         {
             segmentVideos.isHidden = false
+            btnLiveUser.isHidden = true
             btnBack.isHidden = true
         }
     }
@@ -340,10 +357,10 @@ class homeFeedViewController: UIViewController,InternetStatusIndicable {
                         let videoDic = dic["Video"] as! NSDictionary
                         let userDic = dic["User"] as! NSDictionary
                         let soundDic = dic["Sound"] as! NSDictionary
-                        
+                        self.currentSoundDic = dic["Sound"] as! NSDictionary
                         print("videoDic: ",videoDic)
                         print("userDic: ",userDic)
-                        print("soundDic: ",soundDic)
+                        print("soundDic: ",self.currentSoundDic)
                         
                         let videoURL = videoDic.value(forKey: "video") as? String
                         let desc = videoDic.value(forKey: "description") as? String
@@ -365,7 +382,9 @@ class homeFeedViewController: UIViewController,InternetStatusIndicable {
                         
                         let soundName = soundDic.value(forKey: "name")
                         
-                        let videoObj = videoMainMVC(videoID: videoID, videoUserID: "\(videoUserID!)", fb_id: "", description: desc ?? "", videoURL: videoURL ?? "", videoTHUM: "", videoGIF: "", view: "", section: "", sound_id: "", privacy_type: "", allow_comments: "\(allowComments!)", allow_duet: "\(allowDuet!)", block: "", duet_video_id: "", old_video_id: "", created: "", like: "", favourite: "", comment_count: "\(commentCount!)", like_count: "\(likeCount!)", followBtn: followBtn ?? "", duetVideoID: "\(duetVidID!)", userID: uid ?? "", first_name: "", last_name: "", gender: "", bio: "", website: "", dob: "", social_id: "", userEmail: "", userPhone: "", password: "", userProfile_pic: userImgPath  ?? "", role: "", username: userName  ?? "", social: "", device_token: "", videoCount: "", verified: "\(verified!)", soundName: "\(soundName!)")
+                        let sound_id = soundDic.value(forKey: "id")
+                        
+                        let videoObj = videoMainMVC(videoID: videoID, videoUserID: "\(videoUserID!)", fb_id: "", description: desc ?? "", videoURL: videoURL ?? "", videoTHUM: "", videoGIF: "", view: "", section: "", sound_id: sound_id as! String, privacy_type: "", allow_comments: "\(allowComments!)", allow_duet: "\(allowDuet!)", block: "", duet_video_id: "", old_video_id: "", created: "", like: "", favourite: "", comment_count: "\(commentCount!)", like_count: "\(likeCount!)", followBtn: followBtn ?? "", duetVideoID: "\(duetVidID!)", userID: uid ?? "", first_name: "", last_name: "", gender: "", bio: "", website: "", dob: "", social_id: "", userEmail: "", userPhone: "", password: "", userProfile_pic: userImgPath  ?? "", role: "", username: userName  ?? "", social: "", device_token: "", videoCount: "", verified: "\(verified!)", soundName: "\(soundName!)")
                         self.videosRelatedArr.append(videoObj)
                     }
                     
@@ -437,8 +456,9 @@ class homeFeedViewController: UIViewController,InternetStatusIndicable {
                         //                        let followBtn = userDic.value(forKey: "button") as! String
                         
                         let soundName = soundDic.value(forKey: "name")
+                        let sound_id = soundDic.value(forKey: "id")
                         
-                        let videoObj = videoMainMVC(videoID: videoID, videoUserID: "\(videoUserID!)", fb_id: "", description: desc, videoURL: videoURL, videoTHUM: "", videoGIF: "", view: "", section: "", sound_id: "", privacy_type: "", allow_comments: "\(allowComments!)", allow_duet: "\(allowDuet!)", block: "", duet_video_id: "", old_video_id: "", created: "", like: "", favourite: "", comment_count: "\(commentCount!)", like_count: "\(likeCount!)", followBtn: "", duetVideoID: "\(duetVidID!)", userID: uid, first_name: "", last_name: "", gender: "", bio: "", website: "", dob: "", social_id: "", userEmail: "", userPhone: "", password: "", userProfile_pic: userImgPath, role: "", username: userName, social: "", device_token: "", videoCount: "", verified: "\(verified!)", soundName: "\(soundName!)")
+                        let videoObj = videoMainMVC(videoID: videoID, videoUserID: "\(videoUserID!)", fb_id: "", description: desc, videoURL: videoURL, videoTHUM: "", videoGIF: "", view: "", section: "", sound_id: sound_id as! String, privacy_type: "", allow_comments: "\(allowComments!)", allow_duet: "\(allowDuet!)", block: "", duet_video_id: "", old_video_id: "", created: "", like: "", favourite: "", comment_count: "\(commentCount!)", like_count: "\(likeCount!)", followBtn: "", duetVideoID: "\(duetVidID!)", userID: uid, first_name: "", last_name: "", gender: "", bio: "", website: "", dob: "", social_id: "", userEmail: "", userPhone: "", password: "", userProfile_pic: userImgPath, role: "", username: userName, social: "", device_token: "", videoCount: "", verified: "\(verified!)", soundName: "\(soundName!)")
                         self.videosFollowingArr.append(videoObj)
                     }
                     
@@ -461,6 +481,27 @@ class homeFeedViewController: UIViewController,InternetStatusIndicable {
             }
             
             //            self.loaderView.stopAnimating()
+        }
+    }
+    
+    @objc func tapOnPlayerCD(_ sender: UITapGestureRecognizer? = nil) {
+        // handling code
+        //print("Current Music dic " , sender?.view?.tag)
+        //print("Start Point " , startPoint)
+        let deviceID = UserDefaults.standard.string(forKey: "deviceID")
+        //print("deviceID " , deviceID)
+        if(UserDefaults.standard.string(forKey: "userID") == "" || UserDefaults.standard.string(forKey: "userID") == nil){
+                        
+            loginScreenAppear()
+        }else{
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "videosAgainstSoundViewController") as! videosAgainstSoundViewController
+        vc.hidesBottomBarWhenPushed = true
+        vc.deviceIdStr = deviceID!
+        vc.startpointStr = String(startPoint) 
+        vc.soundIdStr = String((sender?.view!.tag)!) // String(vdoObj.sound_id)
+        
+        self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     
@@ -490,6 +531,10 @@ class homeFeedViewController: UIViewController,InternetStatusIndicable {
                     print("userDic: ",userDic)
                     print("soundDic: ",soundDic)
                     
+                    let soundIdVal : String = soundDic["id"] as! String
+                    print("soundIdVal: ",soundIdVal)
+                    
+                    
                     let likeCount = videoDic.value(forKey: "like_count")
                     let commentCount = videoDic.value(forKey: "comment_count")
                     let like = videoDic.value(forKey: "like")
@@ -497,6 +542,21 @@ class homeFeedViewController: UIViewController,InternetStatusIndicable {
                     let cell = self.feedCV.cellForItem(at: ip) as? homeFeedCollectionViewCell
                     //                cell?.playerView.pause()
                     //                cell?.pause()
+                    
+                //    cell?.playerCD.sd_setImage(with: URL(string: videoDic["thum"]! as! String), placeholderImage: UIImage(named: "noUserImg"))
+                    let videoThumb = AppUtility?.detectURL(ipString: soundDic["thum"] as! String);
+                    print("videoThumb " , videoThumb as Any)
+                    
+                    cell?.playerCD.sd_setImage(with: URL(string:videoThumb!), placeholderImage: UIImage(named:"noUserImg"))
+                    cell?.playerCD.layer.cornerRadius = (cell?.playerCD.frame.size.width)!/2
+                    cell?.playerCD.clipsToBounds = true
+                    cell?.playerCD.contentMode = .scaleAspectFill
+                    cell?.playerCD.isUserInteractionEnabled = true
+                    
+                    let tap = UITapGestureRecognizer(target: self, action: #selector(self.tapOnPlayerCD(_:)))
+                    cell?.playerCD.tag = Int(soundIdVal)!
+                    cell?.playerCD.addGestureRecognizer(tap)
+                    
                     cell?.lblLike.text = "\(likeCount!)"
                     cell?.lblComment.text = "\(commentCount!)"
                     let liked = "\(like!)"
@@ -597,7 +657,7 @@ extension homeFeedViewController:UICollectionViewDataSource{
         print("CommentCount: ",commentCount)
         cell.set(url: vidURL!)
 //        cell.txtDesc.text = vidDesc
-        cell.txtDesc.setText(text: vidDesc,textColor: .white, withHashtagColor: #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1), andMentionColor: #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1), andCallBack: { (strng, type) in
+        cell.txtDesc.setText(text: vidDesc,textColor: .white, withHashtagColor: #colorLiteral(red: 0.4, green: 0.9882352941, blue: 0.9450980392, alpha: 1), andMentionColor: #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1), andCallBack: { (strng, type) in
             print("type: ",type)
             print("strng: ",strng)
             
@@ -618,7 +678,7 @@ extension homeFeedViewController:UICollectionViewDataSource{
         cell.lblLike.text = likeCount
         cell.userName.text = "@\(userName)"
         cell.musicName.text = soundName
-        
+       // cell.playerCD.sd_setImage(with: (vidObj["thum"] as! URL), placeholderImage: UIImage(named: "noUserImg"))
         cell.musicName.startLoading()
         
         cell.userImg.sd_imageIndicator = SDWebImageActivityIndicator.gray
@@ -698,7 +758,7 @@ extension homeFeedViewController:UICollectionViewDataSource{
             let vc = storyboard?.instantiateViewController(withIdentifier: "newProfileVC") as!  newProfileViewController
             vc.isOtherUserVisting = true
             vc.hidesBottomBarWhenPushed = true
-//            vc.otherUserID = otherUserID
+            vc.otherUserID = otherUserID
             UserDefaults.standard.set(otherUserID, forKey: "otherUserID")
             navigationController?.pushViewController(vc, animated: true)
         }
@@ -925,6 +985,8 @@ extension homeFeedViewController: UIGestureRecognizerDelegate {
             }
             
         }
+        
+        
     }
     
     @objc func handleDoubleTap(_ gesture: UITapGestureRecognizer){

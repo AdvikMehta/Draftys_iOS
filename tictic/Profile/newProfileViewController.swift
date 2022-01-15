@@ -19,7 +19,9 @@ class newProfileViewController: UIViewController,UICollectionViewDataSource,UICo
     var userID = ""
     var otherUserID = ""
     
+    @IBOutlet weak var topHolderMasterView: UIView!
     
+    @IBOutlet weak var innerHolderMasterView: UIView!
     @IBOutlet var scrollViewOutlet: UIScrollView!
     @IBOutlet var whoopsView: UIView!
     
@@ -36,8 +38,17 @@ class newProfileViewController: UIViewController,UICollectionViewDataSource,UICo
     @IBOutlet weak var btnBackOutlet: UIButton!
     @IBOutlet weak var btnChatOutlet: UIButton!
     @IBOutlet weak var btnFollow: UIButton!
+    @IBOutlet weak var btnLive: UIButton!
     
+    @IBOutlet weak var extraInfoLbl: UILabel!
+    
+    @IBOutlet weak var extraValueLbl: UILabel!
+    
+    @IBOutlet weak var achivementLbl: UILabel!
     //MARK: - DropDown's
+    @IBOutlet weak var bottomCollectionHolderView: UIView!
+    
+    
     let profileDropDown = DropDown()
     
     var videosMainArr = [videoMainMVC]()
@@ -54,7 +65,7 @@ class newProfileViewController: UIViewController,UICollectionViewDataSource,UICo
     
     var storeSelectedIP = IndexPath(item: 0, section: 0)
     
-    var userInfo = [["type":"Following","count":"170"],["type":"Followers","count":"60.1K"],["type":"Likes","count":"5.7M"],["type":"Videos","count":"320"]]
+    var userInfo = [["type":"Following","count":"0"],["type":"Followers","count":"0"],["type":"Likes","count":"0"],["type":"Videos","count":"0"]]
     
     
     var userItem = [["Image":"music tok icon-2","ImageSelected":"music tok icon-5","isSelected":"true"],["Image":"likeVideo","ImageSelected":"music tok icon-6","isSelected":"false"],["Image":"music tok icon-1","ImageSelected":"music tok icon-4","isSelected":"false"]]
@@ -79,7 +90,8 @@ class newProfileViewController: UIViewController,UICollectionViewDataSource,UICo
     
     override func viewDidLoad() {
         super.viewDidLoad()
-            
+        
+        btnLive.isHidden =  true
         setupDropDowns()
         /*
         let height = videosCV.collectionViewLayout.collectionViewContentSize.height
@@ -95,10 +107,30 @@ class newProfileViewController: UIViewController,UICollectionViewDataSource,UICo
             scrollViewOutlet.addSubview(refresher)
         }
         
-        self.fetchingUserDataFunc()
+       
         
+        let image = UIImage(named: "menu_Vertical")?.withRenderingMode(.alwaysTemplate)
+        self.profileDropDownBtn.setImage(image, for: .normal)
+        self.profileDropDownBtn.tintColor = UIColor.white
+        
+        
+        let image1 = UIImage(named: "messageicon")?.withRenderingMode(.alwaysTemplate)
+        self.btnChatOutlet.setImage(image1, for: .normal)
+        self.btnChatOutlet.tintColor = UIColor.white
         
     }
+    
+    func heightForView(text:String, font:UIFont, width:CGFloat) -> CGFloat{
+        let label:UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: width, height: CGFloat.greatestFiniteMagnitude))
+        label.numberOfLines = 0
+        label.lineBreakMode = NSLineBreakMode.byWordWrapping
+        label.font = font
+        label.text = text
+
+        label.sizeToFit()
+        return label.frame.height
+    }
+
     
     @objc
     func requestData() {
@@ -133,11 +165,13 @@ class newProfileViewController: UIViewController,UICollectionViewDataSource,UICo
             self.tabBarController?.tabBar.isHidden = false
         }
         
+        self.fetchingUserDataFunc()
+        
     }
     
     func fetchingUserDataFunc(){
         self.userID = UserDefaults.standard.string(forKey: "userID")!
-        self.otherUserID = UserDefaults.standard.string(forKey: "otherUserID")!
+        //self.otherUserID = UserDefaults.standard.string(forKey: "otherUserID")!
         /*
         if isOtherUserVisting == true{
             UserDefaults.standard.set(otherUserID, forKey: "otherUserID")
@@ -192,18 +226,22 @@ class newProfileViewController: UIViewController,UICollectionViewDataSource,UICo
         
         AppUtility?.startLoader(view: self.view)
         if isOtherUserVisting{
+            print("getOtherUserDetails if ")
             self.getOtherUserDetails()
             btnChatOutlet.isHidden = false
-            btnFollow.isHidden = false
+            btnFollow.isHidden = true
             btnBackOutlet.isHidden = false
+            btnLive.isHidden = true
 //            self.otherUserID = otherUid!
             getUserVideos()
 
         }else{
+            print("getUserDetails else ")
             self.getUserDetails()
             btnChatOutlet.isHidden = true
             btnFollow.isHidden = true
             btnBackOutlet.isHidden = true
+            btnLive.isHidden = true// false
             self.otherUserID = ""
             //            self.StoreSelectedIndex(index: storeSelectedIP.row)
             getUserVideos()
@@ -232,7 +270,23 @@ class newProfileViewController: UIViewController,UICollectionViewDataSource,UICo
     @IBAction func profileDropDownAction(_ sender: AnyObject) {
         profileDropDown.show()
     }
-    //MARK:- DELEGATE METHODS
+    
+    @IBAction func btnLive(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "MainVC") as! MainViewController
+
+//        let navigationController = UINavigationController(rootViewController: vc)
+//        navigationController.navigationBar.isHidden =  true
+        vc.userData = self.userData
+//        vc.hidesBottomBarWhenPushed = true
+//        navigationController?.pushViewController(vc, animated: true)
+        
+        let navigationController = UINavigationController(rootViewController: vc)
+        navigationController.navigationBar.isHidden =  true
+//        KeyCenter.isAudience =  false
+        navigationController.modalPresentationStyle = .fullScreen
+        self.present(navigationController, animated: true, completion: nil)
+
+    }
     
     //MARK: TableView
     
@@ -253,9 +307,13 @@ class newProfileViewController: UIViewController,UICollectionViewDataSource,UICo
         let cell =  collectionView.dequeueReusableCell(withReuseIdentifier: "newProfileItemsCVC", for:indexPath) as! newProfileItemsCollectionViewCell
         
         if collectionView ==  userInfoCollectionView{
-            
+            //cell.backgroundColor = UIColor.red
             cell.lblCount.text =  self.userInfo[indexPath.row]["count"]
+            cell.lblCount.textColor = UIColor.white
             cell.typeFollowing.text = self.userInfo[indexPath.row]["type"]
+            cell.typeFollowing.textColor =  UIColor(red: 110.0/255.0, green: 252.0/255.0, blue: 241.0/255.0, alpha: 1)
+            
+
             
             if indexPath.row ==  self.userInfo.count - 1 {
                 cell.verticalView.isHidden = true
@@ -448,7 +506,7 @@ class newProfileViewController: UIViewController,UICollectionViewDataSource,UICo
         ApiHandler.sharedInstance.showOwnDetail(user_id: self.userID) { (isSuccess, response) in
             if isSuccess{
                 
-                print("response: ",response?.allValues)
+                print("response user details: ",response?.allValues)
                 if response?.value(forKey: "code") as! NSNumber == 200 {
                     let userObjMsg = response?.value(forKey: "msg") as! NSDictionary
                     let userObj = userObjMsg.value(forKey: "User") as! NSDictionary
@@ -493,14 +551,239 @@ class newProfileViewController: UIViewController,UICollectionViewDataSource,UICo
                     let dob = (userObj.value(forKey: "dob") as? String)!
                     let website = (userObj.value(forKey: "website") as? String)!
                     
+                    
+                    var sport_name = ""
+                    
+                    if ((userObj.object(forKey: "sport_name")) != nil) {
+                        print("response someKey exists")
+                        sport_name = (userObj.value(forKey: "sport_name") as? String)!
+                    }
+                    
+                     
                     let userId = (userObj.value(forKey: "id") as? String)!
                     
-                    print("profile_pic:",userImage)
+                    var user_city = ""
                     
-                    let user = userMVC(userID: userId, first_name: firstName, last_name: lastName, gender: gender, bio: bio, website: website, dob: dob, social_id: "", userEmail: "", userPhone: "", password: "", userProfile_pic: userImage, role: "", username: userName, social: "", device_token: "", videoCount: videoCount, likesCount: likesCount, followers: followers, following: followings, followBtn: "")
+                    if ((userObj.object(forKey: "user_city")) != nil)  {
+                        print("response someKey exists")
+                        
+                        if let tempCity = (userObj.object(forKey: "user_city")) as? String
+                        {
+                            user_city = tempCity
+                        }
+                        else
+                        {
+                            user_city = ""
+                        }
+                        
+                    }
                     
+                    var user_state = ""
+                    
+                    if ((userObj.object(forKey: "user_state")) != nil) {
+                        print("response someKey exists")
+                        
+                        if let tempState = (userObj.object(forKey: "user_state")) as? String
+                        {
+                            user_state = tempState
+                        }
+                        else
+                        {
+                            user_state = ""
+                        }
+                        
+                       // user_state = (userObj.value(forKey: "user_state") as? String)!
+                    }
+                    
+                    var height = ""
+                    
+                    if ((userObj.object(forKey: "height")) != nil) {
+                        print("response someKey exists")
+                        
+                        if let tempHeight = (userObj.object(forKey: "height")) as? String
+                        {
+                            height = tempHeight
+                        }
+                        else
+                        {
+                            height = ""
+                        }
+                        
+                      //  height = (userObj.value(forKey: "height") as? String)!
+                    }
+                    
+                    var height_inch = ""
+                    
+                    if ((userObj.object(forKey: "height_inch")) != nil) {
+                        print("response someKey exists")
+                        if let tempHeightInch = (userObj.object(forKey: "height_inch")) as? String
+                        {
+                            height_inch = tempHeightInch
+                        }
+                        else
+                        {
+                            height_inch = ""
+                        }
+                       // height_inch = (userObj.value(forKey: "height_inch") as? String)!
+                    }
+                    
+                    
+                    var achievement = ""
+                    
+                    if ((userObj.object(forKey: "achievement")) != nil) {
+                        if let tempachievement = (userObj.object(forKey: "achievement")) as? String
+                        {
+                            achievement = tempachievement
+                        }
+                        else
+                        {
+                        }
+                    }
+                    
+                    
+                    var sport_id = ""
+                    
+                    if ((userObj.object(forKey: "sport_id")) != nil) {
+                        if let tempsport_id = (userObj.object(forKey: "sport_id")) as? String
+                        {
+                            sport_id = tempsport_id
+                        }
+                        else
+                        {
+                        }
+                    }
+                    
+                    
+                    var position_id = ""
+                    
+                    if ((userObj.object(forKey: "position_id")) != nil) {
+                        if let tempposition_id = (userObj.object(forKey: "position_id")) as? String
+                        {
+                            position_id = tempposition_id
+                        }
+                        else
+                        {
+                        }
+                    }
+                    
+                    var weight = ""
+                    
+                    if ((userObj.object(forKey: "weight")) != nil) {
+                        if let tempVal = (userObj.object(forKey: "weight")) as? String
+                        {
+                            weight = tempVal
+                        }
+                        else
+                        {
+                        }
+                    }
+                    
+                    
+                    var gpa = ""
+                    
+                    if ((userObj.object(forKey: "gpa")) != nil) {
+                        if let tempVal = (userObj.object(forKey: "gpa")) as? String
+                        {
+                            gpa = tempVal
+                        }
+                        else
+                        {
+                        }
+                    }
+                    
+                    var graduating_year = ""
+                    
+                    if ((userObj.object(forKey: "graduating_year")) != nil) {
+                        if let tempVal = (userObj.object(forKey: "graduating_year")) as? String
+                        {
+                            graduating_year = tempVal
+                        }
+                        else
+                        {
+                        }
+                    }
+                    
+                    
+                    var committed = ""
+                    
+                    if ((userObj.object(forKey: "committed")) != nil) {
+                        if let tempVal = (userObj.object(forKey: "committed")) as? String
+                        {
+                            committed = tempVal
+                        }
+                        else
+                        {
+                        }
+                    }
+                    
+                    var university = ""
+                    
+                    if ((userObj.object(forKey: "university")) != nil) {
+                        if let tempVal = (userObj.object(forKey: "university")) as? String
+                        {
+                            university = tempVal
+                        }
+                        else
+                        {
+                        }
+                    }
+                    
+                    
+                    var teams = ""
+                    
+                    if ((userObj.object(forKey: "teams")) != nil) {
+                        if let tempVal = (userObj.object(forKey: "teams")) as? String
+                        {
+                            teams = tempVal
+                        }
+                        else
+                        {
+                        }
+                    }
+                    
+                    
+                    var uni_state = ""
+                    
+                    if ((userObj.object(forKey: "uni_state")) != nil) {
+                        if let tempVal = (userObj.object(forKey: "uni_state")) as? String
+                        {
+                            uni_state = tempVal
+                        }
+                        else
+                        {
+                        }
+                    }
+                    
+                    var user_type = ""
+                    
+                    if ((userObj.object(forKey: "user_type")) != nil) {
+                        if let tempVal = (userObj.object(forKey: "user_type")) as? String
+                        {
+                            user_type = tempVal
+                        }
+                        else
+                        {
+                        }
+                    }
+                    
+                    var position_name = ""
+                    
+                    if ((userObj.object(forKey: "position_name")) != nil) {
+                        if let tempVal = (userObj.object(forKey: "position_name")) as? String
+                        {
+                            position_name = tempVal
+                        }
+                        else
+                        {
+                        }
+                    }
+                    
+                   // print("getUserDetails self.userData " , self.userData)
+                    
+                    let user = userMVC(userID: userId, first_name: firstName, last_name: lastName, gender: gender, bio: bio, website: website, dob: dob, social_id: "", userEmail: "", userPhone: "", password: "", userProfile_pic: userImage, role: "", username: userName, social: "", device_token: "", videoCount: videoCount, likesCount: likesCount, followers: followers, following: followings, followBtn: "",sport_name:sport_name,user_city:user_city,user_state:user_state,height:height,height_inch:height_inch,achievement:achievement , sport_id:sport_id , position_id : position_id , weight:weight,gpa:gpa,graduating_year:graduating_year , committed:committed , university: university,teams: teams , uni_state:uni_state,user_type:user_type,position_name: position_name)
+                   
                     self.userData.append(user)
-                    
+                   // print("getUserDetails user " , self.userData[0])
                     self.setProfileData()
                 }else{
                     
@@ -546,10 +829,254 @@ class newProfileViewController: UIViewController,UICollectionViewDataSource,UICo
                     let dob = (userObj.value(forKey: "dob") as? String)!
                     let website = (userObj.value(forKey: "website") as? String)!
                     let followBtn = (userObj.value(forKey: "button") as? String)!
+
+                    
+                    var sport_name = ""
+                    
+                    if ((userObj.object(forKey: "sport_name")) != nil) {
+                        print("response someKey exists")
+                       // user_city = (userObj.value(forKey: "user_city") as? String)!
+                        
+                        if let value = (userObj.object(forKey: "sport_name") as? String)
+                        {
+                          //NOT NULL
+                            sport_name = value
+                        }
+                        else
+                        {
+                           //NULL
+                        }
+                    }
+                    
                     
                     let userId = (userObj.value(forKey: "id") as? String)!
                     
-                    let user = userMVC(userID: userId, first_name: firstName, last_name: lastName, gender: gender, bio: bio, website: website, dob: dob, social_id: "", userEmail: "", userPhone: "", password: "", userProfile_pic: userImage, role: "", username: userName, social: "", device_token: "", videoCount: videoCount, likesCount: likesCount, followers: followers, following: followings, followBtn: followBtn)
+                    var user_city = ""
+                    
+                    if ((userObj.object(forKey: "user_city")) != nil) {
+                        print("response someKey exists")
+                       // user_city = (userObj.value(forKey: "user_city") as? String)!
+                        
+                        if let value = (userObj.object(forKey: "user_city") as? String)
+                        {
+                          //NOT NULL
+                            user_city = value
+                        }
+                        else
+                        {
+                           //NULL
+                        }
+                    }
+                    
+                    var user_state = ""
+                    
+                    if ((userObj.object(forKey: "user_state")) != nil) {
+                        print("response someKey exists")
+                       // user_state = (userObj.value(forKey: "user_state") as? String)!
+                        
+                        if let value = (userObj.object(forKey: "user_state") as? String)
+                        {
+                          //NOT NULL
+                            user_state = value
+                        }
+                        else
+                        {
+                           //NULL
+                        }
+                    }
+                    
+                    var height = ""
+                    //print("Height Check " , userObj.object(forKey: "height"))
+                    
+                    if ((userObj.object(forKey: "height")) != nil ) {
+                        print("response someKey exists")
+                       
+                        if let value = (userObj.object(forKey: "height") as? String)
+                        {
+                          //NOT NULL
+                            height = value
+                        }
+                        else
+                        {
+                           //NULL
+                        }
+                        
+                       
+                    }
+                    
+                    var height_inch = ""
+                    
+                    if ((userObj.object(forKey: "height_inch")) != nil) {
+                        print("response someKey exists")
+                      //  height_inch = (userObj.value(forKey: "height_inch") as? String)!
+                        
+                        if let value = (userObj.object(forKey: "height_inch") as? String)
+                        {
+                          //NOT NULL
+                            height_inch = value
+                        }
+                        else
+                        {
+                           //NULL
+                        }
+                    }
+                    
+                    
+                    var achievement = ""
+                    
+                    if ((userObj.object(forKey: "achievement")) != nil) {
+                        if let tempachievement = (userObj.object(forKey: "achievement")) as? String
+                        {
+                            achievement = tempachievement
+                        }
+                        else
+                        {
+                        }
+                    }
+                    
+                    
+                    var sport_id = ""
+                    
+                    if ((userObj.object(forKey: "sport_id")) != nil) {
+                        if let tempsport_id = (userObj.object(forKey: "sport_id")) as? String
+                        {
+                            sport_id = tempsport_id
+                        }
+                        else
+                        {
+                        }
+                    }
+                    
+                    
+                    var position_id = ""
+                    
+                    if ((userObj.object(forKey: "position_id")) != nil) {
+                        if let tempposition_id = (userObj.object(forKey: "position_id")) as? String
+                        {
+                            position_id = tempposition_id
+                        }
+                        else
+                        {
+                        }
+                    }
+                    
+                    var weight = ""
+                    
+                    if ((userObj.object(forKey: "weight")) != nil) {
+                        if let tempVal = (userObj.object(forKey: "weight")) as? String
+                        {
+                            weight = tempVal
+                        }
+                        else
+                        {
+                        }
+                    }
+                    
+                    
+                    var gpa = ""
+                    
+                    if ((userObj.object(forKey: "gpa")) != nil) {
+                        if let tempVal = (userObj.object(forKey: "gpa")) as? String
+                        {
+                            gpa = tempVal
+                        }
+                        else
+                        {
+                        }
+                    }
+                    
+                    var graduating_year = ""
+                    
+                    if ((userObj.object(forKey: "graduating_year")) != nil) {
+                        if let tempVal = (userObj.object(forKey: "graduating_year")) as? String
+                        {
+                            graduating_year = tempVal
+                        }
+                        else
+                        {
+                        }
+                    }
+                    
+                    
+                    var committed = ""
+                    
+                    if ((userObj.object(forKey: "committed")) != nil) {
+                        if let tempVal = (userObj.object(forKey: "committed")) as? String
+                        {
+                            committed = tempVal
+                        }
+                        else
+                        {
+                        }
+                    }
+                    
+                    var university = ""
+                    
+                    if ((userObj.object(forKey: "university")) != nil) {
+                        if let tempVal = (userObj.object(forKey: "university")) as? String
+                        {
+                            university = tempVal
+                        }
+                        else
+                        {
+                        }
+                    }
+                    
+                    
+                    var teams = ""
+                    
+                    if ((userObj.object(forKey: "teams")) != nil) {
+                        if let tempVal = (userObj.object(forKey: "teams")) as? String
+                        {
+                            teams = tempVal
+                        }
+                        else
+                        {
+                        }
+                    }
+                    
+                    
+                    var uni_state = ""
+                    
+                    if ((userObj.object(forKey: "uni_state")) != nil) {
+                        if let tempVal = (userObj.object(forKey: "uni_state")) as? String
+                        {
+                            uni_state = tempVal
+                        }
+                        else
+                        {
+                        }
+                    }
+                    
+                    
+                    var user_type = ""
+                                    
+                    if ((userObj.object(forKey: "user_type")) != nil) {
+                        if let tempVal = (userObj.object(forKey: "user_type")) as? String
+                        {
+                            user_type = tempVal
+                        }
+                        else
+                        {
+                        }
+                    }
+                    
+                    var position_name = ""
+                    
+                    if ((userObj.object(forKey: "position_name")) != nil) {
+                    
+                        if let tempVal = (userObj.object(forKey: "position_name")) as? String
+                        {
+                            position_name = tempVal
+                        }
+                        else
+                        {
+                        }
+                        
+                    }
+                                        
+                    
+                    let user = userMVC(userID: userId, first_name: firstName, last_name: lastName, gender: gender, bio: bio, website: website, dob: dob, social_id: "", userEmail: "", userPhone: "", password: "", userProfile_pic: userImage, role: "", username: userName, social: "", device_token: "", videoCount: videoCount, likesCount: likesCount, followers: followers, following: followings, followBtn: followBtn,sport_name:sport_name,user_city:user_city,user_state:user_state,height:height,height_inch:height_inch,achievement:achievement , sport_id:sport_id , position_id : position_id , weight:weight,gpa:gpa,graduating_year:graduating_year , committed:committed , university: university,teams: teams , uni_state:uni_state,user_type: user_type , position_name:position_name)
                     
                     self.userData.append(user)
                     
@@ -573,14 +1100,12 @@ class newProfileViewController: UIViewController,UICollectionViewDataSource,UICo
     //    MARK:- GET USERS VIDEOS
     func getUserVideos(){
         
-        
-        
-        
         print("userID test: ",userID)
         self.userVidArr.removeAll()
         self.videosMainArr.removeAll()
         
         var uid = ""
+        print("otherUserID: ",self.otherUserID)
         if otherUserID != ""{
             uid = self.otherUserID
         }else{
@@ -857,6 +1382,133 @@ class newProfileViewController: UIViewController,UICollectionViewDataSource,UICo
             img.sd_imageIndicator = SDWebImageActivityIndicator.gray
             img.sd_setImage(with: URL(string:profilePic!), placeholderImage: UIImage(named: "noUserImg"))
         }
+        
+        var extraInfoStr = ""
+        
+        
+        
+        if(user.sport_name.count > 0){
+            extraInfoStr = extraInfoStr + " "  + user.sport_name
+            
+            if(user.position_id != ""){
+                extraInfoStr =  extraInfoStr + " / "  + user.position_name + " \n"
+            }
+            else{
+                extraInfoStr = extraInfoStr + " \n"
+            }
+        }
+        
+        if(user.user_type == "Athlete"){
+            if(user.graduating_year.count > 0){
+                extraInfoStr = extraInfoStr + " " + " CO " + user.graduating_year + " /"
+            }
+            
+            if(user.gpa.count > 0){
+                extraInfoStr =  extraInfoStr + " " + user.gpa + " GPA " + " /"
+            }
+            
+            if(user.weight.count > 0){
+                extraInfoStr =  extraInfoStr + " " + user.weight + " lbs /"
+            }
+            
+            if(user.height.count > 0){
+                extraInfoStr =  extraInfoStr + " " + user.height + "'" + user.height_inch + " \n"
+            }
+            
+            if(user.user_city.count > 0){
+                extraInfoStr =  extraInfoStr + " " + user.user_city + " /"
+            }
+            
+            if(user.user_state.count > 0){
+                extraInfoStr =  extraInfoStr + " " + user.user_state + " /"
+            }
+            
+            if(user.committed.count > 0){
+                var commitedValStr = ""
+                
+                if(user.committed == "Y"){
+                    commitedValStr = "Committed"
+                }
+                else{
+                    commitedValStr = "Uncommitted"
+                }
+                extraInfoStr =  extraInfoStr + " " + commitedValStr
+            }
+            
+        }
+        else if(user.user_type == "Coach/Scout/Talent Acquisition"){
+            if(user.user_city.count > 0){
+                extraInfoStr =  extraInfoStr + " " + user.user_city + " /"
+            }
+            
+            if(user.user_state.count > 0){
+                extraInfoStr =  extraInfoStr + " " + user.user_state + " /"
+            }
+            
+            if(user.university.count > 0){
+                extraInfoStr =  extraInfoStr + " " + user.university + " /"
+            }
+            
+            if(user.teams.count > 0){
+                extraInfoStr =  extraInfoStr + " " + user.teams + " /"
+            }
+        }
+        
+        print("extraInfoStr " , extraInfoStr)
+        
+        if(extraInfoStr.count > 0){
+         
+            let lastChar = extraInfoStr.last!
+
+            if(String(lastChar) == "/"){
+                print("/ detected , remove it")
+                extraInfoStr = String(extraInfoStr.dropLast())
+            }
+            
+        }
+        
+
+        
+        
+        
+        
+         //user.bio
+        self.extraInfoLbl.text = extraInfoStr
+        let extraInfoHt = self.heightForView(text: extraInfoStr, font: self.extraInfoLbl.font, width: self.extraInfoLbl.frame.size.width)
+        
+        
+       // self.extraInfoLbl.frame.size.height = extraInfoHt
+        self.extraInfoLbl.frame = CGRect(x: self.extraInfoLbl.frame.origin.x, y: self.extraInfoLbl.frame.origin.y, width: self.extraInfoLbl.frame.size.width, height: extraInfoHt)
+       // self.extraInfoLbl.backgroundColor = UIColor.red
+        
+      //
+        
+        self.achivementLbl.text = user.achievement
+        
+        self.achivementLbl.frame.origin.y = self.extraInfoLbl.frame.size.height + self.extraInfoLbl.frame.origin.y+5
+        
+        self.extraValueLbl.frame.origin.y = self.achivementLbl.frame.size.height + self.achivementLbl.frame.origin.y+5
+        
+        self.extraValueLbl.text = user.bio
+        
+        let bioHt = self.heightForView(text: self.extraValueLbl.text!, font: self.extraValueLbl.font, width: self.extraValueLbl.frame.size.width)
+        
+        self.extraValueLbl.frame.size.height = bioHt
+        
+        self.innerHolderMasterView.frame.size.height = self.extraValueLbl.frame.size.height + self.extraValueLbl.frame.origin.y + 20
+        
+        self.topHolderMasterView.frame.size.height = self.innerHolderMasterView.frame.size.height + self.innerHolderMasterView.frame.origin.y
+        
+        
+        self.userItemsCollectionView.frame.origin.y = self.topHolderMasterView.frame.size.height + self.topHolderMasterView.frame.origin.y + 10
+        
+        self.bottomCollectionHolderView.frame.origin.y = self.topHolderMasterView.frame.size.height + self.topHolderMasterView.frame.origin.y + 45
+        
+        self.bottomCollectionHolderView.frame.size.height = self.view.frame.size.height -
+            (self.topHolderMasterView.frame.size.height + self.topHolderMasterView.frame.origin.y + 45)
+        
+       // self.bottomCollectionHolderView.alpha = 0.0
+       // self.userItemsCollectionView.alpha = 0.0
     }
     
     func setupDropDowns(){
@@ -926,6 +1578,7 @@ class newProfileViewController: UIViewController,UICollectionViewDataSource,UICo
                 
             case "Edit Profile":
                 print("selected item: ",item)
+                print("edit profile userdata " , self!.userData[0])
                 let vc = self?.storyboard?.instantiateViewController(withIdentifier: "editProfileVC") as! editProfileViewController
                 vc.userData = self!.userData
                 vc.hidesBottomBarWhenPushed = true
@@ -996,6 +1649,7 @@ class newProfileViewController: UIViewController,UICollectionViewDataSource,UICo
                 if response?.value(forKey: "code") as! NSNumber == 200 {
                     //  self.showToast(message: (response?.value(forKey: "msg") as? String)!, font: .systemFont(ofSize: 12))
                     print(response?.value(forKey: "msg") as Any)
+                    UserDefaults.standard.set("", forKey: "savedRegPhnNo")
                     UserDefaults.standard.set("", forKey: "userID")
                 }else{
                     //                    self.showToast(message: (response?.value(forKey: "msg") as? String)!, font: .systemFont(ofSize: 12))

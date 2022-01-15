@@ -10,9 +10,14 @@ import Foundation
 import UIKit
 import Alamofire
 
-let BASE_URL = "http://apps.qboxus.com/musictok/"
+//let BASE_URL = "http://draftys.co.in/mobileapp_api/"
+//let API_KEY = "156c4675-9608-4591-1111-00000"
+
+let BASE_URL = "http://draftys.com/dashboard/mobileapp_api/"
+let API_KEY = "156c4675-9608-4591-1111-00000"
+
 let API_BASE_URL = BASE_URL+"api/"
-let API_KEY = "156c4675-9608-4591-b2ec-427503464aac"
+
 
 private let SharedInstance = ApiHandler()
 
@@ -67,6 +72,10 @@ enum Endpoint : String {
     case reportVideo             = "reportVideo"
     case blockUser             = "blockUser"
     case showSoundsAgainstSection   = "showSoundsAgainstSection"
+    case getadvsearch = "getadvsearch"
+    
+    case getSports = "getSports"
+    case getPosition = "getPosition"
     
 }
 class ApiHandler:NSObject{
@@ -81,13 +90,14 @@ class ApiHandler:NSObject{
     }
     
     //MARK:Register
-    func registerSocialUser(dob:String,username:String,email:String,social_id:String ,social:String,first_name:String,last_name:String,auth_token:String,device_token:String,completionHandler:@escaping( _ result:Bool, _ responseObject:NSDictionary?)->Void){
+    func registerSocialUser(user_type:String ,dob:String,username:String,email:String,social_id:String ,social:String,first_name:String,last_name:String,auth_token:String,device_token:String,completionHandler:@escaping( _ result:Bool, _ responseObject:NSDictionary?)->Void){
         let headers: HTTPHeaders = [
             "Api-Key":API_KEY
             
         ]
         var parameters = [String : String]()
         parameters = [
+            "user_type":user_type,
             "dob"         : dob,
             "username"    : username,
             "email"       : email,
@@ -317,14 +327,14 @@ class ApiHandler:NSObject{
         parameters = [
             
             "phone" : phone,
-            "verify": verify,
+            //"verify": verify,
             "code"  : code
             
             
         ]
         let finalUrl = "\(self.baseApiPath!)\(Endpoint.verifyPhoneNo.rawValue)"
         
-        print(finalUrl)
+        print("verify otp " , finalUrl)
         print(parameters)
         AF.request(URL.init(string: finalUrl)!, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON { (response) in
             print(response.result)
@@ -362,16 +372,18 @@ class ApiHandler:NSObject{
     }
     
     //register Phone no check
-    func registerPhoneCheck(phone:String,completionHandler:@escaping( _ result:Bool, _ responseObject:NSDictionary?)->Void){
+    func registerPhoneCheck(phone:String , user_type:String,completionHandler:@escaping( _ result:Bool, _ responseObject:NSDictionary?)->Void){
         let headers: HTTPHeaders = [
             "Api-Key":API_KEY
         ]
         var parameters = [String : String]()
         parameters = [
-            "phone"         : phone
+            "phone"         : phone,
+            "user_type"     : user_type
         ]
         let finalUrl = "\(self.baseApiPath!)\(Endpoint.registerUser.rawValue)"
         
+        print("API_KEY " , API_KEY)
         print(finalUrl)
         print(parameters)
         AF.request(URL.init(string: finalUrl)!, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON { (response) in
@@ -410,7 +422,7 @@ class ApiHandler:NSObject{
         }
     }
     //MARK:- register Phone
-    func registerPhone(phone:String,dob:String,username:String,completionHandler:@escaping( _ result:Bool, _ responseObject:NSDictionary?)->Void){
+    func registerPhone(phone:String,dob:String,username:String,user_type:String ,completionHandler:@escaping( _ result:Bool, _ responseObject:NSDictionary?)->Void){
         let headers: HTTPHeaders = [
             "Api-Key":API_KEY
         ]
@@ -418,7 +430,8 @@ class ApiHandler:NSObject{
         parameters = [
             "dob"         : dob,
             "phone"         : phone,
-            "username"         : username
+            "username"         : username,
+            "user_type"         : user_type
         ]
         let finalUrl = "\(self.baseApiPath!)\(Endpoint.registerUser.rawValue)"
         
@@ -460,7 +473,7 @@ class ApiHandler:NSObject{
         }
     }
     //    MARK:- Register With EMAIL
-    func registerEmail(email:String,password:String,dob:String,username:String,completionHandler:@escaping( _ result:Bool, _ responseObject:NSDictionary?)->Void){
+    func registerEmail(email:String,password:String,dob:String,username:String,user_Type:String,completionHandler:@escaping( _ result:Bool, _ responseObject:NSDictionary?)->Void){
         let headers: HTTPHeaders = [
             "Api-Key":API_KEY
         ]
@@ -469,7 +482,8 @@ class ApiHandler:NSObject{
             "dob"         : dob,
             "email"         : email,
             "username"         : username,
-            "password"         : password
+            "password"         : password,
+            "user_type"        : user_Type
         ]
         let finalUrl = "\(self.baseApiPath!)\(Endpoint.registerUser.rawValue)"
         
@@ -727,7 +741,7 @@ class ApiHandler:NSObject{
         print(finalUrl)
         AF.request(URL.init(string: finalUrl)!, method: .post, parameters: nil, encoding: JSONEncoding.default, headers: headers).responseJSON { (response) in
             print(response.result)
-            
+        
             switch response.result {
             
             case .success(_):
@@ -923,7 +937,8 @@ class ApiHandler:NSObject{
         var parameters = [String : String]()
         parameters = [
             "user_id"        : user_id,
-            "other_user_id"  : other_user_id
+            "other_user_id"  : other_user_id,
+            "self":             "other"
             
         ]
         let finalUrl = "\(self.baseApiPath!)\(Endpoint.showUserDetail.rawValue)"
@@ -971,7 +986,8 @@ class ApiHandler:NSObject{
         ]
         var parameters = [String : String]()
         parameters = [
-            "user_id"        : user_id
+            "user_id"        : user_id,
+            "self":             "self"
             
         ]
         let finalUrl = "\(self.baseApiPath!)\(Endpoint.showUserDetail.rawValue)"
@@ -986,12 +1002,15 @@ class ApiHandler:NSObject{
             case .success(_):
                 if let json = response.value
                 {
+                    print("Own user json " ,json)
                     do {
                         let dict = json as? NSDictionary
-                        print(dict)
+                        print("Own user Success " ,dict)
                         completionHandler(true, dict)
                         
                     } catch {
+                        
+                        print("Own user Success catch")
                         completionHandler(false, nil)
                     }
                 }
@@ -1001,10 +1020,11 @@ class ApiHandler:NSObject{
                 {
                     do {
                         let dict = json as? NSDictionary
-                        print(dict)
+                        print("Own user failure",dict)
                         completionHandler(true, dict)
                         
                     } catch {
+                        print("Own user failure catch")
                         completionHandler(false, nil)
                     }
                 }
@@ -1560,13 +1580,196 @@ class ApiHandler:NSObject{
         }
     }
     
+    
+    //MARK:- getPosition
+    
+    func getPosition(idStr:String, completionHandler:@escaping( _ result:Bool, _ responseObject:NSDictionary?)->Void){
+        let finalUrl = "\(self.baseApiPath!)\(Endpoint.getPosition.rawValue)"
+        
+        let headers: HTTPHeaders = [
+            "Api-Key": API_KEY,
+            "Content-Type": "application/json"
+        ]
+        
+        
+        print("API_KEY " , API_KEY)
+        
+        var parameteres = [String:String]()
+        parameteres = [
+            "id":idStr,
+        ]
+        print(finalUrl)
+        print("parameteres " , parameteres)
+        AF.request(URL.init(string: finalUrl)!, method: .post, parameters: parameteres, encoding: JSONEncoding.default, headers: headers).responseJSON { (response) in
+            print("bef\re switch " , response.result)
+            
+            switch response.result {
+           
+            case .success(_):
+                if let json = response.value
+                {
+                    do {
+                        let dict = json as? NSDictionary
+                        print("Sucess Update ",dict)
+                        completionHandler(true, dict)
+                        
+                    } catch {
+                        print("Update catch ")
+                        completionHandler(false, nil)
+                    }
+                }
+                break
+            case .failure(let error):
+                print("Failure Block Log ",error.localizedDescription)
+                if let json = response.value
+                {
+                    do {
+                        let dict = json as? NSDictionary
+                        print("Failure Update ",dict)
+                        completionHandler(true, dict)
+                        
+                    } catch {
+                        print("Failure Catch ")
+                        completionHandler(false, nil)
+                    }
+                }
+                break
+            }
+        }
+    }
+    
+    //MARK:- getSports
+    
+    func getSports(completionHandler:@escaping( _ result:Bool, _ responseObject:NSDictionary?)->Void){
+        let finalUrl = "\(self.baseApiPath!)\(Endpoint.getSports.rawValue)"
+        
+        let headers: HTTPHeaders = [
+            "Api-Key": API_KEY,
+        ]
+        
+        
+        AF.request(URL.init(string: finalUrl)!, method: .get,  encoding: JSONEncoding.default, headers: headers).responseJSON { (response) in
+            print("bef\re switch " , response.result)
+            
+            switch response.result {
+           
+            case .success(_):
+                if let json = response.value
+                {
+                    do {
+                        let dict = json as? NSDictionary
+                        print("Sucess Update ",dict)
+                        completionHandler(true, dict)
+                        
+                    } catch {
+                        print("Update catch ")
+                        completionHandler(false, nil)
+                    }
+                }
+                break
+            case .failure(let error):
+                print("Failure Block Log ",error.localizedDescription)
+                if let json = response.value
+                {
+                    do {
+                        let dict = json as? NSDictionary
+                        print("Failure Update ",dict)
+                        completionHandler(true, dict)
+                        
+                    } catch {
+                        print("Failure Catch ")
+                        completionHandler(false, nil)
+                    }
+                }
+                break
+            }
+        }
+    }
+    
+    //MARK:- advanceSearch
+    
+    
+    func advanceSearch(sport_id:String,position_id:String,mingyear:String,maxgyear:String,mingpa:String,maxgpa:String,minweight:String,maxweight:String,minheight:String,maxheight:String,committed:String,minheightinch:String,maxheightinch:String, completionHandler:@escaping( _ result:Bool, _ responseObject:NSDictionary?)->Void){
+        let finalUrl = "\(self.baseApiPath!)\(Endpoint.getadvsearch.rawValue)"
+        
+        let headers: HTTPHeaders = [
+            "Api-Key": API_KEY,
+            "Content-Type": "application/json"
+        ]
+        
+        
+        print("API_KEY " , API_KEY)
+        
+        var parameteres = [String:String]()
+        parameteres = [
+            "sport_id":sport_id,
+            "position_id":position_id,
+            "mingyear":mingyear,
+            "maxgyear":maxgyear,
+            "mingpa":mingpa,
+            "maxgpa":maxgpa,
+            "minweight":minweight,
+            "maxweight":maxweight,
+            "minheight":minheight,
+            "maxheight":maxheight,
+            "minheightinch":minheightinch,
+            "maxheightinch":maxheightinch,
+            "committed":committed,
+           
+        ]
+        print(finalUrl)
+        print("parameteres " , parameteres)
+        AF.request(URL.init(string: finalUrl)!, method: .post, parameters: parameteres, encoding: JSONEncoding.default, headers: headers).responseJSON { (response) in
+            print("bef\re switch " , response.result)
+            
+            switch response.result {
+           
+            case .success(_):
+                if let json = response.value
+                {
+                    do {
+                        let dict = json as? NSDictionary
+                        print("Sucess Update ",dict)
+                        completionHandler(true, dict)
+                        
+                    } catch {
+                        print("Update catch ")
+                        completionHandler(false, nil)
+                    }
+                }
+                break
+            case .failure(let error):
+                print("Failure Block Log ",error.localizedDescription)
+                if let json = response.value
+                {
+                    do {
+                        let dict = json as? NSDictionary
+                        print("Failure Update ",dict)
+                        completionHandler(true, dict)
+                        
+                    } catch {
+                        print("Failure Catch ")
+                        completionHandler(false, nil)
+                    }
+                }
+                break
+            }
+        }
+    }
+    
+    
+    
     //MARK:- editProfile
-    func editProfile(username:String,user_id:String,first_name:String,last_name:String,gender:String,website:String,bio:String,completionHandler:@escaping( _ result:Bool, _ responseObject:NSDictionary?)->Void){
+    func editProfile(username:String,user_id:String,first_name:String,last_name:String,gender:String,website:String,bio:String,user_city:String,user_state:String,height:String,height_inch:String,achievement:String,sport_id:String,position_id:String,weight:String,gpa:String,graduating_year:String,committed:String,university:String,teams:String,uni_state:String, completionHandler:@escaping( _ result:Bool, _ responseObject:NSDictionary?)->Void){
         let finalUrl = "\(self.baseApiPath!)\(Endpoint.editProfile.rawValue)"
         
         let headers: HTTPHeaders = [
-            "Api-Key": API_KEY
+            "Api-Key": API_KEY,
+            "Content-Type": "application/json"
         ]
+        
+        
+        print("API_KEY " , API_KEY)
         
         var parameteres = [String:String]()
         parameteres = [
@@ -1576,36 +1779,56 @@ class ApiHandler:NSObject{
             "last_name":last_name,
             "gender":gender,
             "website":website,
-            "bio":bio
+            "bio":bio,
+            "heightInch":height_inch,
+            "heightFt":height,
+            "user_state":user_state,
+            "user_city":user_city,
+            
+            "achievement":achievement,
+            "sport_id":sport_id,
+            "position_id":position_id,
+            "weight":weight,
+            "gpa":gpa,
+            "graduating_year":graduating_year,
+            "committed":committed,
+            "university":university,
+            "teams":teams,
+            "uni_state":uni_state,
+            
         ]
         print(finalUrl)
+        print("parameteres " , parameteres)
         AF.request(URL.init(string: finalUrl)!, method: .post, parameters: parameteres, encoding: JSONEncoding.default, headers: headers).responseJSON { (response) in
-            print(response.result)
+            print("bef\re switch " , response.result)
             
             switch response.result {
-            
+           
             case .success(_):
                 if let json = response.value
                 {
                     do {
                         let dict = json as? NSDictionary
-                        print(dict)
+                        print("Sucess Update ",dict)
                         completionHandler(true, dict)
                         
                     } catch {
+                        print("Update catch ")
                         completionHandler(false, nil)
                     }
                 }
                 break
             case .failure(let error):
+                print("Failure Block Log ",error.localizedDescription)
                 if let json = response.value
                 {
                     do {
                         let dict = json as? NSDictionary
-                        print(dict)
+                        print("Failure Update ",dict)
                         completionHandler(true, dict)
                         
                     } catch {
+                        print("Failure Catch ")
                         completionHandler(false, nil)
                     }
                 }
@@ -2313,7 +2536,7 @@ class ApiHandler:NSObject{
         var parameters = [String : String]()
         parameters = [
             "sound_id"   : sound_id,
-            "sound_id"   : starting_point,
+            "starting_point"   : starting_point,
             "device_id"  : device_id,
             
             

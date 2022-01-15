@@ -13,7 +13,7 @@ class nameViewController: UIViewController,UITextFieldDelegate {
     var dob = ""
     var phoneNo = ""
     var username = ""
-    
+    var user_type = ""
     var email = ""
     var pass = ""
     
@@ -37,7 +37,7 @@ class nameViewController: UIViewController,UITextFieldDelegate {
         btnSignup.isUserInteractionEnabled = false
         
         if socialUserName != ""{
-            usernameTxtField.text = socialUserName
+           // usernameTxtField.text = socialUserName
         }
         usernameTxtField.addTarget(self, action: #selector(nameViewController.textFieldDidChange(_:)), for: .editingChanged)
         // Do any additional setup after loading the view.
@@ -49,7 +49,7 @@ class nameViewController: UIViewController,UITextFieldDelegate {
         
         print("change textCount: ",textCount!)
         if textCount! > 3{
-            btnSignup.backgroundColor = #colorLiteral(red: 0.9847028852, green: 0.625120461, blue: 0.007359095383, alpha: 1)
+            btnSignup.backgroundColor = #colorLiteral(red: 0.04472430795, green: 0.05244834721, blue: 0.07734320313, alpha: 0.8470588235)
             btnSignup.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
             btnSignup.isUserInteractionEnabled = true
         }else{
@@ -101,7 +101,7 @@ class nameViewController: UIViewController,UITextFieldDelegate {
         print("username: ",username)
         AppUtility?.startLoader(view: self.view)
         
-        ApiHandler.sharedInstance.registerPhone(phone: phoneNo, dob: dob, username: username) { (isSuccess, response) in
+        ApiHandler.sharedInstance.registerPhone(phone: phoneNo, dob: dob, username: username ,user_type:self.user_type) { (isSuccess, response) in
             if isSuccess{
                 if response?.value(forKey: "code") as! NSNumber == 200 {
                     AppUtility?.stopLoader(view: self.view)
@@ -191,8 +191,9 @@ class nameViewController: UIViewController,UITextFieldDelegate {
         print("pass: ",pass)
         print("dob: ",dob)
         print("username: ",username)
+        print("User_type" , user_type)
         AppUtility?.startLoader(view: self.view)
-        ApiHandler.sharedInstance.registerEmail(email: email, password: pass, dob: dob, username: username) { (isSuccess, response) in
+        ApiHandler.sharedInstance.registerEmail(email: email, password: pass, dob: dob, username: username , user_Type: user_type) { (isSuccess, response) in
             
             print("Response: ",response)
                         if isSuccess{
@@ -288,10 +289,11 @@ class nameViewController: UIViewController,UITextFieldDelegate {
         let deviceToken = UserDefaults.standard.string(forKey: "deviceKey")
         let signUPType = UserDefaults.standard.string(forKey: "signUpType")
         
+        print("Call From Social Login")
         print("Authtoken: ",authToken)
         print("deviceToken: ",deviceToken!)
 
-        ApiHandler.sharedInstance.registerSocialUser(dob: self.dob, username: username, email: self.socialEmail, social_id: self.socialID, social: signUPType!, first_name: self.firstName, last_name: self.lastName, auth_token: self.authToken, device_token: deviceToken!) { (isSuccess, response) in
+        ApiHandler.sharedInstance.registerSocialUser(user_type:self.user_type, dob: self.dob, username: username, email: self.socialEmail, social_id: self.socialID, social: signUPType!, first_name: self.firstName, last_name: self.lastName, auth_token: self.authToken, device_token: deviceToken!) { (isSuccess, response) in
             if isSuccess{
                 if response?.value(forKey: "code") as! NSNumber == 200 {
                    // self.alertModule(title: "Signin", msg: "\(self.username) Successfully Registered" )

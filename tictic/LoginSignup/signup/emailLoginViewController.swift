@@ -9,10 +9,18 @@
 import UIKit
 import SkyFloatingLabelTextField
 
+@available(iOS 12.0, *)
 class emailLoginViewController: UIViewController {
     
     @IBOutlet weak var emailTxtField: SkyFloatingLabelTextField!
     @IBOutlet weak var passTxtField: SkyFloatingLabelTextField!
+    
+    @IBAction func forgetPasswordBtnClick(_ sender: Any) {
+        print("forgetPasswordBtnClick")
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "forgetPwdViewController") as! forgetPwdViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     
     var email = ""
     var pass = ""
@@ -25,7 +33,13 @@ class emailLoginViewController: UIViewController {
         btnLogin.setTitleColor(#colorLiteral(red: 0.6437677741, green: 0.6631219387, blue: 0.6758852601, alpha: 1), for: .normal)
         btnLogin.isUserInteractionEnabled = false
         // Do any additional setup after loading the view.
+        
+        passTxtField.tintColor = #colorLiteral(red: 0.1663755774, green: 0.2092176974, blue: 0.2607190311, alpha: 1)
+        emailTxtField.tintColor = #colorLiteral(red: 0.1663755774, green: 0.2092176974, blue: 0.2607190311, alpha: 1)
+        
         emailTxtField.addTarget(self, action: #selector(emailLoginViewController.textFieldDidChange(_:)), for: .editingChanged)
+        
+        self.passTxtField.isSecureTextEntry = true
     }
     
     @objc func textFieldDidChange(_ textField: UITextField) {
@@ -34,7 +48,7 @@ class emailLoginViewController: UIViewController {
         
         print("change textCount: ",textCount!)
         if textCount! > 3{
-            btnLogin.backgroundColor = #colorLiteral(red: 0.9847028852, green: 0.625120461, blue: 0.007359095383, alpha: 1)
+            btnLogin.backgroundColor = #colorLiteral(red: 0.04472430795, green: 0.05244834721, blue: 0.07734320313, alpha: 0.8470588235)
             btnLogin.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
             btnLogin.isUserInteractionEnabled = true
         }else{
